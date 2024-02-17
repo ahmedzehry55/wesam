@@ -1,0 +1,44 @@
+.container {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.secPadding {
+  padding: 1rem 6rem;
+}
+
+.div2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navcont {
+  display: flex;
+  border-right: 10px black;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
+.navLink {
+  display: flex;
+  padding: 0 1rem 0;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 800px;
+  line-height: 32px;
+  color: black;
+  min-height: 8vw;
+}
+
+.provider {
+  height: 55px;
+  width: 1px;
+  border-radius: 0.5cm;
+  background-color: rgb(0, 0, 0, 0.2);
+}
