@@ -1,0 +1,42 @@
+
+
+@media screen and (max-width: 850px) {
+}
+
+@media screen and (max-width: 550px) {
+}
+
+@media screen and (max-width: 400px) {
+} 
+
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch ;
+    direction: rtl;
+    width: 100%;
+    font-size: .7rem;
+    margin: 1rem;
+    list-style: none;
+    height: 100%;
+}
+.innerDiv{
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch ;
+    padding:  0 2rem 0;
+}
+.innerDiv ul{
+    flex-basis: 25%;
+    list-style: none;
+}
+.innerDiv li {
+    padding: 0px 5px 0 0;
+}
+.hover:hover{
+  scale: 1.2;
+}

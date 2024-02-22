@@ -1,0 +1,54 @@
+.pABtn {
+  margin: 0 5px;
+  font-size: 13.1px;
+  ;
+}
+.pABtn::after{
+  color: white;
+}
+.aBtnicon {
+  font-size: 1rem;
+  border: 1px solid var(--primary2);
+  border-radius: 0.5cm;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  width: 100%;
+  height: 3rem;
+  font-weight: 500;
+  max-width: fit-content;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: var(--primary2);
+  transition: left 0.6s ease-in-out;
+  border-radius: 1cm;
+}
+.button::after{
+  color: white;
+}
+
+.button:hover::before {
+  left: 0;
+  color: white;
+}

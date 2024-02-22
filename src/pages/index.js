@@ -5,8 +5,15 @@ import styles from "@/styles/Home.module.css";
 import { Layout } from "@/layout/Layout";
 import Navbar from "@/components/NavBar/Navbar";
 import Hero from "@/components/Hero/Hero";
+import ACard from "@/components/ACard/ACard";
+import { offers, worldHotel } from "@/constants/constants";
+import BCard from "@/components/BCard/BCard";
+import FooterBar from "@/components/FooterBar/FooterBar";
+import FlipCard from "@/components/flipCard/FlipCard";
+import FlipContainer from "@/components/FlipContainer/FlipContainer";
 
-const inter = Inter({ subsets: ["latin"] });
+import FooterContainer from "@/components/footer/FooterContainer";
+import ProgramCard2 from "@/components/pro2/ProgramCard2";
 
 export default function Home() {
   return (
@@ -17,9 +24,37 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <Layout>
-        <Hero/>
-        <Navbar/>
+        <Hero />
+        <Navbar />
+        <ACard
+          arryName={offers}
+          compTitle="عروض مميزة منّا لك"
+          sliderName="offerSlider"
+        />
+        <BCard
+          arryName={worldHotel}
+          compTitle="أفضل الفنادق العالمية"
+          sliderName="worldHotelSlider"
+        />
+        <BCard
+          arryName={worldHotel}
+          compTitle="أفضل الفنادق العالمية"
+          sliderName="worldHotelSlider2"
+        />
+        <BCard
+          arryName={worldHotel}
+          compTitle="دليلك لأشهر الوجهات السياحية العالمية"
+          sliderName="travelSlider"
+        />
+        <ACard
+          arryName={offers}
+          compTitle="اكتشف أجمل ما في المملكة العربية السعودية"
+          sliderName="TheBestSlider"
+        />
+        <FlipContainer />
+        <ProgramCard2/>
       </Layout>
     </>
   );

@@ -1,0 +1,83 @@
+.container {
+  max-width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0rem;
+  position: relative;
+  height: 100%;
+  flex-flow: row wrap;
+  border-top: 1px solid rgba(0, 0, 0, 0.275);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.275);
+  overflow: hidden;
+  column-gap: 1.4rem;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13rem;
+  width: 20%;
+  border-left: 1px solid rgb(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+.provider {
+  width: 4.5rem;
+  height: 1px;
+  background: rgba(88, 87, 87, 0.332);
+  margin: 0.5rem 0 0 0;
+}
+.rightSide h3 {
+  padding: 2rem 0rem;
+  font-size: 1.4rem;
+  width: 100%;
+}
+.routesTap {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.routesTap:active {
+  transform: translateX(-5px);
+}
+
+.routesprov {
+  display: flex;
+  background-color: black;
+  margin: 2rem 1rem;
+  width: 70px;
+  height:5px;
+  border: 2px solid rgb(1, 27, 58);
+  border-radius: 1cm;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  left: -45px;
+  top: 20%;
+  transition-duration: 4s ;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-grow: 2;
+  max-width: 70%;
+  overflow: hidden;
+  padding-bottom: inherit;
+  padding-top: 2rem;
+}
+.lsTitle {
+  font-size: 3rem;
+  align-self: center;
+  padding-bottom: 3rem;
+}
+.flipcont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 00px 60px;
+}

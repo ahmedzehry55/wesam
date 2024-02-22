@@ -1,7 +1,10 @@
 .container {
-  background: url(../../../public/images/trav.jpg);
+  background: url(../../../public/images/globe.jpg);
   height: 70vh;
   width: 100%;
   background-position: center;
   background-size: cover;
+  @media screen and (max-width: 860px) {
+  display: none;
+  }
 }

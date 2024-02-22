@@ -1,0 +1,51 @@
+.container {
+  width: 340px;
+  height: 570px;
+  perspective: 800px;
+  padding: 1rem;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7cm;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-image: url(https://source.unsplash.com/random/350x500);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;;
+}
+
+.back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11rem;
+}
+
+.button {
+  display: flex;
+}
+
