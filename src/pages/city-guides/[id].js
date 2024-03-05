@@ -44,15 +44,15 @@ const SinglePage = ({ object }) => {
         </p></div>
         <div className="guide_container_icons_div">
           <div className="guide_container_itemdiv">
-            <figure><Image src={calendar} fill /></figure>
+            <figure><Image src={calendar} fill alt="img"/></figure>
             <span>أفضل الأوقات للزيارة</span>
           </div>
           <div className="guide_container_itemdiv">
-            <figure><Image src={user} fill /></figure>
+            <figure><Image src={user} fill alt="img"/></figure>
             <span>الوثائق المطلوبة للتأشيرة</span>
           </div>
           <div className="guide_container_itemdiv">
-            <figure><Image src={flytimer} fill /></figure>
+            <figure><Image src={flytimer} fill alt="img"/></figure>
             <span>مدة الرحلة</span>
           </div>
         </div>

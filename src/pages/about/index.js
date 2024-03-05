@@ -20,7 +20,7 @@ export default function About() {
       <div id="aboutus"> 
         <AboutSec/>
       </div>
-      <div></div>
+      <div className="about_container_wesam_2"> </div>
       <div></div>
     </div>
   );

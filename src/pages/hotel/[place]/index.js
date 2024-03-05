@@ -44,7 +44,7 @@ const SinglePage = ({ object }) => {
           {hotels[0].list.map((nav) => (
              <div onClick={handleWhatsAppClick} className="hotel__card_container">
               <div className="hotel__image">
-                <Image fill src={nav.image} style={{objectFit:"cover", borderRadius:"0 .5cm .5cm 0 "}} />
+                <Image fill src={nav.image} alt="img" style={{objectFit:"cover", borderRadius:"0 .5cm .5cm 0 "}} />
               </div>
 
               <div className="hotel__text_container">
