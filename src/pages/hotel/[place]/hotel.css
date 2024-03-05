@@ -1,0 +1,53 @@
+.hotel__page_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+.page_title{
+    padding: 1vw;
+}
+.hotel__container{
+    display: flex;
+
+    width: 90%;
+    flex-wrap: wrap;
+    gap :1vw;
+    padding: 1vw;
+}
+.hotel__card_container{
+    width: 47%;
+    display: flex;
+    height: 30vh;
+    cursor: pointer;
+    border: 1px solid rgba(118, 118, 118, 0.66);
+    border-radius: .5cm;
+}
+.hotel__image{
+    width: 50%;
+    height: 96%;
+    margin: .2vw;
+    position: relative;
+    border-radius: 10pxs;
+}
+.hotel__text_container{
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 1vw;
+    font-size:10px;
+}
+.hotel__text_title{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.hotel__text_RateDiv{
+    display: flex;
+}
+.hotel__text_button{
+    height: 1vw;
+}

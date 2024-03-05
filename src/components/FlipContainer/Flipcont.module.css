@@ -10,15 +10,62 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.275);
   overflow: hidden;
   column-gap: 1.4rem;
+  @media (max-width: 860px) {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+}
+.btns button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #373737;
+  font-size: 5vw;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  border: none;
+}
+.btns button:hover {
+  background-color: black;
+  color: aliceblue;
+}
+.btns {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 3vw;
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+.rightSideLink {
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+.slideLeft{
+  z-index: 1;
+  border-radius: .5cm;
+}
+.slideRight {
+  z-index: 1;
+  border-radius: .5cm;
 }
 .rightSide {
   display: flex;
   flex-direction: column;
-  row-gap: 13rem;
+  row-gap: 6vw;
   width: 20%;
   border-left: 1px solid rgb(0, 0, 0, 0.2);
   font-size: 1.5rem;
   padding-top: 2rem;
+  @media (max-width: 860px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    padding: 1vw 0 1vw;
+  }
 }
 .provider {
   width: 4.5rem;
@@ -28,8 +75,20 @@
 }
 .rightSide h3 {
   padding: 2rem 0rem;
-  font-size: 1.4rem;
+  font-size: 2vw;
   width: 100%;
+  @media (max-width: 860px) {
+    padding: 0;
+    font-size: 3vw;
+  }
+}
+.routes {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 860px) {
+    flex-direction: row;
+    column-gap: 3vw;
+  }
 }
 .routesTap {
   position: relative;
@@ -48,7 +107,7 @@
   background-color: black;
   margin: 2rem 1rem;
   width: 70px;
-  height:5px;
+  height: 5px;
   border: 2px solid rgb(1, 27, 58);
   border-radius: 1cm;
   opacity: 1;
@@ -56,7 +115,15 @@
   display: block;
   left: -45px;
   top: 20%;
-  transition-duration: 4s ;
+  transition-duration: 4s;
+  @media (max-width: 860px) {
+    margin: 0;
+    width: 100%;
+    top: 5vw;
+    left: 0;
+    height: 1px;
+    border: none;
+  }
 }
 
 .leftSide {
@@ -69,15 +136,54 @@
   overflow: hidden;
   padding-bottom: inherit;
   padding-top: 2rem;
+  @media (max-width: 860px) {
+    max-width: 100%;
+  }
 }
 .lsTitle {
-  font-size: 3rem;
+  font-size: 3vw;
   align-self: center;
-  padding-bottom: 3rem;
+  padding-bottom: 3vw;
+  @media (max-width: 860px) {
+    display: none;
+  }
 }
+
 .flipcont {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 00px 60px;
+  padding: 10px 0 60px;
+  -webkit-animation: slide-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+.flipCard {
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+
+/* transitions  */
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-110%);
+    transform: translateX(-110%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-110%);
+    transform: translateX(-110%);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
 }

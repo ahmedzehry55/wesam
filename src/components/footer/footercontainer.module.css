@@ -91,7 +91,7 @@
 }
 .div1 {
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
   column-gap: 0.3rem;
 }
@@ -107,10 +107,13 @@
   justify-content: space-between;
   align-items: center;
   justify-self: center;
+  
 }
 .logoDiv p{
   text-align: center;
   padding: .5rem 0 2rem;
+  font-size: 10px;
+  
 }
 .pay {
   justify-self: flex-end;
@@ -118,6 +121,12 @@
   justify-content: baseline;
   align-items: center;
   column-gap: 1rem;
+  @media (max-width:860px) {
+    justify-self: center;
+    justify-content: center;
+
+
+  }
 }
 .logoIcon{
   position: relative;
@@ -125,4 +134,9 @@
   width: 80vw;
   height: 14vw;
   margin-right: 5vw;
+  @media (max-width:860px) {
+    width: 20vw;
+    height:20vw;
+    margin-bottom: 2vw;
+  }
 }

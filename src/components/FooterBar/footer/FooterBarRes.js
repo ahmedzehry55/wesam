@@ -13,8 +13,8 @@ export default function FooterBarRes() {
       </div>
       <div>
         <ul>
-          {footbar.map((nav) => (
-            <>
+          {footbar.map((nav, index) => (
+            <div key={index}>
               <li key={nav.id} className={styles.footerLi}>
                 <>
                   <div className={styles.icon}>
@@ -32,7 +32,7 @@ export default function FooterBarRes() {
                 </>
               </li>
               {/* <div className={styles.provider} /> */}
-            </>
+            </div>
           ))}
         </ul>
       </div>

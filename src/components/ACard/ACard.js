@@ -46,7 +46,9 @@ export default function ACard({ arryName, compTitle, sliderName }) {
                   <div className={styles.itemHeader}>
                     <Image
                       fill={true}
-                      objectFit="cover"
+                      sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw"
                       src={item.image}
                       alt={item.title}
                       style={{ borderRadius: ".2cm .2cm 0 0" }}

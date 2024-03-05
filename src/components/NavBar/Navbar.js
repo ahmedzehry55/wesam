@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import more from "../../../public/images/more.png";
+import more from "../../../public/icons/more.png";
 import { navbar } from "@/constants/constants";
 export default function Navbar() {
-  // const isTabletOrSmaller = window.innerWidth <= 768 ;
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
 
   useEffect(() => {
@@ -33,69 +32,60 @@ export default function Navbar() {
             style={{
               alignSelf: "flex-start ",
               fontWeight: "bolder",
-              fontSize:"2vw",
+              fontSize: "2vw",
               padding: "0 3vw  2vw",
-              display: isTabletOrSmaller ?   "block" : "none",  
+              display: isTabletOrSmaller ? "block" : "none",
             }}
           >
             المزيد من الخدمات
           </h5>
           <ul className={styles.navcont}>
             {navbar
-              .slice(
-                isTabletOrSmaller ? 4 : 0,
-                isTabletOrSmaller ? 7 :5
-              )
+              .slice(isTabletOrSmaller ? 4 : 0, isTabletOrSmaller ? 7 : 5)
               .map((nav, index) => (
-                <>
+                <div key={index} style={{display:"flex"}}>
                   <li
                     key={index}
                     style={{
                       listStyle: "none",
                     }}
                     className={styles.navLinkcontdiv}
-
                   >
                     <Link
                       className={styles.navLink}
-                      
                       style={{
                         color: "black",
                         border: "2 solid BLACK",
                         marginRight: index === 0 ? 0 : undefined,
                       }}
-                      href={`#${nav.id}`}
+                      href={nav.ref}
                     >
-                      <Image
-                        className={styles.icon}
-                        width={45}
-                        height={45}
-                        src={nav.image}
-                        alt={nav.title}
-                      />
-
+                      <div className={styles.icon}>
+                        <Image fill  sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" src={nav.image} alt={nav.title} />
+                      </div>
                       {nav.title}
                     </Link>
                   </li>
                   <div className={styles.provider} />
-                </>
+                </div>
               ))}
-            <li className={styles.navLinkcontdiv} style={{ listStyle: "none" }}>
+            <li  className={styles.navLinkcontdiv} style={{ listStyle: "none" }}>
               <Link
                 className={styles.navLink}
                 style={{
                   color: "black",
                   border: "2 solid BLACK",
+                   
                 }}
-                href={`#id`}
+                href='/'
               >
-                <Image
-                 className={styles.moreicon} 
-                  width={45}
-                  height={45}
-                  src={more}
-                  alt="more"
-                />
+                <div className={styles.moreicon} style={{paddinBottom: "0.6vw"}}>
+                  <Image  sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" fill src={more} alt="more" />
+                </div>
                 خدمات اخرى
               </Link>
             </li>

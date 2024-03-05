@@ -1,10 +1,18 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* row-gap: 1vw; */
   align-items: center;
   min-height: 100vh;
   direction: rtl;
+  background: var(--background)  ;
+  @media (max-width :860px) {
+    background: white;
+    row-gap: 0vw;
+
+      scrollbar-width: 0px;
+   
+  }
 }
 
 /* Mobile */

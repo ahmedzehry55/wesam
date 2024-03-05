@@ -85,31 +85,15 @@
 }
 .options {
     position: fixed;
-    background: white;
+  
     width: 100%;
     top: 0;
- 
     z-index: 100000;
     text-align: center;
     padding: 2.5rem 0 3rem;
-    border-bottom: 1px solid rgba(65, 64, 64, 0.471);
+    /* border-bottom: 1px solid rgba(65, 64, 64, 0.471); */
   }
 
 #menu.active {
   left: 0;
 }
-
-/* #menu ul {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#menu ul li {
-  margin-bottom: 20px;
-}
-
-#menu ul li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 20px;
-} */

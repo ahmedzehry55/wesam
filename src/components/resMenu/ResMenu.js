@@ -16,7 +16,7 @@ const HamburgerMenu = () => {
   return (
     <>
       <div
-        className={`hamburger ${isOpen ? "active" : ""}`}
+        className={`hamburger ${isOpen ? "activee" : ""}`}
         onClick={toggleMenu}
       >
         {isOpen ? (
@@ -31,24 +31,30 @@ const HamburgerMenu = () => {
       </div>
 
       <nav id="menu" className={isOpen ? "active" : ""}>
-        <ul style={{position:'relative'}}>
-          <li className="options">خيارات</li>
+        <ul style={{ position: "relative" }}>
+          <div className="footerLi"><li className="options">خيارات</li></div>
           {navbar.map((nav) => (
-            <>
+            <div key={nav.id}>
               <li
-                key={nav.id}
                 className="footerLi"
-                style={{ marginTop: nav.id===0 ? "25%" : undefined }}
+                style={{ marginTop: nav.id === 0 ? "25%" : undefined }}
               >
                 <>
                   <div className="icon">
-                    <Image fill src={nav.image} />
+                    <Image
+                      fill
+                      src={nav.image}
+                      alt="icon"
+                      sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw"
+                    />
                   </div>
                   <div className="textwithicon">
                     <div className="text">
-                      <h5 className="text2">{nav.title}</h5>
-                      <Link className={`text3`} href={`#${nav.id}`}>
-                        {nav.desc}
+                      {/* <h5 "></h5> */}
+                      <Link className="text2"  href={nav.ref}>
+                      {nav.title}
                       </Link>
                       <IoIosArrowForward
                         style={{ color: "var( --primary2)", fontSize: "18PX" }}
@@ -57,7 +63,7 @@ const HamburgerMenu = () => {
                   </div>
                 </>
               </li>
-            </>
+            </div>
           ))}
         </ul>
       </nav>

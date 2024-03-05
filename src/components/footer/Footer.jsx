@@ -5,7 +5,7 @@ import { footer } from "@/constants/constants";
 import Link from "next/link";
 import Image from "next/image";
 
-function Footer({ arryName, iconsize, bp ,fontSize}) {
+function Footer({ arryName, iconsize, bp, fontSize }) {
   return (
     <div className={styles.container}>
       {arryName.map(({ title, id, links }) => (
@@ -21,8 +21,9 @@ function Footer({ arryName, iconsize, bp ,fontSize}) {
             {title}
           </h3>
           <ul>
-            {links.map(({ link, icon }) => (
+            {links.map(({ link, icon, id }) => (
               <div
+                key={id}
                 className={styles.hover}
                 style={{
                   display: "flex",
@@ -37,14 +38,13 @@ function Footer({ arryName, iconsize, bp ,fontSize}) {
                 {icon ? (
                   <Image
                     src={icon}
-                    alt=""
+                    alt="icon"
                     height={iconsize}
                     width={iconsize}
-                    
                   />
                 ) : null}
 
-                <li style={{ fontSize:`${fontSize}`}}>{link}</li>
+                <li style={{ fontSize: `${fontSize}` }}>{link}</li>
               </div>
             ))}
           </ul>

@@ -1,19 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { Layout } from "@/layout/Layout";
 import Navbar from "@/components/NavBar/Navbar";
-import Hero from "@/components/Hero/Hero";
 import ACard from "@/components/ACard/ACard";
-import { offers, worldHotel } from "@/constants/constants";
+import { offers, programs, worldHotel } from "@/constants/constants";
 import BCard from "@/components/BCard/BCard";
-import FooterBar from "@/components/FooterBar/FooterBar";
-import FlipCard from "@/components/flipCard/FlipCard";
 import FlipContainer from "@/components/FlipContainer/FlipContainer";
-
-import FooterContainer from "@/components/footer/FooterContainer";
 import ProgramCard2 from "@/components/pro2/ProgramCard2";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   return (
@@ -24,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <Layout>
         <Hero />
         <Navbar />
@@ -54,7 +47,7 @@ export default function Home() {
           sliderName="TheBestSlider"
         />
         <FlipContainer />
-        <ProgramCard2/>
+        <ProgramCard2 ArrayName={programs} i={3} page_title='>احدث البرامج السياحية ' />
       </Layout>
     </>
   );

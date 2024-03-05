@@ -1,0 +1,153 @@
+/* global */
+.container {
+  position: relative;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+  @media (max-width:860px) {
+    display: flex;
+  }
+}
+
+.rowItem {
+  outline: 2px solid rgba(0, 0, 0, 0.105);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+  height: 450px;
+  border-radius: 0.2cm;
+  position: relative;
+  overflow: hidden;
+}
+
+.rowItem:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.itemHeader {
+  width: 100%;
+  height: inherit;
+  position: relative;
+  border-radius: 0.2cm;
+}
+.itemHeader Image {
+  width: 100%;
+}
+
+.itemDescription {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.descText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.trending h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .6rem !important;
+}
+
+.rowContainer {
+  min-width: 100%;
+  display: flex;
+  gap: 2.2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  position: relative;
+  padding: 1rem 0.6rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.rowContainer::-webkit-scrollbar {
+  display: none;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.btns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #373737;
+  background-color:white ;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  outline: 2px solid rgba(0, 0, 0, 0.105)
+}
+.slideLeft{
+  position:absolute;
+  top: 53%;
+  left: -2%;
+  z-index: 1;
+  border-radius: .5cm;
+}
+.slideRight {
+  position: absolute;
+  top: 53%;
+  right: -2%;
+  z-index: 1;
+  border-radius: .5cm;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.btns button:hover {
+  background-color: black;
+  color: aliceblue;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: center;
+  color: white;
+  position: relative;
+}
+@media (max-width: 860px) {
+  .container {
+    margin: 0;
+    max-width: 98%;
+    justify-content: flex-end;
+    font-size: 12px;
+  }
+  .btns {
+    display: none;
+  }
+  .rowItem {
+    min-width: 47%;
+  }
+}
+
+@media (max-width: 450px) {
+  .rowItem {
+    height: 350px;
+    width: 30vw;
+  }
+}

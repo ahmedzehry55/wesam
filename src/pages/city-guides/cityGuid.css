@@ -1,0 +1,79 @@
+.guide_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 3vw;
+}
+.guide_hero_container{
+    /* display: flex; */
+    position: relative;
+    width: 100%;
+    color: white;
+}
+.guide_hero_container h2  {
+    position: absolute;
+    z-index: 100000;
+    right: 5vw;
+    bottom: 5vw;
+}
+.guide_hero_container span  {
+    position: absolute;
+    z-index: 100000;
+    right: 5vw;
+    bottom: 3vw;
+}
+.guide_container_p{
+    font-size: 16px;
+    line-height: 2vw;
+    margin: 1vw 3vw;
+    padding: 2vw 0;
+    border-top: .5px solid rgba(122, 122, 122, 0.249);
+     width: 90%;
+}
+.guide_container_p p {
+    width: 90%;
+}
+.guide_container_icons_div{
+    display: flex;
+    column-gap: 1.5vw;
+    padding: 5vw;
+}
+.guide_container_itemdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3vw;
+    width: 23%;
+    height: 34.3vh;
+    border: 1px solid rgba(0, 0, 0, 0.079);
+    border-radius: .2cm;
+    color: var(--primary3);
+    cursor: pointer;
+}
+.guide_container_itemdiv figure{
+    position: relative;
+    width: 22%;
+    height: 27.6%
+}
+.guide_container_button{
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vw;
+    font-size: 26px;
+}
+.guide_container_button button{
+    width:85%;
+    height: 3.7vw;
+    color: white;
+    background:#ef4050 ;
+    font-size: 15px;
+    border: none;
+    border-radius: 1CM;
+    cursor: pointer;
+    font-weight: bolder;
+}

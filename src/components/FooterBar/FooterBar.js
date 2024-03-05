@@ -13,8 +13,8 @@ export default function FooterBar() {
           <h4>فريقنا متواجد لخدمتكم على مدار الساعة 24/7</h4>
         </div>
         <ul className={styles.navcont}>
-          {footbar.slice(0,3).map((nav) => (
-            <>
+          {footbar.slice(0,3).map((nav,index) => (
+            <div key={index}>
               
               <li key={nav.id} className={styles.navLink}>
                 <Image
@@ -40,7 +40,7 @@ export default function FooterBar() {
                 </div>
               </li>
               {/* <div className={styles.provider} /> */}
-            </>
+            </div>
           ))}
         </ul>
         <div className={styles.loc}>

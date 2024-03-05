@@ -2,38 +2,41 @@ import React from "react";
 import styles from "./pcard2.module.css";
 import { CiSun } from "react-icons/ci";
 import { IoMdLocate } from "react-icons/io";
-import { MdOutlineArrowBack } from "react-icons/md";
 import { IoMoonOutline } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
-
 import Image from "next/image";
 import Link from "next/link";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
-import { programs } from "@/constants/constants";
 import Button from "../button/Button";
 
-export default function ProgramCard2() {
+export default function ProgramCard2({ i, ArrayName, page_title, cardRef }) {
   return (
     <div className={styles.container}>
-      <strong className={styles.title}>احدث البرامج السياحية</strong>
+      <Link href="/packages">
+        <strong className={styles.title}>{page_title}</strong>
+      </Link>
 
       <div className={styles.rowContainer} id={"programsslide"}>
-        {programs.slice(0, 3).map((item) => (
+        {ArrayName.slice(0, i).map((item) => (
           <div key={item.id} className={styles.rowItem}>
-            <div className={styles.link}>
-              <div className={styles.itemHeader}>
+            <div
+              // href={`/travel-programs/${item.id}`}
+              className={styles.link}
+            >
+              <section className={styles.itemHeader}>
                 <Image
                   fill
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
                   src={item.image}
                   alt={item.title}
+                  style={{ objectFit: "cover" }}
                   className={styles.newPrograms__card__img}
                 />
-              </div>
+              </section>
               <div className={styles.itemDescription}>
                 <div className={styles.newPrograms__card__content}>
-                  {/* <div className={styles.descText}>
-                <div className={styles.textContainer}> */}
                   <div className={styles.newPrograms__card__period}>
                     <span className={styles.lable}>
                       {/* icon */}
@@ -65,14 +68,14 @@ export default function ProgramCard2() {
                       </Link>
                     </div>
                     <div className={styles.stars}>
-                      {Array.from(Array(item.rate)).map((s, i) => (
-                        <>
+                      {Array.from(Array(item.rate)).map((s, i, index) => (
+                        <div key={index}>
                           <MdStarRate />
                           <MdStarRate />
                           <MdStarRate />
                           <MdStarRate />
                           <MdStarRate />
-                        </>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -83,10 +86,10 @@ export default function ProgramCard2() {
                   {/* </div> */}
                   <div className={styles.newPrograms__card__btns}>
                     <div style={{ position: "relative,", width: "10rem" }}>
-                      <Button title={"تفاصيل العرض"} />
+                      <Button itemId={`packages/worldpackages/${item.place_id}/${item.id}`} title={"تفاصيل العرض"} />
                     </div>
                     <div style={{ position: "relative,", width: "10rem" }}>
-                      <Button title={' حجز العرض'}/>
+                      <Button itemId={`packages/worldpackages/${item.place_id}/${item.id}`} title={" حجز العرض"} />
                     </div>
                   </div>
                   {/* </div> */}

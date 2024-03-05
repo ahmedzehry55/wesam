@@ -1,0 +1,45 @@
+.pagescomponent_container {
+  width: 90%;
+  @media (max-width: 860px) {
+    width: 95%;
+    margin-right: 1vw;
+  }
+}
+@media (max-width: 540px) {
+ .pagescomponent_container{
+  width: 95%;
+  margin-right: 2vw;
+ }
+}
+.pagescomponent_inner_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 1vw auto;
+  @media (max-width: 860px) {
+    width: 100%;
+    row-gap: 3vw;
+  }
+}
+.pages_h1 {
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+  @media (max-width: 860px) {
+    font-size: 3.5vw;
+  }
+}
+.pages_span {
+  font-size: 0.8vw;
+  color: rgb(88, 88, 88);
+  margin-bottom: 1vw;
+  display: inline-block;
+  width: 60vw;
+
+  @media (max-width: 860px) {
+    font-size: 3vw;
+    margin-bottom: 3vw;
+  }
+}
+.navgatoinBar {
+}

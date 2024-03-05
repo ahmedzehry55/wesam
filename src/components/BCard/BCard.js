@@ -4,7 +4,7 @@ import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 
-export default function BCard({ arryName, compTitle, sliderName }) {
+export default function BCard({ arryName, compTitle, sliderName , widthCard ,hCard}) {
   const slideLeft = () => {
     let slider = document.getElementById(`${sliderName}`);
     slider.scrollLeft = slider.scrollLeft - 270;
@@ -14,7 +14,7 @@ export default function BCard({ arryName, compTitle, sliderName }) {
     let slider = document.getElementById(`${sliderName}`);
     slider.scrollLeft = slider.scrollLeft + 270;
   };
-
+  const myArray = arryName[0].nav;
   return (
     <>
       <div className={`trending`}>
@@ -42,13 +42,16 @@ export default function BCard({ arryName, compTitle, sliderName }) {
             <h3></h3>
           </div>
           <div className={styles.rowContainer} id={`${sliderName}`}>
-            {arryName.map((item) => (
-              <div key={item.id} className={styles.rowItem}>
+            {myArray.map((item) => (
+              <div key={item.id} className={styles.rowItem} style={{width:`${widthCard}`, height:`${hCard}`}}>
                 <Image
                   fill={true}
-                  objectFit="cover"
+                  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
                   src={item.image}
-                  alt={item.title}
+                  alt='item'
+                  // alt={item.title}
                   style={{ borderRadius: ".2cm " }}
                 />
                 <div className={styles.link}>

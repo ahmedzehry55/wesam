@@ -29,7 +29,7 @@
 }
 
 .front {
-  background-image: url(https://source.unsplash.com/random/350x500);
+  /* background: url(https://source.unsplash.com/random/350x500); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

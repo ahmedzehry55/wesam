@@ -1,0 +1,67 @@
+.about_container{
+    margin-bottom: 3vw;
+}
+/* first sec */
+.about_container_wesam_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    row-gap: 3vw;
+    padding: 5vw 9vw;
+}
+.about_container_wesam_1 h3{
+    font-size: 26px;
+
+}
+.about_container_wesam_1 span{  font-size: 14px;}
+.about_container_wesam_1 button{
+    height:8vh ;
+    width: 19vw;
+    background: transparent;
+    border: 1px solid var(--primary3);
+    border-radius: 1cm;
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--primary3);
+    cursor: pointer;
+}
+.about_container_wesam_1 button:hover{
+    background: rgba(140, 215, 232, 0.337);
+}
+/* end */
+
+/* socned sec */
+.AboutSec_container{
+    background: #e9f6f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3vw;
+    direction: rtl;
+    padding: 5vw 2vw;
+}
+.AboutSec_container_card_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+}
+.AboutSec_container_card_container_item{
+    width:17.2vw;
+     height: 50vh;
+    font-size: 16px;
+    text-align: center;
+}
+.AboutSec_container_card_container_item figure{
+    position: relative;
+    width:17.2vw;
+    height: 39vh;
+    margin-bottom: 2vw;
+}
+.AboutSec_container_card_container_item span{
+    width: 10vw;
+}
+/* end  socned sec */
+/* third sec */

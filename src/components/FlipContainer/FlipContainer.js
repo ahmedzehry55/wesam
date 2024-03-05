@@ -1,24 +1,41 @@
-import { worldHotel } from "@/constants/constants";
+import CCard from "../cCard/CCard";
+import { allRoutes, worldHotel } from "@/constants/constants";
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./Flipcont.module.css";
 import FlipCard from "../flipCard/FlipCard";
+
+import { IoIosArrowRoundBack,IoIosArrowRoundForward  } from "react-icons/io";
+
 function FlipContainer() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const handle = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+  const slideLeft = () => {
+    let slider = document.getElementById("flipcon");
+    slider.scrollLeft -= 270;
   };
+
+  const slideRight = () => {
+    let slider = document.getElementById("flipcon");
+    slider.scrollLeft += 270;
+  };
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeTitleId, setActiveTitleId] = useState(1);
+
+  const handle = (index, titleId) => {
+    setActiveIndex(index);
+    setActiveTitleId(titleId);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.rightSide}>
-        <div style={{ alignSelf: "center" }}>
+        <div style={{ alignSelf: "center" }} className={styles.rightSideLink}>
           <Link
             className={styles.rightSideLink}
             style={{
               fontSize: "1rem",
               paddingBottom: "3rem",
             }}
-            href="/"
+            href="{()=>activeIndex(1)}"
           >
             عرض الكل
           </Link>
@@ -26,28 +43,64 @@ function FlipContainer() {
         </div>
 
         <div className={styles.routes}>
-      <div className={styles.routesTap} onClick={() => handle(0)}>
-        {activeIndex === 0 && <div className={styles.routesprov} />}
-        <h3>جميع الوجهات</h3>
+          {allRoutes.map(({ titleLink, id }) => (
+            <div
+              key={id}
+              className={styles.routesTap}
+              onClick={() => handle(id, id)}
+            >
+              {activeIndex === id && <div className={styles.routesprov} />}
+              <h3>{titleLink}</h3>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.btns}>
+          <button
+            className={styles.slideRight}
+            title="scroll right"
+            onClick={slideRight}
+          >
+            <IoIosArrowRoundForward />
+          </button>
+          <button
+            className={styles.slideLeft}
+            title="scroll left"
+            onClick={slideLeft}
+          >
+            <IoIosArrowRoundBack />
+          </button>
+        </div>
       </div>
-      <div className={styles.routesTap} onClick={() => handle(1)}>
-        {activeIndex === 1 && <div className={styles.routesprov} />}
-        <h3>االوجهات الداخلية</h3>
-      </div>
-      <div className={styles.routesTap} onClick={() => handle(2)}>
-        {activeIndex === 2 && <div className={styles.routesprov} />}
-        <h3>الوجهات الخارجية</h3>
-      </div>
-    </div>
-      </div>
+
       <div className={styles.leftSide}>
         <div className={styles.lsTitle}>
           <h2>اختر وجهتك الان</h2>
         </div>
-        <div className={styles.flipcont}>
-          {worldHotel.map((item) => (
-            <div key={item.id} className={styles.flipCard}>
-              <FlipCard compTitle={item.title} img={item.img} />
+        <div
+          style={{
+            width: "100%",
+            alignItems: "start",
+            display: "grid",
+            alignItems: "start",
+          }}
+        >
+          {allRoutes.map(({ id, routs }) => (
+            <div key={id}>
+              {id === activeTitleId && (
+                <>
+                  <div className={`${styles.flipcont}`} id="flipcon">
+                    {routs.map((item) => (
+                      <div key={item.id}>
+                        <div  className={styles.flipCard}>
+                          <FlipCard compTitle={item.link} img={item.image} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <CCard arryName={routs} />
+                </>
+              )}
             </div>
           ))}
         </div>

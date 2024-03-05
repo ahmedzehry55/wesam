@@ -11,6 +11,8 @@
   @media(max-width:860px) {
    height: auto;
    box-shadow: none;
+    scrollbar-width: 0;
+    scrollbar-color: black;
   }
 }
 .container h4{
