@@ -8,8 +8,8 @@ import Image from "next/image";
 function Footer({ arryName, iconsize, bp, fontSize }) {
   return (
     <div className={styles.container}>
-      {arryName.map(({ title, id, links }) => (
-        <div className={styles.innerDiv} key={id}>
+      {arryName.map((item) => (
+        <div className={styles.innerDiv} key={`${item.id} + ${item.index}`}>
           <h3
             style={{
               paddingBottom: "5px",
@@ -18,10 +18,11 @@ function Footer({ arryName, iconsize, bp, fontSize }) {
               borderRadius: ".02cm",
             }}
           >
-            {title}
+            title, id, links ,index
+            {item.title}
           </h3>
           <ul>
-            {links.map(({ link, icon, id }) => (
+            {item.links.map(({ link, icon, id }) => (
               <div
                 key={id}
                 className={styles.hover}
