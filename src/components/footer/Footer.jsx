@@ -18,7 +18,7 @@ function Footer({ arryName, iconsize, bp, fontSize }) {
               borderRadius: ".02cm",
             }}
           >
-            title, id, links ,index
+         
             {item.title}
           </h3>
           <ul>
