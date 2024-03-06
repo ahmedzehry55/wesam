@@ -7,6 +7,7 @@ import BCard from "@/components/BCard/BCard";
 import FlipContainer from "@/components/FlipContainer/FlipContainer";
 import ProgramCard2 from "@/components/pro2/ProgramCard2";
 import Hero from "@/components/Hero/Hero";
+import Cta from "@/components/Cta/Cta";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Layout>
         <Hero />
         <Navbar />
+        <Cta/>
         <ACard
           arryName={offers}
           compTitle="عروض مميزة منّا لك"
@@ -47,7 +49,8 @@ export default function Home() {
           sliderName="TheBestSlider"
         />
         <FlipContainer />
-        <ProgramCard2 ArrayName={programs} i={3} page_title='>احدث البرامج السياحية ' />
+        <ProgramCard2 ArrayName={programs} i={3} page_title='احدث البرامج السياحية' />
+
       </Layout>
     </>
   );
