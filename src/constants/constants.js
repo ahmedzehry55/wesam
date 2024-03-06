@@ -53,13 +53,13 @@ export const navMenu = [
 
   {
     title: "الجولات السياحية",
-    image: "/icons/bootw.png",
+    image: "/icons/thunderw.png",
     ref: "/tours",
     id: 3,
   },
   {
     title: "فنادق",
-    image: "/icons/bootw.png",
+    image: "/icons/hotelw.png",
     ref: "/hotel",
     id: 4,
   },
