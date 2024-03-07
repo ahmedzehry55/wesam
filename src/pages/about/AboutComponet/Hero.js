@@ -4,7 +4,9 @@ import img from "../../../../public/images/londn.jpg";
 export default function Hero() {
   return (
     <div className="about_hero">
-      <Image fill src={img} alt="img" />
+      <Image sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw" fill src={img} alt="img" />
     </div>
   );
 }

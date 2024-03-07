@@ -3,6 +3,17 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import snap from "../../public/images/snapchat.png";
+import about2 from "../../public/icons/about2.svg";
+import about1 from "../../public/icons/about1.svg";
+import about3 from "../../public/icons/about3.svg";
+import about4 from "../../public/icons/about4.svg";
+import about5 from "../../public/icons/about5.svg";
+import about6 from "../../public/icons/about6.svg";
+import about7 from "../../public/icons/about7.svg";
+import about8 from "../../public/icons/about8.svg";
+import about9 from "../../public/icons/about9.svg";
+import about10 from "../../public/icons/about10.svg";
+import about11 from "../../public/icons/about11.svg";
 import hour24 from "../../public/images/24hours.png";
 import twitter from "../../public/images/twitter.png";
 import youtube from "../../public/images/youtube.png";
@@ -18,7 +29,6 @@ import email from "../../public/images/email.png";
 import phone from "../../public/images/hours24.png";
 import arrow from "../../public/images/arrow.png";
 import whatshand from "../../public/images/whatsapphand.png";
-import { MdStarRate } from "react-icons/md";
 export const contentUsNav = [
   {
     title: "+966545003143",
@@ -69,6 +79,12 @@ export const navMenu = [
     ref: "/packages/cruise",
     id: 6,
   },
+  {
+    title: "نبذة عنا",
+    image: "/icons/user.png",
+    ref: "/about",
+    id: 8,
+  },
 ];
 export const navbar = [
   {
@@ -118,7 +134,7 @@ export const navbar = [
   {
     title: "نبذة عنا",
     image: "/icons/user.png",
-    ref: "/",
+    ref: "/about",
     id: 8,
   },
   {
@@ -1067,7 +1083,6 @@ export const packages = [
         title: "باقات بأسعار محددة",
         desc: "",
         image: "/images/abodabi.jpg",
-
         id: "pricePakages",
       },
       {
@@ -2757,3 +2772,104 @@ export const countrys = [
     ],
   },
 ];
+export const ourExpArry=[
+  {
+    title: "تعتمد على تسخير خبرات مجموعة سيرا التي تمتد لأكثر من 40 عاماً",
+    img:about1,
+    id:0 ,
+  },
+  {
+    title: "بقيادة خبراء المجال والمهنيين الرقميين",
+    img:about2,
+    id:2 ,
+  },
+  {
+    title: "منصة تقنية عالية الأداء وقابلة للتطوير",
+    img:about3,
+    id:3 ,
+  },
+  {
+    title: "معرفة محلية وإقليمية واسعة",
+    img:about4,
+    id:4 ,
+  },
+  {
+    title: "عقود من الخبرة في خدمة المسافرين الإقليميين",
+    img:about5,
+    id:5 ,
+  },
+  {
+    title: "علاقات قوية مع شركاء السفر والضيافة الرائدين",
+    img:about6,
+    id:6 ,
+  },
+  {
+    title: "عملاء من الشركات والجهات الحكومية الرائدة",
+    img:about7,
+    id:7 ,
+  },
+  {
+    title: "محتوى عربي ومحلّي خاص",
+    img:about8,
+    id:8 ,
+  },
+  {
+    title: "فريق متنوع من 43 جنسية والعدد بازدياد",
+    img:about9,
+    id:9 ,
+  },
+  {
+    title: "2700+ موظف محترف",
+    img:about10,
+    id:10 ,
+  },
+  {
+    title: "المقر الرئيسي في الرياض ومكاتب في جميع أنحاء المملكة والإمارات العربية المتحدة ومصر",
+    img:about11,
+    id:11 ,
+  },
+]
+export const suppliers = [
+  {
+    id:0,
+    title:"أكثر من 450",
+    span:"خطوط طيران"
+  },
+  {
+    id:1,
+    title:"أكثر من مليون",
+    span:"فندق والعدد بازدياد"
+  },
+  {
+    id:2,
+    title:"أكثر من 27",
+    span:"سلسلة فنادق عالمية والعدد بازدياد"
+  },
+  {
+    id:3,
+    title:"أكثر من 20",
+    span:"ألف فندق مباشر"
+  },
+]
+export const suppliers_wesam = [
+  {
+    id:0,
+    title:"أكثر من مليون",
+    span:" عميل"
+  },
+  {
+    id:1,
+    title:"أكثر من 140",
+    span:"عميل من الشركات والجهات الحكومية"
+  },
+  {
+    id:2,
+    title:"أكثر من 5,000",
+    span:"وكيل عالمي"
+  },
+  {
+    id:3,
+    title:"أكثر من 100",
+    span:"ألف حاج ومعمتر"
+  },
+]

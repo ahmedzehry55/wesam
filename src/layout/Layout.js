@@ -13,7 +13,7 @@ export const Layout = ({ children, menuDis,bgcolor  , btnTitlea,
   return (
     <div className={styles.container}>
       <ProgressComp/>
-      <HamburgerMenu />
+      <HamburgerMenu color="white" />
       <Headern navbarmenu={menuDis}  btnTitle={btnTitlea} btnRef={btnRefa} /> 
       
       <main className={`${style.main} `} style={{background:`${bgcolor}`}}>{children}</main>

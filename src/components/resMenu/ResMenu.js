@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-const HamburgerMenu = () => {
+const HamburgerMenu = ({color}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
             onClick={() => setIsOpen(false)}
           />
         ) : (
-          <IoIosMenu color="#fff" size={27} onClick={() => setIsOpen(true)} />
+          <IoIosMenu color={color} size={27} onClick={() => setIsOpen(true)} />
         )}
       </div>
 

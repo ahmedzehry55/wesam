@@ -34,30 +34,7 @@ const Headern = ({navbarmenu , btnTitle, btnRef , btndisplay}) => {
 
   return (
     <div className={styles.header__outer}>
-      
     <div className={`${styles.container} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.div2}>
-        <ul className={`${styles.navcont} ${scrolled ? styles.scrolled : ""}`}>
-          {contentUsNav.map((nav) => (
-            <li key={nav.id} className={styles.navLinkmain}>
-              <div
-                style={{
-                  margin: "0 5px 0 0 ",
-                  position: "relative",
-                  objectFit: "contain",
-                  width: "2vw",
-                  height: "2vw",
-                }}
-              >
-                <Image fill src={nav.image} alt="icon" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-              </div>
-              <Link className={styles.navLinktag} href={`#${nav.ref}`} onClick={handleWhatsAppClick}>
-                {nav.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
       <div className={styles.div1Res}>
         <div className={styles.div1}>
           <div className={styles.navMenu}>

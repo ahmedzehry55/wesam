@@ -2,6 +2,14 @@ import React from "react";
 import Header from "./AboutComponet/header/Header";
 import Hero from "./AboutComponet/Hero";
 import AboutSec from "./AboutComponet/AboutSec";
+import OurExp from "./AboutComponet/OurExp";
+import Suppliers from "./AboutComponet/Suppliers";
+import Agent from "./AboutComponet/Agent ";
+import Form from "./AboutComponet/Form";
+import FooterBar from "@/components/FooterBar/FooterBar";
+import FooterContainer from "@/components/footer/FooterContainer";
+import FooterRes from "@/components/footer/FooterRes/FooterRes";
+import HamburgerMenu from "@/components/resMenu/ResMenu";
 
 export default function About() {
   return (
@@ -17,11 +25,16 @@ export default function About() {
         </span>
         <button>اتصل بنا</button>
       </div>
-      <div id="aboutus"> 
-        <AboutSec/>
+      <div id="aboutus">
+        <AboutSec />
       </div>
-      <div className="about_container_wesam_2"> </div>
-      <div></div>
+      <OurExp />
+      <Suppliers />
+      <Agent />
+      <Form />
+      <FooterBar />
+      <FooterContainer />
+      <FooterRes />
     </div>
   );
 }
