@@ -6,6 +6,7 @@ import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList"
 import Hero from "../about/AboutComponet/Hero";
 import Image from "next/image";
 import Link from "next/link";
+import hero from "../../../public/images/tourHero.jpg";
 
 const breadcrumb1 = [
   {
