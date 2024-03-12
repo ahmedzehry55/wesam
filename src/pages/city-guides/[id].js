@@ -6,9 +6,9 @@ import { cityGuides, offers, worldHotel } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import flytimer from "../../../public/icons/flytimer.png";
-import calendar from "../../../public/icons/calendar.png";
-import user from "../../../public/icons/user.png";
+import flytimer from "../../../public/icons/planw.svg";
+import calendar from "../../../public/icons/best_time_visit_icon.svg";
+import user from "../../../public/icons/visa_requirement_icon.svg";
 const navarray = cityGuides[0].nav;
 const SinglePage = ({ object }) => {
   const breadcrumb1 = [

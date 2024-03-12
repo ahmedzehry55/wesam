@@ -50,20 +50,20 @@ export const navMenu = [
   },
   {
     title: "البرامج السياحية",
-    image: "/icons/flagw.png",
+    image: "/icons/int-packages.svg",
     ref: "/packages",
     id: 1,
   },
   {
     title: "الدليل السياحي",
-    image: "/icons/offerw.png",
+    image:"/icons/activities-and-experiences.png",
     ref: "/city-guides",
     id: 2,
   },
 
   {
     title: "الجولات السياحية",
-    image: "/icons/thunderw.png",
+    image: "/icons/tours.png",
     ref: "/tours",
     id: 3,
   },
@@ -75,13 +75,13 @@ export const navMenu = [
   },
   {
     title: "رحلات بحرية",
-    image: "/icons/bootw.png",
+    image: "/icons/cruises.svg",
     ref: "/packages/cruise",
     id: 6,
   },
   {
     title: "نبذة عنا",
-    image: "/icons/user.png",
+    image: "/icons/about10.svg",
     ref: "/about",
     id: 8,
   },
@@ -89,31 +89,31 @@ export const navMenu = [
 export const navbar = [
   {
     title: "الرئيسية",
-    image: "/icons/home.png",
+    image: "/icons/homew.png",
     ref: "/",
     id: 0,
   },
   {
     title: "البرامج السياحية",
-    image: "/icons/flag.png",
+    image: "/icons/int-packages.svg",
     ref: "/packages",
     id: 1,
   },
   {
     title: "الدليل السياحي",
-    image: "/icons/offer.png",
+    image: "/icons/activities-and-experiences.png",
     ref: "/city-guides",
     id: 2,
   },
   {
     title: "الطيران",
-    image: "/icons/plane.png",
+    image: "/icons/planw.svg",
     ref: "/",
     id: 3,
   },
   {
     title: "حجز فنادق",
-    image: "/icons/hotel.png",
+    image: "/icons/hotelw.png",
     ref: "/hotel",
     id: 4,
   },
@@ -125,7 +125,7 @@ export const navbar = [
   },
   {
     title: "الجولات السياحية",
-    image: "/icons/thunder.png",
+    image: "/icons/tours.png",
     ref: "/tours",
     id: 13,
   },
@@ -138,7 +138,7 @@ export const navbar = [
 
   {
     title: "نبذة عنا",
-    image: "/icons/user.png",
+    image: "/icons/about10.svg",
     ref: "/about",
     id: 8,
   },

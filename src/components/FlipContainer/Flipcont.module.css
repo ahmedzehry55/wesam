@@ -18,22 +18,17 @@
 }
 .btns button {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  color: #373737;
-  font-size: 5vw;
+  color: #3737376e;
+  font-size: 6vw;
   cursor: pointer;
   transition: all 0.1s ease-in;
   border: none;
+  background-color: transparent;
 }
-.btns button:hover {
-  background-color: black;
-  color: aliceblue;
-}
+
 .btns {
   display: flex;
-  /* justify-content: space-between; */
-  gap: 3vw;
   @media (max-width: 860px) {
     display: none;
   }
@@ -45,11 +40,9 @@
 }
 .slideLeft{
   z-index: 1;
-  border-radius: .5cm;
 }
 .slideRight {
   z-index: 1;
-  border-radius: .5cm;
 }
 .rightSide {
   display: flex;
@@ -165,7 +158,15 @@
     display: none;
   }
 }
-
+.cardcont{
+  width: 100%;
+  align-items: "start";
+  display: "grid";
+  align-items: "start";
+  overflow:"scroll";
+  /* scrollbar-width:0px; */
+  transition: all 1s ease;
+}
 /* transitions  */
 @-webkit-keyframes slide-right {
   0% {

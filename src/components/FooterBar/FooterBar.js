@@ -23,7 +23,7 @@ export default function FooterBar() {
                   fill
                   src={nav.image}
                   alt={nav.title}
-                  style={{ marginLeft: "10px" }}
+                  style={{ marginLeft: "1vw" }}
                 />
                 </figure>
                 <div className={styles.textz}>
@@ -31,7 +31,7 @@ export default function FooterBar() {
                   <Link
                     style={{
                       color: "black",
-                      fontSize: "21px",
+                      fontSize: "1.4vw",
                       fontWeight: 'bolder'
                     }}
                     href={`#${nav.id}`}

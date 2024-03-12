@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import more from "../../../public/icons/more.png";
+import more from "../../../public/icons/more.svg";
 import { navbar } from "@/constants/constants";
 export default function Navbar() {
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);

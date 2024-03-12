@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <path id="jmy8n1zc4a" d="M18.75 22.5H30V33.75H18.75z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-1080 -787) translate(970 734) translate(110 53)">
+                    <circle cx="30" cy="30" r="30" fill="#E9F6F8"/>
+                    <path fill="#E9F6F8" d="M28.125 24.375H31.875V30H28.125z"/>
+                    <path fill="#FFF" d="M13.125 15H46.875V46.875H13.125z"/>
+                    <path fill="#A3C8D0" d="M13.125 15H46.875V20.625H13.125z"/>
+                    <path stroke="#02647A" stroke-linejoin="round" stroke-width="1.313" d="M19.288 14.332h-5.393c-.423 0-.77.167-.77.61v31.007c0 .443.283.739.706.739h32.485c.423 0 .706-.296.706-.739V14.942c0-.443-.347-.61-.77-.61h-5.393m-2.953 0H22.37m-9.245 6.933h33.897"/>
+                    <path fill="#FFF" stroke="#02647A" stroke-linejoin="round" stroke-width="1.313" d="M40.088 17.413h-1.54c-.426 0-.77-.345-.77-.77V12.02c0-.425.344-.77.77-.77h1.54c.426 0 .77.345.77.77v4.623c0 .425-.344.77-.77.77zm-18.489 0h-1.54c-.426 0-.771-.345-.771-.77V12.02c0-.425.345-.77.77-.77H21.6c.425 0 .77.345.77.77v4.623c0 .425-.345.77-.77.77z"/>
+                    <path stroke="#016479" stroke-linecap="round" stroke-width="1.313" d="M24.375 35.418L28.417 39.375 37.5 28.125"/>
+                    <path fill="#EF4050" stroke="#FF2449" stroke-width=".5" d="M38.438 41.25c-.517 0-.938.421-.938.938 0 .516.421.937.938.937.516 0 .937-.421.937-.938 0-.516-.421-.937-.938-.937zM42.188 41.25c-.517 0-.938.421-.938.938 0 .516.421.937.938.937.516 0 .937-.421.937-.938 0-.516-.421-.937-.938-.937z"/>
+                    <g stroke="#02647A" stroke-linecap="round" stroke-width="1.313">
+                        <path d="M2.625 -0.35L2.625 2.25" transform="translate(15 23.5) rotate(-90 2.625 .95)"/>
+                        <path d="M7.825 -0.35L7.825 2.25" transform="translate(15 23.5) rotate(-90 7.825 .95)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

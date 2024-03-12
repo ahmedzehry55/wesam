@@ -9,13 +9,13 @@ import { IoIosArrowRoundBack,IoIosArrowRoundForward  } from "react-icons/io";
 
 function FlipContainer() {
   const slideLeft = () => {
-    let slider = document.getElementById("flipcon");
-    slider.scrollLeft -= 270;
+    let slider = document.getElementById("flip");
+    slider.scrollLeft -= 360;
   };
 
   const slideRight = () => {
-    let slider = document.getElementById("flipcon");
-    slider.scrollLeft += 270;
+    let slider = document.getElementById("flip");
+    slider.scrollLeft += 360;
   };
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeTitleId, setActiveTitleId] = useState(1);
@@ -77,13 +77,19 @@ function FlipContainer() {
         <div className={styles.lsTitle}>
           <h2>اختر وجهتك الان</h2>
         </div>
-        <div
+        <div 
+        className={styles.cardcont}
           style={{
             width: "100%",
             alignItems: "start",
             display: "grid",
             alignItems: "start",
+            overflowX:"scroll",
+            scrollBehavior:"smooth",
+            scrollbarWidth:"none",
+            transition:"all 3s ease"
           }}
+          id="flip"
         >
           {allRoutes.map(({ id, routs }) => (
             <div key={id}>

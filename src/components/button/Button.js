@@ -7,7 +7,7 @@ export default function Button({ title, itemId }) {
   return (
     <div>
       <Link href={`/${itemId}`} className={styles.button}>
-        <p className={styles.pABtn} style={{ zIndex: "10", paddingLeft:'1vw' }}>
+        <p className={styles.pABtn} style={{ zIndex: "10",  }}>
           {title}
         </p>
         <div style={{ zIndex: "10" }} className={styles.aBtnicon}>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import icon from "../../../public/icons/flytimer.png";
+import icon from "../../../public/icons/flytimer.svg";
 export default function Cta() {
   return (
     <div className="Cta_container">
