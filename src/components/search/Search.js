@@ -16,7 +16,7 @@ const Search = ({color}) => {
   return (
     <>
       <div
-        className={`hamburger ${isOpen ? "sactivee" : ""}`}
+        className={`shamburger ${isOpen ? "sactivee" : ""}`}
         onClick={toggleMenu}
       >
         {isOpen ? (
@@ -40,10 +40,9 @@ const Search = ({color}) => {
           <h3>الأنشطةالمقترحة</h3>
           <ul>
             {tourNav.map((item) => (
-              <li>
+              <li key={item.id}>
                 {item.title}
               </li>
-
             ))}
           </ul>
         </div>

@@ -1,4 +1,10 @@
-
+.shamburger {
+  position: absolute;
+  right: 19px;
+  top: 35px;
+  cursor: pointer;
+  z-index: 100000;
+}
 /* Navigation menu styles */
 #smenu {
   position: fixed;

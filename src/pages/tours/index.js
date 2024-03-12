@@ -24,10 +24,11 @@ function Tours() {
     <Layout menuDis="none">
       <div className="tour_hero">
         <Hero imag={hero} />
-        <div className="tour_heroSerch">
-          <Search />
-        </div>
-
+        <input
+          className="tour_heroSerch"
+          type="search"
+          placeholder={`ابحث عن الأنشطة داخل السعودية`}
+        />
         <h3>اكتشف اروع التجارب معنا</h3>
       </div>
       {/* <BreadcrumbList
@@ -39,8 +40,8 @@ function Tours() {
       <ul className="tour_nav_ul">
         {tourNav.map((nav) => (
           <li key={nav.id} className="tour_nav_ul_li">
-            <Link href="/" className="tour_nav_ul_li_link">
-              <figure>
+            <Link href='/' className="tour_nav_ul_li_link">
+              <figure >
                 <Image fill src={nav.img} alt={nav.title} />
               </figure>
               <h4>{nav.title}</h4>
@@ -55,12 +56,7 @@ function Tours() {
             <li key={nav.id}>
               <Link href={`/tours/${nav.id}`} className="tour_list_ul_li_link">
                 <figure>
-                  <Image
-                    style={{ borderRadius: ".2cm" }}
-                    fill
-                    src={nav.img}
-                    alt={nav.title}
-                  />
+                  <Image style={{borderRadius:".2cm"}} fill src={nav.img} alt={nav.title} />
                 </figure>
                 <h4>{nav.title}</h4>
               </Link>
