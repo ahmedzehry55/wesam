@@ -56,7 +56,7 @@ export const navMenu = [
   },
   {
     title: "الدليل السياحي",
-    image:"/icons/activities-and-experiences.png",
+    image: "/icons/activities-and-experiences.png",
     ref: "/city-guides",
     id: 2,
   },
@@ -2909,6 +2909,7 @@ export const tourList = [
     id: 0,
     img: "/images/reyad.jpg",
     ref: "",
+    act: " 7 انشطة " ,
     place_id: "",
   },
   {
@@ -2916,6 +2917,7 @@ export const tourList = [
     id: 1,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2923,6 +2925,7 @@ export const tourList = [
     id: 2,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2930,6 +2933,7 @@ export const tourList = [
     id: 3,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2937,6 +2941,7 @@ export const tourList = [
     id: 4,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2944,6 +2949,7 @@ export const tourList = [
     id: 5,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2951,6 +2957,7 @@ export const tourList = [
     id: 6,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2958,6 +2965,7 @@ export const tourList = [
     id: 7,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2965,6 +2973,7 @@ export const tourList = [
     id: 8,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2972,6 +2981,7 @@ export const tourList = [
     id: 9,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2979,6 +2989,7 @@ export const tourList = [
     id: 10,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2986,6 +2997,7 @@ export const tourList = [
     id: 11,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -2993,6 +3005,7 @@ export const tourList = [
     id: 12,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3000,6 +3013,7 @@ export const tourList = [
     id: 13,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3007,6 +3021,7 @@ export const tourList = [
     id: 14,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3014,6 +3029,7 @@ export const tourList = [
     id: 15,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3021,6 +3037,7 @@ export const tourList = [
     id: 16,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3028,6 +3045,7 @@ export const tourList = [
     id: 17,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3035,6 +3053,7 @@ export const tourList = [
     id: 18,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3042,6 +3061,7 @@ export const tourList = [
     id: 19,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
   {
@@ -3049,6 +3069,7 @@ export const tourList = [
     id: 20,
     img: "/images/reyad.jpg",
     ref: "",
+    act: "7انشطة",
     place_id: "",
   },
 ];
@@ -3073,5 +3094,52 @@ export const tourNav = [
     img: "/icons/attractions-and-experiences.png",
     ref: "",
     place_id: "",
+  },
+];
+export const tourdata = [
+  {
+    title: "المشي في مسار أبا البارد",
+ img: [
+      "/images/neom1.jpg",
+      "/images/neom1.jpg",
+      "/images/neom1.jpg",
+      "/images/neom1.jpg",
+      
+    ],
+    price: "345 ر.س",
+    type: "تجارب المشي",
+  },
+  {
+    title: "المشي في مسار أبا البارد",
+    img: [
+      "/images/neom1.jpg",
+      "/images/reyad.jpg",
+      "/images/rome.jpg" ,
+      "/images/jeddah.jpg",
+    ],
+    price: "345 ر.س",
+    type: "تجارب المشي",
+  },
+  {
+    title: "المشي في مسار أبا البارد",
+ img: [
+      "/images/neom1.jpg",
+      "/images/reyad.jpg",
+      "/images/rome.jpg" ,
+      "/images/jeddah.jpg",
+    ],
+    price: "345 ر.س",
+    type: "تجارب المشي",
+  },
+  {
+    title: "المشي في مسار أبا البارد",
+ img: [
+      "/images/neom1.jpg",
+      "/images/reyad.jpg",
+      "/images/rome.jpg" ,
+      "/images/jeddah.jpg",
+    ],
+    price: "345 ر.س",
+    type: "تجارب المشي",
   },
 ];

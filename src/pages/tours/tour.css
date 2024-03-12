@@ -109,6 +109,178 @@
   margin-bottom: 2vw;
   color: rgba(110, 110, 110, 0.57);
 }
+
+.tourid_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  direction: rtl;
+}
+.tourid_container_header {
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2vw;
+  background: white;
+  position: fixed;
+  z-index: 1111111111111111;
+}
+.tourid_container_header_back {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 23%;
+  font-size: 2vw;
+  color: #0c9ab0;
+}
+.tourid_container_header_middel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.2vw;
+  flex-direction: column;
+}
+.tourid_container_header_middel_title {
+  font-size: 0.9vw;
+}
+.tourid_container_header_middel_num {
+  color: #9f9e9d;
+  font-size: 0.8vw;
+}
+.tourid_container_header_left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.tourid_container_header_left_fig {
+  position: relative;
+  width: 10vw;
+  color: #0c9ab0;
+  height: 3vw;
+  font-size: 2vw;
+}
+.tourid_container_header_left_bottons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1vw;
+  font-size: 0.6vw;
+  font-weight: bolder;
+}
+.tourid_container_header_left_botton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 0;
+
+  height: 2vw;
+  border: 1px solid rgba(160, 162, 160, 0.625);
+  border-radius: 0.5cm;
+  padding: 1vw;
+}
+.tourid_container_header_left_bottons_fig {
+  position: relative;
+
+  height: 5vw;
+}
+.tourid_container_header_left_bottons_span {
+}
+.tourid_container_card_container {
+  width: 90%;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tourid_container_card_container_li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-bottom: 1vw;
+}
+/* .tourid_container_card_container_corsul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 30vh;
+  border-radius: 0.3cm;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.tourid_container_card_container_corsul_fig {
+  position: relative;
+  width: 90vw;
+  height: 100%;
+} */
+
+.tourid_container_card_container_textSec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 20vh;
+  border-bottom: 1px solid #807f7f89;
+}
+.tourid_container_card_container_rightText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 1vw;
+}
+.tourid_container_card_container_rightText label {
+  text-align: center;
+  background: rgba(182, 180, 180, 0.488);
+  border-radius: 0.2cm;
+  width: 6vw;
+  height: 1.3rem;
+  padding: 0.1vw;
+  align-self: flex-start;
+  font-size: 0.8vw;
+}
+
+.tourid_container_card_container_rightText_1line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8vw;
+  color: rgb(121, 120, 120);
+}
+.tourid_container_card_container_rightText_1line figure {
+  position: relative;
+  width: 1vw;
+  height: 1vw;
+}
+.tourid_container_card_container_leftText {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  row-gap: 1vw;
+  flex-direction: column;
+}
+.tourid_container_card_container_leftText h4 {
+  color: #0c9ab0;
+}
+.tourid_container_card_container_leftText h4 span {
+  color: black;
+  font-size: 0.8vw;
+}
+.tourid_container_card_container_leftText span {
+  color: #9f9e9d;
+  font-size: 0.8vw;
+}
+/*  
+*/
 @media (max-width: 860px) {
   .tour_hero {
     margin: 0vw 0 2vw;
@@ -122,7 +294,7 @@
   }
   .tour_list_ul {
     gap: 2vw;
-   }
+  }
 
   .tour_list_ul li {
     width: 18vw;
@@ -139,10 +311,166 @@
     margin: 2vw;
     font-size: 18px;
   }
+
+  .tourid_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    direction: rtl;
+  }
+  .tourid_container_header {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2vw;
+    background: white;
+    position: fixed;
+    z-index: 1111111111111111;
+  }
+  .tourid_container_header_back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 23%;
+    font-size: 4vw;
+    color: #0c9ab0;
+  }
+  .tourid_container_header_middel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.2vw;
+    flex-direction: column;
+  }
+  .tourid_container_header_middel_title {
+    font-size: 2vw;
+  }
+  .tourid_container_header_middel_num {
+    color: #9f9e9d;
+    font-size:2vw;
+  }
+  .tourid_container_header_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 1vw;
+    flex-direction: column;
+  }
+  .tourid_container_header_left_fig {
+    position: relative;
+    width: 10vw;
+    color: #0c9ab0;
+    height: 3vw;
+    font-size: 3vw;
+  }
+  .tourid_container_header_left_bottons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+    font-size: 2vw;
+    font-weight: bolder;
+  }
+  .tourid_container_header_left_botton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0;
+
+    height: 5vw;
+    border: 1px solid rgba(160, 162, 160, 0.625);
+    border-radius: 0.5cm;
+    padding: 1vw;
+  }
+  .tourid_container_header_left_bottons_fig {
+    position: relative;
+
+    height: 5vw;
+  }
+  .tourid_container_header_left_bottons_span {
+  }
+  .tourid_container_card_container {
+    width: 90%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tourid_container_card_container_li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-bottom: 1vw;
+  }
+
+  .tourid_container_card_container_textSec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 15vh;
+    border-bottom: 1px solid #807f7f89;
+  }
+  .tourid_container_card_container_rightText {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 1vw;
+  }
+  .tourid_container_card_container_rightText label {
+    text-align: center;
+    background: rgba(182, 180, 180, 0.488);
+    border-radius: 0.2cm;
+    width: 9vw;
+    height: 1.4rem;
+    padding: 0.1vw;
+    align-self: flex-start;
+    font-size: 1.4vw;
+  }
+
+  .tourid_container_card_container_rightText_1line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    color: rgb(121, 120, 120);
+  }
+  .tourid_container_card_container_rightText_1line figure {
+    position: relative;
+    width: 1vw;
+    height: 1vw;
+  }
+  .tourid_container_card_container_leftText {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    row-gap: 1vw;
+    flex-direction: column;
+  }
+  .tourid_container_card_container_leftText h4 {
+    color: #0c9ab0;
+  }
+  .tourid_container_card_container_leftText h4 span {
+    color: black;
+    font-size: 0.8vw;
+  }
+  .tourid_container_card_container_leftText span {
+    color: #9f9e9d;
+    font-size: 1.3vw;
+  }
 }
 @media (max-width: 450px) {
   .tour_list_ul {
-   gap: 3vw;
+    gap: 3vw;
   }
   .tour_nav_ul_li_link h4 {
     font-size: 10px;
@@ -158,5 +486,26 @@
   }
   .tour_footer {
     font-size: 12px;
+  }
+  .tourid_container_card_container_rightText_1line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: rgb(121, 120, 120);
+  }
+  .tourid_container_card_container_rightText label {
+    text-align: center;
+    background: rgba(182, 180, 180, 0.488);
+    border-radius: 0.2cm;
+    width: 12vw;
+    height: 1rem;
+    padding: 0.1vw;
+    align-self: flex-start;
+    font-size: 2vw;
+  }
+  .tourid_container_card_container_leftText span {
+    color: #9f9e9d;
+    font-size: 2vw;
   }
 }
