@@ -6,7 +6,7 @@
 /* global */
 .container {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 1vw auto;
   padding: 0 19px;
   height: 100%;
   display: flex;
@@ -21,6 +21,7 @@
   justify-content: space-between;
   flex-direction: row;
   margin: 0 2rem 2rem;
+  font-size: 12px;
 }
 .rowContainer {
   position: relative;
@@ -37,7 +38,6 @@
   min-width: 31%;
   box-sizing: border-box;
   flex: 1 1 300px;
-  
 }
 
 .rowItem:hover {
@@ -68,9 +68,14 @@
   justify-content: space-around;
   align-items: flex-start;
   font-size: 1rem;
-  margin: 0 0 2rem 0.5rem;
   width: 90%;
   overflow: hidden;
+}
+.descText h3 {
+  font-size: 14px;
+}
+.descText p {
+  font-size: 12px;
 }
 .rowContainer {
   display: flex;
@@ -159,11 +164,41 @@
   }
   .rowItem {
     min-width: 47%;
+    height: 40vw;
+  }
+  .itemHeader {
+    height: 30vw;
+  }
+  .head {
+    font-size: 12px;
+    margin: 0 2rem 2vw;
+  }
+  .descText h3 {
+    font-size: 12px;
+    margin-bottom: 2vw;
+  }
+  .descText p {
+    font-size: 9px;
   }
 }
 
 @media (max-width: 450px) {
   .rowItem {
     min-width: 100%;
+  }
+  .rowItem {
+    height: 80vw;
+  }
+  .itemHeader {
+    height: 60vw;
+  }
+  .head {
+    font-size: 9px;
+  }
+  .descText h3 {
+    font-size: 9px;
+  }
+  .descText p {
+    font-size: 8px;
   }
 }

@@ -39,7 +39,10 @@
   position: relative;
   width: 18.3vw;
  object-fit: contain;
-
+ @media (max-width:860px) {
+  height: 30vh;
+  width: 40vw
+}
 }
 
 .rowItem:hover {

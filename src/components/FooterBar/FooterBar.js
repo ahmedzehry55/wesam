@@ -17,14 +17,15 @@ export default function FooterBar() {
             <div key={index}>
               
               <li key={nav.id} className={styles.navLink}>
+                <figure className={styles.icon_figure}>
                 <Image
                   className={styles.icon}
-                  width={41}
-                  height={41}
+                  fill
                   src={nav.image}
                   alt={nav.title}
                   style={{ marginLeft: "10px" }}
                 />
+                </figure>
                 <div className={styles.textz}>
                   <h4>{nav.title}</h4>
                   <Link

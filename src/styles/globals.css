@@ -6,6 +6,8 @@
 @import url(../pages/city-guides/cityGuid.css);
 @import url(../pages/about/AboutComponet/header/aboutHeader.css);
 @import url(../pages/about/about.css);
+@import url(../pages/tours/tour.css);
+@import url(../components/search/Search.css);
 @import url(../pages/packages/worldpackages/[place]/[data]/program.css);
 :root {
   --max-width: 1100px;

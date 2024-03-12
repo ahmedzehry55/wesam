@@ -1,54 +1,90 @@
-.Cta_container{
-    display: flex;
-    padding: 2vw  2vw;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    border-radius: .5cm;
-    border: none;
-    background: #E9F6F8;
+.Cta_container {
+  display: flex;
+  padding: 2vw 2vw;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border-radius: 0.5cm;
+  border: none;
+  background: #e9f6f8;
 }
-.Cta_container_rightSide{
-    display: flex;
-    justify-content:center;
-    align-items: center;
+.Cta_container_rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.Cta_container_rightSide figure{
-    position: relative;
-    width: 3vw;
-    height: 3vw;
+.Cta_container_rightSide figure {
+  position: relative;
+  width: 3vw;
+  height: 3vw;
 }
-.Cta_container_text{
-    display: flex;
+.Cta_container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 1vw;
+  padding: 1vw;
+}
+.Cta_container_text h2 {
+  font-size: 16px;
+}
+.Cta_container_text span {
+  font-size: 14px;
+  color: rgba(114, 114, 114, 0.614);
+}
+.Cta_container_wesam_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3vw;
+  padding: 1vw 1vw;
+}
+.Cta_container_wesam_1 button {
+  height: 8vh;
+  width: 16vw;
+  background: white;
+  border: 1px solid var(--primary3);
+  border-radius: 1cm;
+  font-size: 16px;
+  font-weight: bolder;
+  color: var(--primary3);
+  cursor: pointer;
+}
+@media (max-width: 860px) {
+  .Cta_container {
     flex-direction: column;
-    justify-content:flex-start;
-    align-items: flex-start;
-    row-gap: 1vw;
-    padding: 1vw;
-}
-.Cta_container_text h2{
-    font-size: 16px;
-}
-.Cta_container_text span{
-    font-size: 14px;
-    color: rgba(114, 114, 114, 0.614);
-}
-.Cta_container_wesam_1{
-    display: flex;
-    flex-direction: column;
+    row-gap: 2vh;
+    text-align: center;
+
+  }
+  .Cta_container_rightSide figure{
+    display: none;
+  }
+  .Cta_container_text{
+    text-align: center;
+    justify-content: center;
     align-items: center;
-    justify-content: center; 
-    row-gap: 3vw;
-    padding: 1vw 1vw;
+  }
+  .Cta_container_wesam_1 button {
+    height: 4vh;
+    width: 70vw;
+  }
 }
-.Cta_container_wesam_1 button{
-    height:8vh ;
-    width: 16vw;
-    background: white;
-    border: 1px solid var(--primary3);
-    border-radius: 1cm;
-    font-size: 16px;
-    font-weight: bolder;
-    color: var(--primary3);
-    cursor: pointer;
+@media (max-width: 450px) {
+    .Cta_container{
+        margin: 2vh 0 0 ;
+    }
+    .Cta_container_text h2 {
+        font-size:12px ;
+    }
+    .Cta_container_text span{
+        font-size:8px ;
+    }
+    .Cta_container_wesam_1 button {
+        height: 3vh;
+        width: 70vw;
+        font-size: 10px;
+      }
 }

@@ -123,7 +123,12 @@ export const navbar = [
     ref: "/contact",
     id: 7,
   },
-
+  {
+    title: "الجولات السياحية",
+    image: "/icons/thunder.png",
+    ref: "/tours",
+    id: 13,
+  },
   {
     title: "رحلات بحرية",
     image: "/icons/boot.png",
@@ -169,7 +174,7 @@ export const programs = [
     night: 5,
     price: 2550,
     person: 2,
-    place_id:8,
+    place_id: 8,
     rate: [
       // <MdStarRate />,
       // <MdStarRate />,
@@ -186,7 +191,7 @@ export const programs = [
     locate: "تايلاند",
     person: 2,
     night: 5,
-    place_id:8,
+    place_id: 8,
     price: 2550,
     rate: [
       // <MdStarRate />,
@@ -205,7 +210,7 @@ export const programs = [
     price: 2550,
     // rate: [<MdStarRate />, <MdStarRate />, <MdStarRate />],
     id: 2,
-    place_id:8,
+    place_id: 8,
     locate: "تايلاند",
     person: 2,
   },
@@ -216,7 +221,7 @@ export const programs = [
     night: 5,
     price: 2550,
     rate: [],
-    place_id:8,
+    place_id: 8,
     id: 3,
   },
   {
@@ -226,7 +231,7 @@ export const programs = [
     night: 5,
     price: 2550,
     rate: [],
-    place_id:8,
+    place_id: 8,
     id: 4,
   },
   {
@@ -236,7 +241,7 @@ export const programs = [
     night: 5,
     price: 2550,
     rate: [],
-    place_id:8,
+    place_id: 8,
     id: 5,
   },
   {
@@ -246,7 +251,7 @@ export const programs = [
     night: 5,
     price: 2550,
     rate: [],
-    place_id:8,
+    place_id: 8,
     id: 6,
     // },
     // ],
@@ -769,6 +774,28 @@ export const socnav1 = [
     id: 3,
   },
 ];
+export const socnavData = [
+  {
+    name: "خط سير الرحلة",
+    ref: "#acrd",
+    id: 1,
+  },
+  {
+    name: " وجهات يمكنك زيارتها",
+    ref: "#dataCard",
+    id: 2,
+  },
+  {
+    name: " يرجى التواصل معي ",
+    ref: "#dataForm",
+    id: 3,
+  },
+  {
+    name: " وجهات يمكنك زيارتها",
+    ref: "#dataCard",
+    id: 2,
+  },
+];
 //
 //
 import { useRouter } from "next/router";
@@ -1137,6 +1164,8 @@ export const countrys = [
       {
         title: "المانيا",
         desc: "فرانكفورت  .  ميونخ",
+        pargrahp:
+          " شاهد تشعب الحاضر والماضي عند زيارتك ألمانيا. مع باقاتنا المخصصة،يمكنك زيارة قلب بفاريا النابض في ميونخ، موطن مهرجان أكتوبر. تمشى على الطرق المرصوفة بالحجارة وتمتع بالفن المعماري العريق. أو يمكنك اختيار باقتنا التي تتيح لك قضاء 4 ليالٍ في فرانكفورت لاكتشاف هذا المركز المالي بجمال أفقه وناطحاته السحابية. كما تقدم لك الباقة مميزات لتتسوق في المحلات الفاخرة وتهدي أحبائك أجمل وأحدث صيحات الموضة.",
         image: "/images/germany.jpg",
         ref: "worldpackages/1",
         packages: [
@@ -2772,104 +2801,277 @@ export const countrys = [
     ],
   },
 ];
-export const ourExpArry=[
+export const ourExpArry = [
   {
     title: "تعتمد على تسخير خبرات مجموعة سيرا التي تمتد لأكثر من 40 عاماً",
-    img:about1,
-    id:0 ,
+    img: about1,
+    id: 0,
   },
   {
     title: "بقيادة خبراء المجال والمهنيين الرقميين",
-    img:about2,
-    id:2 ,
+    img: about2,
+    id: 2,
   },
   {
     title: "منصة تقنية عالية الأداء وقابلة للتطوير",
-    img:about3,
-    id:3 ,
+    img: about3,
+    id: 3,
   },
   {
     title: "معرفة محلية وإقليمية واسعة",
-    img:about4,
-    id:4 ,
+    img: about4,
+    id: 4,
   },
   {
     title: "عقود من الخبرة في خدمة المسافرين الإقليميين",
-    img:about5,
-    id:5 ,
+    img: about5,
+    id: 5,
   },
   {
     title: "علاقات قوية مع شركاء السفر والضيافة الرائدين",
-    img:about6,
-    id:6 ,
+    img: about6,
+    id: 6,
   },
   {
     title: "عملاء من الشركات والجهات الحكومية الرائدة",
-    img:about7,
-    id:7 ,
+    img: about7,
+    id: 7,
   },
   {
     title: "محتوى عربي ومحلّي خاص",
-    img:about8,
-    id:8 ,
+    img: about8,
+    id: 8,
   },
   {
     title: "فريق متنوع من 43 جنسية والعدد بازدياد",
-    img:about9,
-    id:9 ,
+    img: about9,
+    id: 9,
   },
   {
     title: "2700+ موظف محترف",
-    img:about10,
-    id:10 ,
+    img: about10,
+    id: 10,
   },
   {
-    title: "المقر الرئيسي في الرياض ومكاتب في جميع أنحاء المملكة والإمارات العربية المتحدة ومصر",
-    img:about11,
-    id:11 ,
+    title:
+      "المقر الرئيسي في الرياض ومكاتب في جميع أنحاء المملكة والإمارات العربية المتحدة ومصر",
+    img: about11,
+    id: 11,
   },
-]
+];
 export const suppliers = [
   {
-    id:0,
-    title:"أكثر من 450",
-    span:"خطوط طيران"
+    id: 0,
+    title: "أكثر من 450",
+    span: "خطوط طيران",
   },
   {
-    id:1,
-    title:"أكثر من مليون",
-    span:"فندق والعدد بازدياد"
+    id: 1,
+    title: "أكثر من مليون",
+    span: "فندق والعدد بازدياد",
   },
   {
-    id:2,
-    title:"أكثر من 27",
-    span:"سلسلة فنادق عالمية والعدد بازدياد"
+    id: 2,
+    title: "أكثر من 27",
+    span: "سلسلة فنادق عالمية والعدد بازدياد",
   },
   {
-    id:3,
-    title:"أكثر من 20",
-    span:"ألف فندق مباشر"
+    id: 3,
+    title: "أكثر من 20",
+    span: "ألف فندق مباشر",
   },
-]
+];
 export const suppliers_wesam = [
   {
-    id:0,
-    title:"أكثر من مليون",
-    span:" عميل"
+    id: 0,
+    title: "أكثر من مليون",
+    span: " عميل",
   },
   {
-    id:1,
-    title:"أكثر من 140",
-    span:"عميل من الشركات والجهات الحكومية"
+    id: 1,
+    title: "أكثر من 140",
+    span: "عميل من الشركات والجهات الحكومية",
   },
   {
-    id:2,
-    title:"أكثر من 5,000",
-    span:"وكيل عالمي"
+    id: 2,
+    title: "أكثر من 5,000",
+    span: "وكيل عالمي",
   },
   {
-    id:3,
-    title:"أكثر من 100",
-    span:"ألف حاج ومعمتر"
+    id: 3,
+    title: "أكثر من 100",
+    span: "ألف حاج ومعمتر",
   },
-]
+];
+export const tourList = [
+  {
+    title: "الرياض",
+    id: 0,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 1,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 2,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 3,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 4,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 5,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 6,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 7,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 8,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 9,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 10,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 11,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 12,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 13,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 14,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 15,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 16,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 17,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 18,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 19,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الرياض",
+    id: 20,
+    img: "/images/reyad.jpg",
+    ref: "",
+    place_id: "",
+  },
+];
+export const tourNav = [
+  {
+    title: "الجولات",
+    id: 0,
+    img: "/icons/tours.png",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "الأنشطة والتجارب",
+    id: 2,
+    img: "/icons/activities-and-experiences.png",
+    ref: "",
+    place_id: "",
+  },
+  {
+    title: "المعالم",
+    id: 1,
+    img: "/icons/attractions-and-experiences.png",
+    ref: "",
+    place_id: "",
+  },
+];

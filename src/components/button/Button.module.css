@@ -30,6 +30,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  z-index: 999;
 }
 
 .button::before {

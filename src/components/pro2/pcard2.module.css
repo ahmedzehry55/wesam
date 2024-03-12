@@ -7,9 +7,6 @@
   margin: 4rem 0;
   padding: 0 1rem;
 }
-
- 
-
 .link {
   text-decoration: none;
   color: black;
@@ -28,7 +25,6 @@
   border: 2px solid var(--primary2);
   border-radius: 0 0 1cm 1cm;
 }
-
 .title {
   font-size: 2.3rem;
   color: #5e6568;
@@ -140,7 +136,11 @@
     margin: 3vw 0;
   }
   .rowItem{
+    
     height: 400px;
+  }
+  .link{
+    
   }
   .itemHeader{
     height: 200px;

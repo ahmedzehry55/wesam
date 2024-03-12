@@ -1,14 +1,14 @@
 import ACard from "@/components/ACard/ACard";
 import BCard from "@/components/BCard/BCard";
-import Hero from "@/components/Hero/Hero";
+import Hero from "@/pages/about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import { cityGuides, offers, worldHotel } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import flytimer from "../../../public/icons/flytimer.png"
-import calendar from "../../../public/icons/calendar.png"
-import user from "../../../public/icons/user.png"
+import flytimer from "../../../public/icons/flytimer.png";
+import calendar from "../../../public/icons/calendar.png";
+import user from "../../../public/icons/user.png";
 const navarray = cityGuides[0].nav;
 const SinglePage = ({ object }) => {
   const breadcrumb1 = [
@@ -22,11 +22,13 @@ const SinglePage = ({ object }) => {
     },
   ];
   return (
-    <Layout bgcolor="white">
-      <div className="guide_hero_container">
-        <Hero />
-        <h2>{object.title}</h2>
-        <span>{object.desc}</span>
+    <Layout bgcolor="white" menuDis="none">
+      <div className="program_container_hero_container">
+        <Hero imag={object.image} />
+        <div className="program_container_hero_container_h2">
+          <h2>{object.title}</h2>
+          <span>{object.desc}</span>
+        </div>
       </div>
       <div className="guide_container">
         <BreadcrumbList
@@ -34,31 +36,55 @@ const SinglePage = ({ object }) => {
           breadcrumbsArrayname={breadcrumb1}
           btnTitle="العودة"
         />
-       <div className="guide_container_p"> <p >
-          بفضل الهندسة المعمارية الحديثة، خيارات الطعام المتعددة بمستوياتها
-          العالمية، الشواطئ الخلابة، المراكز الثقافية، الأنشطة الترفيهية، ووجهات
-          التسوق التي لا تنتهي، دبي بالتأكيد تستحق زيارتك. إمارة مليئة
-          بالمغامرات الممتعة والمعالم العالمية الفريدة من نوعها. كما تضم الإمارة
-          العديد من أماكن الجذب السياحي والأنشطة الشيقة. من المؤكد أن زيارتك إلى
-          دبي ستنقلك إلى مستوى آخر من متعة الترفيه!
-        </p></div>
+        <div className="guide_container_p">
+          {" "}
+          <p>
+            بفضل الهندسة المعمارية الحديثة، خيارات الطعام المتعددة بمستوياتها
+            العالمية، الشواطئ الخلابة، المراكز الثقافية، الأنشطة الترفيهية،
+            ووجهات التسوق التي لا تنتهي، دبي بالتأكيد تستحق زيارتك. إمارة مليئة
+            بالمغامرات الممتعة والمعالم العالمية الفريدة من نوعها. كما تضم
+            الإمارة العديد من أماكن الجذب السياحي والأنشطة الشيقة. من المؤكد أن
+            زيارتك إلى دبي ستنقلك إلى مستوى آخر من متعة الترفيه!
+          </p>
+        </div>
         <div className="guide_container_icons_div">
           <div className="guide_container_itemdiv">
-            <figure><Image sizes="(max-width: 768px) 100vw,
+            <figure>
+              <Image
+                sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
-                      33vw" src={calendar} fill alt="img"/></figure>
+                      33vw"
+                src={calendar}
+                fill
+                alt="img"
+              />
+            </figure>
             <span>أفضل الأوقات للزيارة</span>
           </div>
           <div className="guide_container_itemdiv">
-            <figure><Image sizes="(max-width: 768px) 100vw,
+            <figure>
+              <Image
+                sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
-                      33vw" src={user} fill alt="img"/></figure>
+                      33vw"
+                src={user}
+                fill
+                alt="img"
+              />
+            </figure>
             <span>الوثائق المطلوبة للتأشيرة</span>
           </div>
           <div className="guide_container_itemdiv">
-            <figure><Image sizes="(max-width: 768px) 100vw,
+            <figure>
+              <Image
+                sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
-                      33vw" src={flytimer} fill alt="img"/></figure>
+                      33vw"
+                src={flytimer}
+                fill
+                alt="img"
+              />
+            </figure>
             <span>مدة الرحلة</span>
           </div>
         </div>

@@ -1,15 +1,12 @@
-import Hero from "@/components/Hero/Hero";
+import Hero from "../../../../about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import SocNavbar2 from "@/components/pagesComponent/socNavbar2/SocNavbar2";
-import { countrys, programs } from "@/constants/constants";
+import { programs, socnavData } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
-import { Includes, germanyCity } from "@/constants/countryConstants";
+import { Includes, City } from "@/constants/countryConstants";
 import PackageCard from "@/components/packageCard/packageCard";
 import { FaWhatsapp } from "react-icons/fa6";
 import { useState } from "react";
 import Accordion from "@/components/accordion/Accordion";
-import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
-import Link from "next/link";
 
 const SinglePage = ({ object }) => {
   const breadcrumb1 = [
@@ -20,48 +17,42 @@ const SinglePage = ({ object }) => {
         { label: "باقات دولية", path: "/packages/worldpackages" },
         {
           label: `المانيا`,
-          path: `/packages/worldpackages/${object.place}`,
+          path: `/packages/worldpackages/1`,
         },
         {
-          label: `${object.title}`,
-          path: `/packages/worldpackages/${object.place}/${object.data}`,
+          label: `بوكيت عرض لشخصين`,
+          path: `/packages/worldpackages/1/1`,
         },
       ],
     },
   ];
-  const city = germanyCity[0].nav;
+  const city = City[0].nav;
   const [selectedCity, setSelectedCity] = useState(city[0].name);
   return (
-    <Layout
-      menuDis="none"
-      //  bgcolor="#e9f6f8"
-      btnTitlea="العودة للباقات"
-    >
-      <Hero />
+    <Layout menuDis="none" bgcolor="#fafafa" btnTitlea="العودة للباقات">
+      <div className="program_container_hero_container">
+        <Hero imag={City[0].image} />
+        <h2 className="program_container_hero_container_h2">{City[0].title}</h2>
+      </div>
       <div className="program_container">
         <div className="program_data_container">
+          {/* <div className="socnavbe_data">
+          <SocNavbar2 arrName={socnavData} />
+          </div> */}
           <BreadcrumbList
             breadcrumbsArrayname={breadcrumb1}
             btnTitle="العودة"
             padT="0"
             f_s="12px"
           />
-          <div style={{ width: "55vw" }}>
+          <div className="program_data_container2">
             <div className="program_data_container_p">
-              <p>
-                شاهد تشعب الحاضر والماضي عند زيارتك ألمانيا. مع باقاتنا المخصصة،
-                يمكنك زيارة قلب بفاريا النابض في ميونخ، موطن مهرجان أكتوبر. تمشى
-                على الطرق المرصوفة بالحجارة وتمتع بالفن المعماري العريق. أو
-                يمكنك اختيار باقتنا التي تتيح لك قضاء 4 ليالٍ في فرانكفورت
-                لاكتشاف هذا المركز المالي بجمال أفقه وناطحاته السحابية. كما تقدم
-                لك الباقة مميزات لتتسوق في المحلات الفاخرة وتهدي أحبائك أجمل
-                وأحدث صيحات الموضة.
-              </p>
+              <p>{City[0].para}</p>
             </div>
-            <div className="program_data_container_card">
+            <div className="program_data_container_card" id="dataCard">
               <PackageCard
-                compTitle="وجهات يمكنك زيارتها"
-                arryName={germanyCity}
+                compTitle=" وجهات يمكنك زيارتها"
+                arryName={City}
                 sliderName="germenCity"
                 widthCard="41vw"
                 hCard="250px"
@@ -69,8 +60,8 @@ const SinglePage = ({ object }) => {
             </div>
 
             <div className="program_data_container_Itinerary">
-              <h3 style={{paddingBottom:"3vw"}}>خط سير الرحلة </h3>
-              <ul className="accordion_navTitle">
+              <h3 style={{ paddingBottom: "3vw" }}>خط سير الرحلة </h3>
+              <ul className="accordion_navTitle" id="acrd">
                 {city.map((nav) => (
                   <div
                     key={nav.id}
@@ -93,9 +84,9 @@ const SinglePage = ({ object }) => {
                         selectedCity === nav.name ? "activecityul" : ""
                       }`}
                     >
-                      <Accordion arrayName={germanyCity} navId={nav.id} />
+                      <Accordion arrayName={City} navId={nav.id} />
                       <div>
-                        <h2 className="Includes__h2">الباقه تشمل :</h2>
+                        <h2 className="Includes__h2 ">الباقه تشمل :</h2>
                         <Accordion arrayName={Includes} navId={0} />
                       </div>
                     </div>
@@ -104,7 +95,7 @@ const SinglePage = ({ object }) => {
             </div>
           </div>
         </div>
-        <div className="program_form_container">
+        <div className="program_form_container" id="dataForm">
           <div>
             <h4>خطّط عطلتك كيفما شئت!</h4>
             <p>
@@ -143,7 +134,7 @@ const SinglePage = ({ object }) => {
               <label>تواريخ السفر</label>
               <input type="date"></input>
             </div>
-            <button type="submit">يرجى التواصل معي</button>
+            <button type="submit"> يرجى التواصل معي </button>
           </form>
         </div>
       </div>
@@ -151,27 +142,17 @@ const SinglePage = ({ object }) => {
   );
 };
 
-
-// export async function getStaticPaths() {
-  
-//   const programIds = programs.map((program) => program.id);
-//   const paths = programIds.map((id) => ({
-//     params: { place: id.toString() , data: id.toString() },
-//   }));
-
-//   return { paths, fallback: false };
-// }
-
 export async function getStaticPaths() {
-  
-  const programIds = programs.map((program) => ({id:program.id,data:program.place_id}));
+  const programIds = programs.map((program) => ({
+    id: program.id,
+    data: program.place_id,
+  }));
   const paths = programIds.map((program) => ({
-    params: { place: program.data.toString() , data: program.id.toString() },
+    params: { place: program.data.toString(), data: program.id.toString() },
   }));
 
   return { paths, fallback: false };
 }
-
 
 export async function getStaticProps({ params }) {
   const program = programs.find(

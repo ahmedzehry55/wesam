@@ -25,8 +25,6 @@ function Hotel() {
       <SocNavbar arrName={socnav1} />
 
       <Pagescomponent
-        cardWidth="22.7vw"
-        catdHeight="36vh"
         cardText="start"
         textAlignProp="center"
         arryName={cruisePrograms}

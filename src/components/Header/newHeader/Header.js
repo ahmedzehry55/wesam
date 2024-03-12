@@ -5,7 +5,8 @@ import { contentUsNav, navMenu, navbar } from "@/constants/constants";
 import logo from "../../../../public/images/logoblack.png";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import ButtonBread from "@/components/pagesComponent/breadList/ButtonBread";
+import ButtonBread  from "@/components/pagesComponent/breadList/ButtonBread";
+import HamburgerMenu from "@/components/resMenu/ResMenu";
 
 const Headern = ({navbarmenu , btnTitle, btnRef , btndisplay}) => {
   const phoneNumber = '+966545003143';
@@ -35,6 +36,7 @@ const Headern = ({navbarmenu , btnTitle, btnRef , btndisplay}) => {
   return (
     <div className={styles.header__outer}>
     <div className={`${styles.container} ${scrolled ? styles.scrolled : ""}`}>
+    <HamburgerMenu color="white" />
       <div className={styles.div1Res}>
         <div className={styles.div1}>
           <div className={styles.navMenu}>

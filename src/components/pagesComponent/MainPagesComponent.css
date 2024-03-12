@@ -6,10 +6,10 @@
   }
 }
 @media (max-width: 540px) {
- .pagescomponent_container{
-  width: 95%;
-  margin-right: 2vw;
- }
+  .pagescomponent_container {
+    width: 95%;
+    margin-right: 2vw;
+  }
 }
 .pagescomponent_inner_container {
   display: flex;
@@ -26,6 +26,7 @@
   font-size: 1.5vw;
   margin-bottom: 1vw;
   @media (max-width: 860px) {
+    margin-top: 2vw;
     font-size: 3.5vw;
   }
 }
@@ -35,11 +36,21 @@
   margin-bottom: 1vw;
   display: inline-block;
   width: 60vw;
+}
+.navgatoinBar {
+}
 
-  @media (max-width: 860px) {
-    font-size: 3vw;
+@media (max-width: 860px) {
+  .pages_span {
+    font-size: 2vw;
     margin-bottom: 3vw;
   }
 }
-.navgatoinBar {
+
+@media (max-width: 450px) {
+  .pages_span {
+    font-size: 3vw;
+    margin-bottom: 3vw;
+    width: 95vw;
+  }
 }

@@ -1,11 +1,8 @@
 import Button from "@/components/button/Button";
-import Pagescomponent from "@/components/pagesComponent/Main";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import SocNavbar2 from "@/components/pagesComponent/socNavbar2/SocNavbar2";
 import { hotels } from "@/constants/hotels";
 import { Layout } from "@/layout/Layout";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { IoMdStar } from "react-icons/io";
@@ -13,17 +10,16 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdDirections } from "react-icons/md";
 import { RiWalkFill } from "react-icons/ri";
 
-
 const SinglePage = ({ object }) => {
-  const phoneNumber = '+966545003143';
-  const message = 'Please help me?';
+  const phoneNumber = "+966545003143";
+  const message = "Please help me?";
 
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(message);
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     window.open(url);
   };
-  const router = useRouter()
+  const router = useRouter();
   const currentPath = router.asPath;
   const Icon = <IoMdStar size={15} color="orange" />;
   const breadcrumb1 = [
@@ -38,15 +34,25 @@ const SinglePage = ({ object }) => {
   return (
     <Layout menuDis="none" btnTitlea="العودة للباقات">
       <BreadcrumbList breadcrumbsArrayname={breadcrumb1} btnTitle="العودة" />
-      <div className="hotel__page_container" >
+      <div className="hotel__page_container">
         <h1 className="page_title">الفنادق المشهورة</h1>
         <div className="hotel__container">
           {hotels[0].list.map((nav) => (
-             <div onClick={handleWhatsAppClick} className="hotel__card_container">
+            <div
+              onClick={handleWhatsAppClick}
+              className="hotel__card_container"
+            >
               <div className="hotel__image">
-                <Image sizes="(max-width: 768px) 100vw,
+                <Image
+                  sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
-                      33vw" fill src={nav.image} alt="img" style={{objectFit:"cover", borderRadius:"0 .5cm .5cm 0 "}} />
+                      33vw"
+                  fill
+                  className="hotel__image_next"
+                  src={nav.image}
+                  alt="img"
+                  
+                />
               </div>
 
               <div className="hotel__text_container">
@@ -64,18 +70,20 @@ const SinglePage = ({ object }) => {
                   </div>
                 </div>
                 <span className="hotel__text_loc">
-                  <IoLocationOutline /> {" "} {nav.location}
+                  <IoLocationOutline /> {nav.location}
                 </span>
                 <span className="hotel__text_dis">
-                  <MdDirections /> {" "}
-                  {nav.distance}
+                  <MdDirections /> {nav.distance}
                 </span>
                 <span className="hotel__text_dis">
-                  <RiWalkFill />{" "}
-                  {nav.timer}
+                  <RiWalkFill /> {nav.timer}
                 </span>
                 <div className="hotel__text_button">
-                  <Button title='احجز الأن' itemId={currentPath} onClick={handleWhatsAppClick}/>
+                  <Button
+                    title=" احجز الأن" 
+                    itemId={currentPath}
+                    onClick={handleWhatsAppClick}
+                  />
                 </div>
               </div>
             </div>
