@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
+      <Layout headerheight="277px" headerbg="#e9f6f8">
         <Hero />
         <Navbar />
         <Cta/>

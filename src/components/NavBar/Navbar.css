@@ -2,7 +2,8 @@
   align-self: "flex-start";
   font-Weight: "bolder";
   font-size: 2vw;
-  padding: 0 3vw  ;
+  padding: 1vw 3vw  ;
+  margin-top: 4vw ;
 }
 .navbar_navcont {
   width: 100%;
@@ -47,14 +48,14 @@
   }
   .navbar_navLinkTag {
     background: white; 
-    border: 0.5px solid rgba(59, 59, 59, 0.255);
-    border-radius: 0.2cm;
+    border: 1px solid #D8DCDE;
+    border-radius: 12px;
     justify-content: center;
     width: 23vw;
     height: 112px;
     font-weight: bolder;
     font-size: 10px;
-    box-shadow: 0px -1px 3px 1px rgba(50, 50, 50, 0.14) inset;
+    /* box-shadow: 0px -1px 3px 1px rgba(50, 50, 50, 0.14) inset; */
   }
   .navbar_icon {
     width:38px;

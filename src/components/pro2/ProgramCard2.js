@@ -85,7 +85,7 @@ export default function ProgramCard2({ i, ArrayName, page_title, cardRef }) {
                   </div>
                   {/* </div> */}
                   <div className={styles.newPrograms__card__btns}>
-                    <div style={{ position: "relative,", width: "10rem" }}>
+                    <div style={{ position: "relative,", width: "100%" }}>
                       <Button itemId={`packages/worldpackages/${item.place_id}/${item.id}`} title={"تفاصيل العرض"} />
                     </div>
                     <div style={{ position: "relative,", width: "10rem" }}>

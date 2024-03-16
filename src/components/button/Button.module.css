@@ -1,29 +1,30 @@
 .pABtn {
+  min-width:fit-content;
   font-size: 13.1px;
 }
 .pABtn:hover {
   color: white;
 }
 .aBtnicon {
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: 1px solid var(--primary2);
-  border-radius: 0.5cm;
-  height: 40px;
-  min-width: 40px;
+  border-radius: 50%;
+  height: 100%;
+  min-width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--primary2);;
 }
 .button {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   background: transparent;
-  padding-right: 1vw;
+  padding: 0 1vw;
   width: 100%;
   height: 7vh;
   font-weight: 500;
-  column-gap: .2vw;
+  column-gap: 1vw;
   /* max-width: fit-content; */
   border: none;
   cursor: pointer;
@@ -36,28 +37,40 @@
   content: "";
   position: absolute;
   padding-right: 1vw;
-  top: 0;
-  left: -75%;
-  width: 100%;
+  column-gap: 1vw;
+  top: 0%;
+  left: 0%;
+  width: 35%;
   height: 100%;
-  transition: all 0.6s ease-in;
+  transition: all 0.45s ease-in;
   background: transparent;
   border-radius: 1cm;
   padding: 0;
+  
 }
 .button:hover {
   color: white;
-  gap: .1vw;
-  .aBtnicon{
-    margin: 0 .1vw;
-    border: 1px solid white;
+  padding:  0 1vw;
+  .aBtnicon {
+    margin: 0 0.1vw;
+    color: white;
   }
 }
 
 .button:hover::before {
-  left: 0;
   width: 100%;
   background: var(--primary2);
 
 }
-
+@media (max-width: 860px) {
+  .button{
+    border: 1px solid var(--primary2);
+    color: var(--primary2);
+    border-radius: 1cm;
+    justify-content: space-around;
+    height: 30px;
+  }
+  .aBtnicon{
+    border: none;
+  }
+}

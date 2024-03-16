@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Button({ title, itemId }) {
   return (
-    <div>
+    <div style={{width:"fit-content"}}>
       <Link href={`/${itemId}`} className={styles.button}>
         <p className={styles.pABtn} style={{ zIndex: "10",  }}>
           {title}

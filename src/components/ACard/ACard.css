@@ -132,7 +132,7 @@ height: 30px;
     width: auto;
   }
   .A_rowItem {
-    min-width: 82vw;
+    min-width: 44vw;
   }
   .itemHeader {
     height: 120px;
@@ -152,6 +152,9 @@ height: 30px;
 }
 
 @media (max-width: 450px) {
+  .A_rowItem {
+    min-width: 82vw;
+  }
   .itemHeader {
     height: 120px;
   }

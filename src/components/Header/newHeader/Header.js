@@ -3,12 +3,29 @@ import styles from "./Header.module.css";
 import Image from "next/image";
 import { navMenu, navbar } from "@/constants/constants";
 import logo from "../../../../public/images/logo.svg";
+import blacklogo from "../../../../public/images/blackLogo.svg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import HamburgerMenu from "@/components/resMenu/ResMenu";
 
-const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay ,headerPos}) => {
+const Header = ({
+  navbarmenu,
+  btnTitle,
+  btnRef,
+  btndisplay,
+  headerPos,
+  headerheight,
+  headerbg
+}) => {
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
+  const router = useRouter();
+  const [ismain, setIsmain] = useState(false);
+
+  useEffect(() => {
+    if (router.pathname === '/') {
+      setIsmain(true);
+    }
+  }, [router.pathname]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 860px)");
@@ -26,23 +43,33 @@ const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay ,headerPos}) => {
       mediaQuery.removeEventListener("change", handleViewportChange);
     };
   }, []);
-  const router = useRouter();
+
   return (
-    <div className={`container ${styles.header_container}`} style={{position : `${isTabletOrSmaller ? headerPos :""}`}}>
+    <div
+      className={`container ${styles.header_container}`}
+      style={{
+        position: `${isTabletOrSmaller ? headerPos : ""}`,
+        height: `${isTabletOrSmaller  ? headerheight : ""}`,
+        background: `${isTabletOrSmaller ? headerbg : ""}`,
+        
+      }}
+    >
       <div className={styles.header_item}>
         <div className={styles.header_logo_ham}>
-        <Link className={`${styles.header_item_mainlogo}`} href="/">
+          <Link className={`${styles.header_item_mainlogo}`} href="/">
             <Image
               fill
-              src={logo}
+              src={isTabletOrSmaller && ismain  ? blacklogo : logo}
               alt="wesam elnagah logo"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </Link>
-          <HamburgerMenu color="white" />
-          
+          <HamburgerMenu color="5fbccb" />
         </div>
-        <div className={styles.header_item_navMenu} style={{display : `${isTabletOrSmaller ? navbarmenu :""}` }}>
+        <div
+          className={styles.header_item_navMenu}
+          style={{ display: `${isTabletOrSmaller ? navbarmenu : ""}` }}
+        >
           {navMenu.slice(0, isTabletOrSmaller ? 4 : 10).map((nav) => (
             <li key={nav.id}>
               <Link

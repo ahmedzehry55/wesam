@@ -53,6 +53,8 @@
   display: flex;
 }
 .hotel__text_button {
+  margin-top: 5px;
+  width:140px;
   height: 1vw;
 }
 @media (max-width: 860px) {
@@ -74,7 +76,7 @@
 @media (max-width: 450px) {
   .hotel__card_container {
     flex-direction: column;
-    height: 45vh;
+    height: 300px;
     margin-bottom: 2vw;
   }
   .hotel__image {
@@ -89,6 +91,7 @@
   }
   .hotel__text_container {
     width: 100%;
+    row-gap: 5px;
   }
   .page_title{
     margin: 2vw auto 2vw;

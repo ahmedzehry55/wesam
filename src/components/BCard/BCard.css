@@ -26,8 +26,8 @@
 
 @media (max-width: 860px) {
   .B_rowItem {
-    min-width: 82vw;
-    height: 200px;
+    min-width: 44vw;
+    height: 380px;
     align-items: start;
   }
   .B_itemDescription {
@@ -36,5 +36,11 @@
   }
   .B_itemDescription .descText{
     align-items: flex-start;
+  }
+}
+@media (max-width: 450px) {
+  .B_rowItem {
+    min-width: 82vw;
+    height: 200px;
   }
 }
