@@ -1,30 +1,39 @@
 .Cta_container {
   display: flex;
-  padding: 2vw 2vw;
-  justify-content: space-between;
+  padding: 16px;
+  justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 1200px;
   border-radius: 0.5cm;
   border: none;
   background: #e9f6f8;
+  height: 125px;
 }
 .Cta_container_rightSide {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  
 }
 .Cta_container_rightSide figure {
   position: relative;
-  width: 3vw;
-  height: 3vw;
+  width: 30px;
+  height: 30px;
 }
+ .Cta_container_text_button{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+ }
 .Cta_container_text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   row-gap: 1vw;
-  padding: 1vw;
+
 }
 .Cta_container_text h2 {
   font-size: 16px;
@@ -39,13 +48,14 @@
   align-items: center;
   justify-content: center;
   row-gap: 3vw;
-  padding: 1vw 1vw;
+  padding: 1vw;
 }
 .Cta_container_wesam_1 button {
-  height: 8vh;
-  width: 16vw;
+  height: 7vh;
+  padding: 0 4vw;
+  /* width: 16vw; */
   background: white;
-  border: 1px solid var(--primary3);
+  border: none;
   border-radius: 1cm;
   font-size: 16px;
   font-weight: bolder;
@@ -55,36 +65,63 @@
 @media (max-width: 860px) {
   .Cta_container {
     flex-direction: column;
-    row-gap: 2vh;
-    text-align: center;
-
+    align-items: flex-start;
+    text-align: start;
+    width: 96%;
+    height: 100px;
+    padding: 16px;
   }
-  .Cta_container_rightSide figure{
-    display: none;
+  .Cta_container_rightSide{
+    height: 100%;
+    align-items: flex-start;
   }
-  .Cta_container_text{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  .Cta_container_rightSide figure {
+    width: 32px;
+    height: 32px;
   }
+  .Cta_container_text_button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1vw;
+   }
+  .Cta_container_text {
+    align-self: flex-start;
+    text-align: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+    .Cta_container_wesam_1{
+      width: auto;
+      height: 2vw;
+      padding: 0px;
+    }
   .Cta_container_wesam_1 button {
-    height: 4vh;
-    width: 70vw;
+    background: transparent;
+    border: none;
+    padding: 0px;
   }
 }
 @media (max-width: 450px) {
-    .Cta_container{
-        margin: 2vh 0 0 ;
-    }
-    .Cta_container_text h2 {
-        font-size:12px ;
-    }
-    .Cta_container_text span{
-        font-size:8px ;
-    }
-    .Cta_container_wesam_1 button {
-        height: 3vh;
-        width: 70vw;
-        font-size: 10px;
-      }
+  .Cta_container {
+    height: 125px;
+  }
+
+  .Cta_container_text_button{
+    height: 100%;
+    row-gap: 2vw;
+  }
+  .Cta_container_text {
+    height: 70%;
+    justify-content: space-around;
+  }
+  .Cta_container_text h2 {
+    font-size: 12px;
+  }
+  .Cta_container_text span {
+    font-size: 12px;
+  }
+  .Cta_container_wesam_1 button {
+    font-size: 14px;
+  }
 }

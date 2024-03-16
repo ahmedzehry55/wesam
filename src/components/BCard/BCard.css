@@ -1,0 +1,40 @@
+
+.B_rowItem {
+  position: relative;
+  overflow: hidden;
+  min-width: 280px;
+  height: 360px;
+}
+
+.B_itemDescription {
+  position: absolute;
+  bottom: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+.B_itemDescription p{
+  color: white;
+}
+.B_itemDescription .descText{
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .B_rowItem {
+    min-width: 82vw;
+    height: 200px;
+    align-items: start;
+  }
+  .B_itemDescription {
+    align-items: flex-start;
+    padding: 16px ;
+  }
+  .B_itemDescription .descText{
+    align-items: flex-start;
+  }
+}

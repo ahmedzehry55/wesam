@@ -1,102 +1,72 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
 import Image from "next/image";
-import { contentUsNav, navMenu, navbar } from "@/constants/constants";
-import logo from "../../../../public/images/logoblack.png";
+import { navMenu, navbar } from "@/constants/constants";
+import logo from "../../../../public/images/logo.svg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import ButtonBread  from "@/components/pagesComponent/breadList/ButtonBread";
 import HamburgerMenu from "@/components/resMenu/ResMenu";
 
-const Headern = ({navbarmenu , btnTitle, btnRef , btndisplay}) => {
-  const phoneNumber = '+966545003143';
-  const message = 'Please help me?';
-
-  const handleWhatsAppClick = () => {
-    const encodedMessage = encodeURIComponent(message);
-    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-    window.open(url);
-  };
-  const [scrolled, setScrolled] = useState(false);
-  const router = useRouter();
+const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay }) => {
+  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 0;
-      setScrolled(isScrolled);
+    const mediaQuery = window.matchMedia("(max-width: 860px)");
+
+    const handleViewportChange = (event) => {
+      setIsTabletOrSmaller(event.matches);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    mediaQuery.addEventListener("change", handleViewportChange);
+
+    // Initial check
+    setIsTabletOrSmaller(mediaQuery.matches);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      mediaQuery.removeEventListener("change", handleViewportChange);
     };
   }, []);
-
+  const router = useRouter();
   return (
-    <div className={styles.header__outer}>
-    <div className={`${styles.container} ${scrolled ? styles.scrolled : ""}`}>
-    <HamburgerMenu color="white" />
-      <div className={styles.div1Res}>
-        <div className={styles.div1}>
-          <div className={styles.navMenu}>
-            {navMenu.map((nav) => (
-              <li
-                key={nav.id}
-                className={`${styles.navLink} ${router.pathname === nav.ref ? styles.active : ""}`}
-                style={{
-                  minWidth: "fit-content",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Link href={nav.ref} style={{ display: "flex", minWidth: "fit-content", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                  <div className={styles.navMenuIcon}>
-                    <Image src={nav.image} fill alt="icon" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                  </div>
-                  {nav.title}
-                </Link>
-              </li>
-            ))}
-          </div>
-          <Link className={`${styles.mainlogo} ${styles.logoscorll}`} href="/">
-            <Image fill src={logo} alt="wesam elnagah logo" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+    <div className={`container ${styles.header_container}`}>
+      <div className={styles.header_item}>
+        <div className={styles.header_logo_ham}>
+        <Link className={`${styles.header_item_mainlogo}`} href="/">
+            <Image
+              fill
+              src={logo}
+              alt="wesam elnagah logo"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </Link>
-          <Link className={`${styles.mainlogo} ${styles.logoBlack} `} href="/">
-            <Image fill src={logo} alt="wesam elnagah logo" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-          </Link>
+          <HamburgerMenu color="white" />
+          
         </div>
-       {/* <div style={{
-        margin:"2vw 0 ", justifySelf:"flex-end",display:`${btndisplay}`
-       }}> <ButtonBread title={btnTitle} ref={btnRef} /></div> */}
-      </div>
-      <div className={styles.div2Res} style={{display:`${navbarmenu}`}}>
-        <ul className={styles.navcont}>
-          {navbar.slice(0, 4).map((nav, index) => (
-            <div key={index}>
-              <li style={{ listStyle: "none" }}>
-                <Link
-                  className={`${styles.navLink}`}
-                  style={{
-                    color: "black",
-                    border: "2 solid BLACK",
-                  }}
-                  href={nav.ref}
-                >
-                  <div className={styles.icon}>
-                    <Image fill src={nav.image} alt={nav.title} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                  </div>
-                  {nav.title}
-                </Link>
-              </li>
-            </div>
+        <div className={styles.header_item_navMenu}>
+          {navMenu.slice(0, isTabletOrSmaller ? 4 : 10).map((nav) => (
+            <li key={nav.id}>
+              <Link
+                className={`${styles.header_navLink} ${
+                  router.pathname === nav.ref ? styles.active : ""
+                }`}
+                href={nav.ref}
+              >
+                <figure className={styles.header_navMenuIcon}>
+                  <Image
+                    src={nav.image}
+                    fill
+                    alt={nav.title}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </figure>
+                {nav.title}
+              </Link>
+            </li>
           ))}
-        </ul>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
 
-export default Headern;
+export default Header;

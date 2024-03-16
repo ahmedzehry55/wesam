@@ -5,31 +5,35 @@ import { CiSearch } from "react-icons/ci";
 import { IoMdArrowForward } from "react-icons/io";
 import { LuArrowUpDown } from "react-icons/lu";
 import { LuSettings2 } from "react-icons/lu";
-import SwiperSlide from "./SwiperSlide";
-import CCard from "@/components/cCard/CCard";
-import PackageCard from "@/components/packageCard/packageCard";
-import { City, tourphoto } from "@/constants/countryConstants";
+import { useRouter } from "next/router";
+import Carsoul from "@/components/Carsoul/Carsoul";
 
 const navarray = tourList;
 const SinglePage = ({ object }) => {
+  const router = useRouter();
+
+  const goBack = () => {
+    router.back();
+  };
   return (
     <div className="tourid_container">
       {/* header */}
       <div className="tourid_container_header">
         <div className="tourid_container_header_left">
-          <figure className="tourid_container_header_left_fig">
+          <figure onClick={goBack} className="tourid_container_header_left_fig">
             <IoMdArrowForward />
           </figure>
           <div className="tourid_container_header_left_bottons">
             <div className="tourid_container_header_left_botton">
               <span className="tourid_container_header_left_bottons_span">
-                <LuArrowUpDown  style={{fontSize:".6vw" ,color:"rgba(160, 162, 160, 1)"}}/> ترتيب حسب
+                <LuArrowUpDown className="button_icon"/> ترتيب حسب
               </span>
             </div>
             <div className="tourid_container_header_left_botton">
               <span className="tourid_container_header_left_bottons_span">
-                <LuSettings2 style={{fontSize:".6vw" , color:"rgba(160, 162, 160, 1)"}} /> تصنيف
+                <LuSettings2 className="button_icon" />
               </span>
+              <span> تصنيف</span>
             </div>
           </div>
         </div>
@@ -51,12 +55,7 @@ const SinglePage = ({ object }) => {
         {tourdata.map((item) => (
           <li className="tourid_container_card_container_li">
             <div className="tourid_container_card_container_corsul">
-              {/* {item.img.map((img) => (
-                <figure className="tourid_container_card_container_corsul_fig mySlides">
-                  <Image src={img} fill alt=""/>
-                </figure>
-              ))} */}
-             <SwiperSlide images={item.img} />
+             <Carsoul images={item.img} />
             </div>
             <div className="tourid_container_card_container_textSec">
               <div className="tourid_container_card_container_rightText">
@@ -67,7 +66,7 @@ const SinglePage = ({ object }) => {
                   </figure>
                   <h4>حجز فوري</h4>
                 </div>
-                <h4>{item.title}</h4>
+                <h4 className="texth4">{item.title}</h4>
                 <label> الغاء مجاني</label>
               </div>
               <div className="tourid_container_card_container_leftText">

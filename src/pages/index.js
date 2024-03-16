@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Layout } from "@/layout/Layout";
 import Navbar from "@/components/NavBar/Navbar";
 import ACard from "@/components/ACard/ACard";
-import { offers, programs, worldHotel } from "@/constants/constants";
+import { cityGuides, offers, programs, worldHotel } from "@/constants/constants";
 import BCard from "@/components/BCard/BCard";
 import FlipContainer from "@/components/FlipContainer/FlipContainer";
 import ProgramCard2 from "@/components/pro2/ProgramCard2";
@@ -27,19 +27,23 @@ export default function Home() {
           arryName={offers}
           compTitle="عروض مميزة منّا لك"
           sliderName="offerSlider"
+          titleBtns='عرض المزيد'
+          
         />
         <BCard
           arryName={worldHotel}
-          compTitle="أفضل الفنادق العالمية"
+          compTitle="أفضل الفنادق الداخلية"
+          compspan="ابحث عن الفنادق التي تناسب تطلعاتك داخل السعودية"
           sliderName="worldHotelSlider"
         />
         <BCard
-          arryName={worldHotel}
+          arryName={cityGuides}
           compTitle="أفضل الفنادق العالمية"
+          compspan="ابحث عن أفضل الفنادق في أشهر الوجهات"
           sliderName="worldHotelSlider2"
         />
         <BCard
-          arryName={worldHotel}
+          arryName={cityGuides}
           compTitle="دليلك لأشهر الوجهات السياحية العالمية"
           sliderName="travelSlider"
         />

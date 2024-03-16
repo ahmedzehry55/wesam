@@ -90,7 +90,6 @@
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  gap: 1rem;
   width: 10rem;
 }
 .newPrograms__card__period {
@@ -128,39 +127,11 @@
 .stars svg {
   color: gold;
 }
-@media (max-width:860px) {
-  .title{
-    font-size: 1.8rem;
+@media (max-width: 450px) {
+  .rowItem {
+    width: 90vw;
   }
-  .container {
-    margin: 3vw 0;
-  }
-  .rowItem{
-    
-    height: 400px;
-  }
-  .link{
-    
-  }
-  .itemHeader{
-    height: 200px;
-  }
-  .newPrograms__card__content {
-    height: 200px;
-    font-size: 2vw;
-    width: 100%;
-  }
-  .newPrograms__card__btns{
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .stars{
-    font-size: 20px;
-  }
-}
-@media (max-width:500px) {
-  .title{
-    font-size: 1.3rem;
+  .title {
+    font-size: 18px;
   }
 }

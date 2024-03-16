@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./resFooter.module.css";
+import styless from "../footercontainer.module.css";
 import pay1 from "../../../../public/images/pay1.png";
 import pay2 from "../../../../public/images/pay2.png";
 import pay3 from "../../../../public/images/pay3.png";
@@ -7,14 +8,12 @@ import pay4 from "../../../../public/images/pay4.png";
 import WTA from "../../../../public/images/WTA.png";
 
 import logo from "../../../../public/images/logo.png";
-import {
-  footer,
-  footerlegal,
-  footersocial,
-} from "@/constants/constants";
+import { footer, footerlegal, footersocial } from "@/constants/constants";
 import logoicon from "../../../../public/images/iconlogo.png";
 import Image from "next/image";
-import style from "../footercontainer.module.css"
+import style from "../footercontainer.module.css";
+
+import Brightness from "@/components/brightness/Brightness";
 const Footer = ({ arraName }) => (
   <div className={styles.resfooterlink}>
     {arraName.map(({ title, id, links }) => (
@@ -43,7 +42,7 @@ export default function FooterRes() {
   return (
     <div className={styles.resfootercontainer}>
       <div>
-      <div className={style.logoIcon}>
+        <div className={style.logoIcon}>
           <Image
             src={logoicon}
             fill
@@ -53,7 +52,6 @@ export default function FooterRes() {
                       33vw"
           />
         </div>
-      
       </div>
       <div className={styles.linksdivcontainer}>
         <Footer arraName={footer} />
@@ -82,20 +80,24 @@ export default function FooterRes() {
         ))}
       </div>
       <div className={style.div1}>
-          <Image src={WTA} alt="WTA" width={159} height={40} />
-        </div>
-     
+        <Image src={WTA} alt="WTA" width={159} height={40} />
+      </div>
+
       <div className={styles.logoDiv}>
         <Image src={logo} alt="wesam el nagah logo" width={200} height={48} />
-        <p style={{fontSize:"11px"}}>جميع الحقوق محفوظة © 2024 وسام النجاح</p>
+        <p style={{ fontSize: "11px" }}>
+          جميع الحقوق محفوظة © 2024 وسام النجاح
+        </p>
       </div>
       <div className={style.pay}>
-          <Image src={pay1} alt="pay" width={30} height={10} />
-          <Image src={pay2} alt="pay" width={25} height={25} />
-          <Image src={pay3} alt="pay" width={25} height={25} />
-          <Image src={pay4} alt="pay" width={25} height={25} />
-        </div>
-      
+        <Image src={pay1} alt="pay" width={30} height={10} />
+        <Image src={pay2} alt="pay" width={25} height={25} />
+        <Image src={pay3} alt="pay" width={25} height={25} />
+        <Image src={pay4} alt="pay" width={25} height={25} />
+      </div>
+      <section className={styless.sec} title=".slideTwo">
+      <Brightness/>
+      </section>
     </div>
   );
 }

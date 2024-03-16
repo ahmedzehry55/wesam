@@ -1,0 +1,8 @@
+.cCardDis {
+  display: none;
+}
+@media screen and (max-width: 860px) {
+  .cCardDis {
+    display: flex;
+  }
+}

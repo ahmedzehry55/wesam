@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RiCloseLine } from "react-icons/ri";
 import { IoIosMenu } from "react-icons/io";
-import { navbar } from "@/constants/constants";
+import { navMenu } from "@/constants/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
@@ -33,7 +33,7 @@ const HamburgerMenu = ({color}) => {
       <nav id="menu" className={isOpen ? "active" : ""}>
         <ul style={{ position: "relative" }}>
           <div className="footerLi"><li className="options">خيارات</li></div>
-          {navbar.map((nav) => (
+          {navMenu.map((nav) => (
             <div key={nav.id}>
               <li
                 className="footerLi"
