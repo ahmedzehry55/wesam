@@ -42,7 +42,7 @@ const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay }) => {
           <HamburgerMenu color="white" />
           
         </div>
-        <div className={styles.header_item_navMenu}>
+        <div className={styles.header_item_navMenu} style={{display : `${isTabletOrSmaller ? navbarmenu :""}`}}>
           {navMenu.slice(0, isTabletOrSmaller ? 4 : 10).map((nav) => (
             <li key={nav.id}>
               <Link
