@@ -7,12 +7,12 @@ import FooterContainer from "@/components/footer/FooterContainer";
 import FooterRes from "@/components/footer/FooterRes/FooterRes";
 import ProgressComp from "@/components/progressBar/Progressbar";
 
-export const Layout = ({ children, menuDis,bgcolor,btnTitlea,
+export const Layout = ({ children, headerPos,menuDis,bgcolor,btnTitlea,
   btnRefa}) => {
   return (
     <div className={styles.container}>
       <ProgressComp/>
-      <Header navbarmenu={menuDis}  btnTitle={btnTitlea} btnRef={btnRefa} /> 
+      <Header navbarmenu={menuDis} headerPos={headerPos}  btnTitle={btnTitlea} btnRef={btnRefa} /> 
       <main className={`${style.main} `} style={{background:`${bgcolor}`}}>{children}</main>
       <FooterBar />
       <FooterContainer/>

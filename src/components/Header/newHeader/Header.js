@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import HamburgerMenu from "@/components/resMenu/ResMenu";
 
-const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay }) => {
+const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay ,headerPos}) => {
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay }) => {
   }, []);
   const router = useRouter();
   return (
-    <div className={`container ${styles.header_container}`}>
+    <div className={`container ${styles.header_container}`} style={{position : `${isTabletOrSmaller ? headerPos :""}`}}>
       <div className={styles.header_item}>
         <div className={styles.header_logo_ham}>
         <Link className={`${styles.header_item_mainlogo}`} href="/">
@@ -42,7 +42,7 @@ const Header = ({ navbarmenu, btnTitle, btnRef, btndisplay }) => {
           <HamburgerMenu color="white" />
           
         </div>
-        <div className={styles.header_item_navMenu} style={{display : `${isTabletOrSmaller ? navbarmenu :""}`}}>
+        <div className={styles.header_item_navMenu} style={{display : `${isTabletOrSmaller ? navbarmenu :""}` }}>
           {navMenu.slice(0, isTabletOrSmaller ? 4 : 10).map((nav) => (
             <li key={nav.id}>
               <Link

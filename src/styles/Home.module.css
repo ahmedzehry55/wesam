@@ -6,9 +6,10 @@
   min-height: 100vh;
   direction: rtl;
   background: var(--background)  ;
+  background: white;
   @media (max-width :860px) {
     background: white;
-      margin-top: 3vw;
+      /* margin-top: 3vw; */
       scrollbar-width: 0px;
       width: auto;
       row-gap: 5vw;
