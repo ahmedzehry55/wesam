@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { useState } from "react";
 
-export default function MyCarousel({ images }) {
+export default function MyCarousel({ images ,dotbottm}) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleDotClick = (index) => {
@@ -9,7 +10,7 @@ export default function MyCarousel({ images }) {
 
   return (
     <div>
-      <div className="carousel-dots">
+      <div className="carousel-dots" style={{bottom:`${dotbottm}`}}>
         {images.map((image, index) => (
           <span
             key={index}
@@ -18,7 +19,7 @@ export default function MyCarousel({ images }) {
           ></span>
         ))}
       </div>
-      <img className="img_carousels" src={images[currentSlide]} alt={`Image ${currentSlide}`} />
+      <Image fill className="img_carousels" src={images[currentSlide]} alt={`Image ${currentSlide}`} style={{objectFit:`cover`}}  />
     </div>
   );
 }

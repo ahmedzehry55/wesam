@@ -2915,7 +2915,7 @@ export const tourList = [
     id: 0,
     img: "/images/reyad.jpg",
     ref: "",
-    act: " 7 انشطة " ,
+    act: " 7 انشطة ",
     place_id: "",
   },
   {
@@ -3105,12 +3105,11 @@ export const tourNav = [
 export const tourdata = [
   {
     title: "المشي في مسار أبا البارد",
- img: [
+    img: [
       "/images/neom1.jpg",
       "/images/neom1.jpg",
       "/images/neom1.jpg",
       "/images/neom1.jpg",
-      
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
@@ -3120,7 +3119,7 @@ export const tourdata = [
     img: [
       "/images/neom1.jpg",
       "/images/reyad.jpg",
-      "/images/rome.jpg" ,
+      "/images/rome.jpg",
       "/images/jeddah.jpg",
     ],
     price: "345 ر.س",
@@ -3128,10 +3127,10 @@ export const tourdata = [
   },
   {
     title: "المشي في مسار أبا البارد",
- img: [
+    img: [
       "/images/neom1.jpg",
       "/images/reyad.jpg",
-      "/images/rome.jpg" ,
+      "/images/rome.jpg",
       "/images/jeddah.jpg",
     ],
     price: "345 ر.س",
@@ -3139,13 +3138,79 @@ export const tourdata = [
   },
   {
     title: "المشي في مسار أبا البارد",
- img: [
+    img: [
       "/images/neom1.jpg",
       "/images/reyad.jpg",
-      "/images/rome.jpg" ,
+      "/images/rome.jpg",
       "/images/jeddah.jpg",
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
+  },
+];
+export const singletourdata = [
+  {
+    id: 1,
+    place_id: 0,
+    packagePrice: "175",
+    img: [
+      "/images/neom1.jpg",
+      "/images/reyad.jpg",
+      "/images/rome.jpg",
+      "/images/jeddah.jpg",
+    ],
+    tourTime: 3,
+    tourTitle: " الخيمة الرمضانية في سمار ",
+    loc: "الرياض، المملكة العربية السعودية",
+    map: { lat: 51.505, lng: -0.09 },
+    overview:
+      "ليالي رمضان الجميلة … زاد بهاها مع سَمار. انضموا لتجربة الخيمة الرمضانية المناسبة لجميع الأذواق بأربع جلسات وثلاث مطلات آسرة تبرز جمال طبيعة العمّارية والصخور الرملية. استمتعوا بالأجواء الساحرة أثناء تناول الأفطار أو السحور، وجهّزوا الأطفال للاستمتاع بتجارب مسلية في الحضانة. بين جبال نجد الساحرة… عِش أجواء رمضان في الرياض!",
+    advantage: [
+      "عِش أجواء الخيمة الرمضانية مع سَمار",
+      "تأمل طبيعة العمارية الصحراوية الساحرة",
+      "تجربة استثنائية مناسبة لجميع الأعمار",
+      "استمتع بتناول الإفطار أو السحور مع إطلالة ساحرة",
+    ],
+    tourPackages: [
+      {
+        id: 0,
+        packageTitle: "الإفطار",
+        packagePrice: "175",
+        tourdesc: "تذكرة (تذاكر) 1 بوفية الإفطار الرمضاني",
+        packgeDescSec: [
+          {
+            header: "تشمل",
+            text: ["افطار شخص واحد"],
+          },
+          {
+            header: "امكانية المشاركة",
+            text: [
+              "يجب أن تكون أعمار المشاركين من 13+ للمشاركة في هذاالنشاط",
+              "مجاني للاطفال من 1-5",
+            ],
+          },
+        ],
+        packagereq: [
+          {
+            header: "تاكيد",
+            text: ["احصل على تاكيد فوري  اذا لم تستلم تاكيد الحجز يرجى اعلامنا بذلك"],
+          },
+          {
+            header: "سياسية الالغاء",
+            text: ["لايمكن اجراء اي استرداد او تغييرات " ],
+          },
+        ],
+        packageused: [
+          {
+            header: "صلاحية",
+            text: ['القسيمة صالحة فقط في التاريخ (والوقت إن وجد) المحدد'],
+          },
+          {
+            header: "العنوان",
+            text: ["يرجى الاطلاع على الخريطة للحصول على المساعدة"],
+          },
+        ],
+      },
+    ],
   },
 ];

@@ -4,6 +4,8 @@
 @import url(../components/NavBar/Navbar.css);
 @import url(../components/resMenu/ResMenu.css);
 @import url(../components/Cta/Cta.css);
+@import url(../components/Carsoul/carousel.module.css);
+
 @import url(../components/pagesComponent/MainPagesComponent.css);
 @import url(../components/pagesComponent/socNavbar/SocNavBar.css);
 @import url(../pages/hotel/[place]/hotel.css);
@@ -11,6 +13,7 @@
 @import url(../pages/about/AboutComponet/header/aboutHeader.css);
 @import url(../pages/about/about.css);
 @import url(../pages/tours/tour.css);
+@import url(../pages/tours/[place]/[data]/tourdata.css);
 @import url(../components/search/Search.css);
 @import url(../pages/packages/worldpackages/[place]/[data]/program.css);
 :root {
@@ -34,7 +37,8 @@
   src: url("../../public/fonts/bukraregular.otf");
 }
 html,
-body {
+body,
+button {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: bukra;

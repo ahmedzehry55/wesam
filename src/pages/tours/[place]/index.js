@@ -1,5 +1,5 @@
 import { tourList, tourdata } from "@/constants/constants";
-import dot from "../../../public/icons/dot.png";
+import dot from "../../../../public/icons/dot.png";
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
 import { IoMdArrowForward } from "react-icons/io";
@@ -55,7 +55,7 @@ const SinglePage = ({ object }) => {
         {tourdata.map((item) => (
           <li className="tourid_container_card_container_li">
             <div className="tourid_container_card_container_corsul">
-             <Carsoul images={item.img} />
+             <Carsoul images={item.img} dotbottm='1vw' />
             </div>
             <div className="tourid_container_card_container_textSec">
               <div className="tourid_container_card_container_rightText">
@@ -86,14 +86,14 @@ const SinglePage = ({ object }) => {
 
 export async function getStaticPaths() {
   const paths = navarray.map((object) => ({
-    params: { id: object.id.toString() },
+    params: { place: object.id.toString() },
   }));
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const object = navarray.find((object) => object.id.toString() === params.id);
+  const object = navarray.find((object) => object.id.toString() === params.place);
 
   return { props: { object } };
 }

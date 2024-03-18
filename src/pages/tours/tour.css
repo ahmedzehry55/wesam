@@ -237,6 +237,7 @@ background-color: white;
   align-items: center;
   position: relative;
   height: 30vh;
+  width: 100%;
   border-radius: 0.3cm;
   overflow: scroll;
   scrollbar-width: none;
@@ -530,32 +531,4 @@ padding: 2vw;
     color: #9f9e9d;
     font-size: 2vw;
   }
-}
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-  position: absolute;
-  z-index: 1111111111;
-  bottom: 3vw;
-  left: 45%;
-}
-.img_carousels {
-  width: 90vw;
-  height: 192px;
-  border-radius: .4cm;
-  object-fit: cover;
-}
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #555;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color:#bbb;
- 
 }
