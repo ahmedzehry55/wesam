@@ -5,7 +5,7 @@
   margin-bottom: 10px;
   position: absolute;
   z-index: 1111111111;
-  left: 43%;
+  left: 50vw;
 }
 .img_carousels {
   /* width: 90vw;
@@ -26,4 +26,9 @@
 
 .dot.active {
   background-color:#bbb;
+}
+@media (max-width: 450px) {
+  .carousel-dots {
+    left: 43vw;
+  }
 }
