@@ -7,11 +7,12 @@ import { LuArrowUpDown } from "react-icons/lu";
 import { LuSettings2 } from "react-icons/lu";
 import { useRouter } from "next/router";
 import Carsoul from "@/components/Carsoul/Carsoul";
+import Link from "next/link";
 
 const navarray = tourList;
 const SinglePage = ({ object }) => {
   const router = useRouter();
-
+  const currentPath = router.asPath;
   const goBack = () => {
     router.back();
   };
@@ -26,7 +27,7 @@ const SinglePage = ({ object }) => {
           <div className="tourid_container_header_left_bottons">
             <div className="tourid_container_header_left_botton">
               <span className="tourid_container_header_left_bottons_span">
-                <LuArrowUpDown className="button_icon"/> ترتيب حسب
+                <LuArrowUpDown className="button_icon" /> ترتيب حسب
               </span>
             </div>
             <div className="tourid_container_header_left_botton">
@@ -54,29 +55,31 @@ const SinglePage = ({ object }) => {
       <ul className="tourid_container_card_container">
         {tourdata.map((item) => (
           <li className="tourid_container_card_container_li">
-            <div className="tourid_container_card_container_corsul">
-             <Carsoul images={item.img} dotbottm='1vw' />
-            </div>
-            <div className="tourid_container_card_container_textSec">
-              <div className="tourid_container_card_container_rightText">
-                <div className="tourid_container_card_container_rightText_1line">
-                  <h4>{item.type}</h4>
-                  <figure>
-                    <Image fill alt="" src={dot} />
-                  </figure>
-                  <h4>حجز فوري</h4>
+            <Link href={`/${currentPath}/${item.id}`}> 
+              <div className="tourid_container_card_container_corsul">
+                <Carsoul images={item.img} dotbottm="1vw" />
+              </div>
+              <div className="tourid_container_card_container_textSec">
+                <div className="tourid_container_card_container_rightText">
+                  <div className="tourid_container_card_container_rightText_1line">
+                    <h4>{item.type}</h4>
+                    <figure>
+                      <Image fill alt="" src={dot} />
+                    </figure>
+                    <h4>حجز فوري</h4>
+                  </div>
+                  <h4 className="texth4">{item.title}</h4>
+                  <label> الغاء مجاني</label>
                 </div>
-                <h4 className="texth4">{item.title}</h4>
-                <label> الغاء مجاني</label>
+                <div className="tourid_container_card_container_leftText">
+                  <h4>
+                    <span> من </span>
+                    {item.price}
+                  </h4>
+                  <span>(شاملاً ضريبة القيمة المضافة)</span>
+                </div>
               </div>
-              <div className="tourid_container_card_container_leftText">
-                <h4>
-                  <span> من </span>
-                  {item.price}
-                </h4>
-                <span>(شاملاً ضريبة القيمة المضافة)</span>
-              </div>
-            </div>
+            </Link>
           </li>
         ))}
       </ul>
@@ -93,7 +96,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const object = navarray.find((object) => object.id.toString() === params.place);
+  const object = navarray.find(
+    (object) => object.id.toString() === params.place
+  );
 
   return { props: { object } };
 }

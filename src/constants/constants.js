@@ -3113,6 +3113,7 @@ export const tourdata = [
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
+    id:0
   },
   {
     title: "المشي في مسار أبا البارد",
@@ -3124,6 +3125,7 @@ export const tourdata = [
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
+    id:1
   },
   {
     title: "المشي في مسار أبا البارد",
@@ -3135,6 +3137,7 @@ export const tourdata = [
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
+    id:2
   },
   {
     title: "المشي في مسار أبا البارد",
@@ -3146,6 +3149,7 @@ export const tourdata = [
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
+    id:3
   },
 ];
 export const singletourdata = [
