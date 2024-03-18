@@ -3113,7 +3113,8 @@ export const tourdata = [
     ],
     price: "345 ر.س",
     type: "تجارب المشي",
-    id:0
+    id:0,
+    place_id: 1,
   },
   {
     title: "المشي في مسار أبا البارد",

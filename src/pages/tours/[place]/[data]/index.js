@@ -277,7 +277,7 @@ const SinglePage = ({ object }) => {
 };
 
 export async function getStaticPaths() {
-  const programIds = programs.map((program) => ({
+  const programIds = singletourdata.map((program) => ({
     id: program.id,
     data: program.place_id,
   }));
@@ -289,7 +289,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const program = programs.find(
+  const program = singletourdata.find(
     (program) => program.id.toString() === params.data
   );
   const object = { ...program };
