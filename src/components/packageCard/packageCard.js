@@ -19,16 +19,16 @@ export default function PackageCard({ arryName, compTitle, sliderName , widthCar
     <>
       <div className={`trending`}>
         <div className={styles.container}>
-          <div className={styles.btns}>
+          <div className='btns'>
             <button
-              className={styles.slideLeft}
+              className='slideLeft'
               title="scroll left"
               onClick={slideLeft}
             >
               <IoIosArrowBack />
             </button>
             <button
-              className={styles.slideRight}
+              className='slideRight'
               title="scroll right"
               onClick={slideRight}
             >

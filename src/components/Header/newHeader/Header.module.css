@@ -9,6 +9,7 @@
   align-items: flex-start;
   padding: 2vw 3vw;
   z-index: 9999999999999999;
+    
 }
 .header_item {
   display: flex;
@@ -54,7 +55,7 @@
   .header_container {
     position: relative;
     justify-content: space-between;
-    padding-top: 30px;
+    height: 65px;
   }
   
   .header_item {

@@ -3,7 +3,7 @@ import React from "react";
 import icon from "../../../public/icons/flytimer.svg";
 export default function Cta() {
   return (
-    <div className="Cta_container">
+    <div className="Cta_container section_margin">
       <div className="Cta_container_rightSide" >
       <figure>
         <Image src={icon} fill alt="CTa"/>

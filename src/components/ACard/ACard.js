@@ -13,7 +13,7 @@ export default function ACard({ arryName, compTitle, titleBtns, sliderName ,titl
   };
 
   return (
-    <div className="container">
+    <div className="container section_margin">
       <div className="Card_head">
         <h2>{compTitle}</h2>
         <Link href={`/${titleBtnsLink}`}>{titleBtns}</Link>

@@ -49,7 +49,7 @@ export default function Home() {
         />
         <ACard
           arryName={offers}
-          compTitle="اكتشف أجمل ما في المملكة العربية السعودية"
+          compTitle="اكتشف اجمل الجولات السياحية "
           sliderName="TheBestSlider"
         />
         <FlipContainer />

@@ -6,10 +6,11 @@ import { IoMoonOutline } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
-import { MdStarRate } from "react-icons/md";
 import Button from "../button/Button";
+import { IoMdStar } from "react-icons/io";
 
 export default function ProgramCard2({ i, ArrayName, page_title, cardRef }) {
+  const Icon = <IoMdStar size={20} color="orange" />;
   return (
     <div className={styles.container}>
       <Link href="/packages">
@@ -68,28 +69,28 @@ export default function ProgramCard2({ i, ArrayName, page_title, cardRef }) {
                       </Link>
                     </div>
                     <div className={styles.stars}>
-                      {Array.from(Array(item.rate)).map((s, i, index) => (
-                        <div key={index}>
-                          <MdStarRate />
-                          <MdStarRate />
-                          <MdStarRate />
-                          <MdStarRate />
-                          <MdStarRate />
-                        </div>
+                      {Array.from({ length: item.rate }).map((_, index) => (
+                        <div key={index}>{Icon}</div>
                       ))}
                     </div>
                   </div>
                   <div className={styles.newPrograms__card__price}>
                     <span className={styles.new__price}>{item.price}</span>
-                    <span style={{ fontSize: ".6rem" }}>ريال سعودي</span>
+                    <span style={{ fontSize: ".6rem" }}> ريال سعودي </span>
                   </div>
                   {/* </div> */}
                   <div className={styles.newPrograms__card__btns}>
                     <div style={{ position: "relative,", width: "100%" }}>
-                      <Button itemId={`packages/worldpackages/${item.place_id}/${item.id}`} title={"تفاصيل العرض"} />
+                      <Button
+                        itemId={`packages/worldpackages/${item.place_id}/${item.id}`}
+                        title={"تفاصيل العرض"}
+                      />
                     </div>
                     <div style={{ position: "relative,", width: "10rem" }}>
-                      <Button itemId={`packages/worldpackages/${item.place_id}/${item.id}`} title={" حجز العرض"} />
+                      <Button
+                        itemId={`packages/worldpackages/${item.place_id}/${item.id}`}
+                        title={" حجز العرض"}
+                      />
                     </div>
                   </div>
                   {/* </div> */}

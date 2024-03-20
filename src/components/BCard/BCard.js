@@ -25,7 +25,7 @@ export default function BCard({
   };
   const myArray = arryName[0].nav;
   return (
-    <div className="container">
+    <div className="container section_margin">
       <div className="Card_head">
         <div className="Card_head_text" >
           <h2>{compTitle}</h2>

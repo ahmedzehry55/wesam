@@ -1,12 +1,14 @@
 import Hero from "../../../../about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import { programs, socnavData } from "@/constants/constants";
+import { datasoc, programs, socnavData } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
 import { Includes, City } from "@/constants/countryConstants";
 import PackageCard from "@/components/packageCard/packageCard";
 import { FaWhatsapp } from "react-icons/fa6";
 import { useState } from "react";
 import Accordion from "@/components/accordion/Accordion";
+import ButtonBread from "@/components/pagesComponent/breadList/ButtonBread";
+import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
 
 const SinglePage = ({ object }) => {
   const breadcrumb1 = [
@@ -30,15 +32,18 @@ const SinglePage = ({ object }) => {
   const [selectedCity, setSelectedCity] = useState(city[0].name);
   return (
     <Layout menuDis="none" bgcolor="#fafafa" btnTitlea="العودة للباقات">
-      <div className="program_container_hero_container">
+      
+      <div className="program_container_hero_container  ">
         <Hero imag={City[0].image} />
         <h2 className="program_container_hero_container_h2">{City[0].title}</h2>
       </div>
-      <div className="program_container">
+      <div className="program_data_container_socnav section_margin">
+          <SocNavbar arrName={datasoc} fontsize='10px' scrolvh={65}/>
+          </div>
+      <div className="program_container section_margin">
         <div className="program_data_container">
-          {/* <div className="socnavbe_data">
-          <SocNavbar2 arrName={socnavData} />
-          </div> */}
+          <ButtonBread title="العودة الى البرامج"/>
+          
           <BreadcrumbList
             breadcrumbsArrayname={breadcrumb1}
             btnTitle="العودة"
@@ -60,7 +65,7 @@ const SinglePage = ({ object }) => {
             </div>
 
             <div className="program_data_container_Itinerary">
-              <h3 style={{ paddingBottom: "3vw" }}>خط سير الرحلة </h3>
+              <h3 style={{ padding: "3vw 0 5vw" }} id="roadmap">خط سير الرحلة </h3>
               <ul className="accordion_navTitle" id="acrd">
                 {city.map((nav) => (
                   <div
@@ -74,7 +79,7 @@ const SinglePage = ({ object }) => {
                   </div>
                 ))}
               </ul>
-              <div className="program_data_container_Itinerary_container">
+              <div className="program_data_container_Itinerary_container" >
                 {selectedCity &&
                   city.map((nav) => (
                     <div
@@ -85,8 +90,8 @@ const SinglePage = ({ object }) => {
                       }`}
                     >
                       <Accordion arrayName={City} navId={nav.id} />
-                      <div>
-                        <h2 className="Includes__h2 ">الباقه تشمل :</h2>
+                      <div style={{padding:"5vw 0"}}>
+                        <h2 style={{padding:"0vw 0 5vw"}} className="Includes__h2 ">الباقه تشمل :</h2>
                         <Accordion arrayName={Includes} navId={0} />
                       </div>
                     </div>
@@ -96,7 +101,7 @@ const SinglePage = ({ object }) => {
           </div>
         </div>
         <div className="program_form_container" id="dataForm">
-          <div>
+          <div className="program_form_container_textSec">
             <h4>خطّط عطلتك كيفما شئت!</h4>
             <p>
               لقضاء عطلة استثنائية، يرجى التواصل معنا عن طريق الوتساب أو إدخال
@@ -110,8 +115,9 @@ const SinglePage = ({ object }) => {
               </div>{" "}
               تواصل معنا عن طريق الوتساب
             </button>
-            <span>او</span>
+            
           </div>
+          <span>او</span>
           <form className="program_form_container_form">
             <h5>المعلومات الشخصية</h5>
             <div>

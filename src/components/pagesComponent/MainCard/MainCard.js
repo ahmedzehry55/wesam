@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./MainCard.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,12 +10,31 @@ export default function MainCard({
   itemWidth,
   itemHeight,
   itemText,
-  justitem
-})
- {
-  const router = useRouter()
+  justitem,
+  textflex,
+  phonewidth
+}) {
+  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 860px)");
+
+    const handleViewportChange = (event) => {
+      setIsTabletOrSmaller(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleViewportChange);
+
+    // Initial check
+    setIsTabletOrSmaller(mediaQuery.matches);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleViewportChange);
+    };
+  }, []);
+  const router = useRouter();
   const currentPath = router.asPath;
   const myArray = arryName[0].nav;
+  const [badge, setBadge] = useState(false);
   return (
     <>
       <div className={`trending`}>
@@ -27,32 +46,64 @@ export default function MainCard({
                 key={nav.id}
                 className={styles.rowItem}
                 style={{
-                  width: `${itemWidth}`,
+                
                   height: `${itemHeight}`,
                   textAlign: `${itemText}`,
+                  width: `${isTabletOrSmaller  ? '' : itemWidth}`,
+
                 }}
               >
-                 <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw,
+                <div className={styles.blackdiv} />
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw,
                   (max-width: 1200px) 50vw,
                   33vw"
-                    src={nav.image}
-                    alt={nav.title}
-                    style={{ objectFit: "cover",borderRadius: ".2cm " }}
-                  />
+                  src={nav.image}
+                  alt={nav.title}
+                  style={{ objectFit: "cover", borderRadius: ".2cm " }}
+                />
+                <div  className={styles.badgediv} >
+                  {nav.badge ? <p className={styles.badge}>{nav.badge}</p> : null}
+                  {nav.bestSeller ? <p className={styles.badge}>{nav.bestSeller}</p> : null}
+                </div>
 
                 <section
                   className={styles.link}
                   style={{ alignItems: `${itemText}` }}
                 >
-                  <section className={styles.itemDescription}>
+                  <section
+                    className={styles.itemDescription}
+                    style={{ justifyContent: `${textflex}` }}
+                  >
                     <section
                       className={styles.descText}
-                      style={{ alignItems: `${itemText}`, justifyItems:`${justitem}`, rowGap: ".5vw" }}
+                      style={{
+                        alignItems: `${itemText}`,
+                        justifyItems: `${justitem}`,
+                        rowGap: ".5vw",
+                      }}
                     >
                       <h3>{nav.title}</h3>
-                      <p>{nav.desc}</p>
+                      <div className={styles.arraydesc_div}>
+                        {nav.desc.length > 0 ? (
+                          nav.desc.map((city, index) => (
+                            <div className={styles.arraydesc_div_array}>
+                              <p>{city}</p>
+                              {index === nav.desc.length - 1 ? (
+                                <div
+                                  className="city_dot"
+                                  style={{ display: "none" }}
+                                />
+                              ) : (
+                                <div className="city_dot" />
+                              )}
+                            </div>
+                          ))
+                        ) : (
+                          <p>{nav.desc}</p>
+                        )}
+                      </div>
                     </section>
                   </section>
                 </section>

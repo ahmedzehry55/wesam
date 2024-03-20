@@ -1,10 +1,9 @@
 .Breadcrumbcss {
   align-self: flex-start;
   margin-right: 3vw;
-  padding-top: 14vh;
-  @media (max-width:860px) {
-   padding-top: 0;;
-    
+  padding-top: 15vh;
+  @media (max-width: 860px) {
+    padding-top: 0;
   }
 }
 .ol {
@@ -13,15 +12,15 @@
   gap: 1vw;
   margin-top: 1vw;
   color: #277b8b;
-  @media (max-width:860px) {
+  @media (max-width: 860px) {
     display: none;
-    
   }
 }
 .li {
   display: flex;
   align-items: center;
   gap: 0.5vw;
+  font-size: 12px;
 }
 .li:hover {
   text-decoration: underline;
@@ -45,7 +44,9 @@
 }
 
 .bn54 {
-  position: relative;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   outline: none;
   text-decoration: none;
   border-radius: 50px;
@@ -55,20 +56,21 @@
   cursor: pointer;
   text-transform: uppercase;
   height: 45px;
-  width: 130px;
+  width: 133px;
+  color: #02647a;
   opacity: 1;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.6);
-  @media (max-width:860px) {
-    display: flex;
 
+  @media (max-width: 860px) {
+    display: flex;
+    z-index: 11111;
   }
 }
 
 .bn54 .bn54span {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000000;
-  font-size: 12px;
+  color: #02647a;
+  font-size: 11px;
   font-weight: bolder;
   letter-spacing: 0.7px;
 }

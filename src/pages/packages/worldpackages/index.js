@@ -16,17 +16,21 @@ const breadcrumb1 = [
 ];
 function Hotel() {
   return (
-    <Layout menuDis='none'>
+    <Layout menuDis='none' bgcolor='#ededed'>
       <BreadcrumbList
         breadcrumbsArrayname={breadcrumb1}
         btnTitle="العودة للباقات"
         // btnRef="/packages"
       />
-      <SocNavbar arrName={socnav1} />
+      <SocNavbar arrName={socnav1} scrolvh={10} />
 
       <Pagescomponent
         textAlignProp="center"
         arryName={countrys}
+        cardWidth="23vw"
+        catdHeight='250px'
+        textflex='flex-start'
+        cardText='flex-start'
         currntpath="cruise"
         title="باقات دولية"
         span="هل تبحث عن رحلة بحرية لا مثيل لها حول العالم؟ سواءً كنت ترغب بتجربة في غاية الفخامة أو بتكلفة معقولة، صممنا لك باقات متعددة بمرافق عالمية المستوى تناسب متطلباتك. والتي تتميّز بالضيافة العالمية والمرافق الترفيهية والمطاعم الرائعة. عندما ترسو الرحلات البحرية في مدن الموانئ المختلفة، ستتاح لك الفرصة للانطلاق واستكشاف وجهة جديدة! احصل على أفضل ما في البر والبحر عندما تحجز معنا!        "

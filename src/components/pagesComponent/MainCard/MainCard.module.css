@@ -9,13 +9,22 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 10px;
- 
   
   @media (max-width:860px) {
     margin: 0;
     max-width: 95%;
     font-size: 10px;
   }
+}
+.blackdiv{
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background:   linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0));
+  opacity: .2;
+  z-index: 1;
+  border-radius: .2cm;
+  bottom: 0px;
 }
  /* rowContainer */
 .rowContainer {
@@ -34,10 +43,10 @@
   outline: 2px solid rgba(0, 0, 0, 0.105);
   cursor: pointer;
   transition: all 0.15s ease-in;
-  height: 50vh;
+  height:60vh;
   border-radius: 0.2cm;
   position: relative;
-  width: 18.3vw;
+  width: 22.3vw;
  object-fit: contain;
  @media (max-width:860px) {
   height: 30vh;
@@ -48,13 +57,35 @@
 .rowItem:hover {
   outline: 2px solid rgba(0, 0, 0, 0.6);
 }
+.badgediv{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.badge{
+  /* width: 200px; */
+  text-align: center;
+  /* height: 30px; */
 
+  padding: 5px 13px;
+  border-radius: .5cm;
+  z-index: 1000;
+ 
+  background: #fcfcfc;
+  color: #333333;
+  font-size: 9px;
+}
 .itemDescription {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  z-index: 2;
 }
 .descText {
   position: relative;
@@ -66,7 +97,17 @@
   overflow: hidden;
   color: white;
 }
-
+.arraydesc_div{
+  display: flex; 
+  flex-wrap: wrap;
+  column-gap: 1vw;
+}
+.arraydesc_div_array{
+  display: flex; 
+  align-items: center;
+  column-gap: 1vw;
+  font-size: 12px;
+}
 .trending h3 {
   font-size: 1.5rem;
   font-weight: 600;

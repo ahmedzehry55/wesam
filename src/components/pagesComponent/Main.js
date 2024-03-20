@@ -1,7 +1,5 @@
 import React from "react";
 import MainCard from "./MainCard/MainCard";
-import SocNavbar from "./socNavbar/SocNavbar";
-import { socnav1 } from "../../constants/constants";
 function Pagescomponent({
   cardText,
   arryName,
@@ -12,6 +10,9 @@ function Pagescomponent({
   cardWidth,
   catdHeight,
   just,
+  textflex,
+  phonewidth
+
 }) {
   return (
     <div className="pagescomponent_container">
@@ -30,6 +31,8 @@ function Pagescomponent({
           itemWidth={cardWidth}
           itemHeight={catdHeight}
           justitem={just}
+          textflex={textflex}
+          phonewidth={phonewidth}
         />
       </div>
     </div>

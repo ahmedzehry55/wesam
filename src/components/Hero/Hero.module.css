@@ -4,6 +4,7 @@
   width: 100%;
   background-position: center;
   background-size: cover;
+  margin-top:115px ;
   @media screen and (max-width: 860px) {
   display: none;
   }

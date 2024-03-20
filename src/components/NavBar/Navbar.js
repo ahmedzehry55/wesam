@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="container" id="navbar">
+    <div className="container section_margin" id="navbar">
       <h5
         className="navbar_h5"
         style={{

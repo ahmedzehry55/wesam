@@ -1,11 +1,11 @@
 .program_container {
   display: flex;
 }
-.program_container_hero_container{
+.program_container_hero_container {
   min-width: 100vw;
   position: relative;
 }
-.program_container_hero_container_h2{
+.program_container_hero_container_h2 {
   position: absolute;
   bottom: 3vw;
   right: 5vw;
@@ -71,7 +71,7 @@
 }
 .program_data_container_Itinerary_li_LeftSide_text p {
   color: rgba(82, 81, 81, 0.7);
-  font-size: 10px;
+  font-size: 12px;
 }
 .acLineCont {
   display: flex;
@@ -125,6 +125,10 @@
   width: 24vw;
   flex-basis: 1;
   background: rgb(255, 255, 255);
+  height: fit-content;
+  border: 1px solid rgb(203, 208, 210);
+  border-radius: 0 0 0.3cm 0.3cm;
+  border-top: none;
 }
 .program_form_container h4 {
   font-size: 22px;
@@ -143,7 +147,6 @@
   margin: 1.5vw auto;
   border-radius: 1cm;
   border: transparent;
-  font-size: 18px;
   font-weight: bolder;
   color: white;
   background: #25d366;
@@ -163,7 +166,6 @@
 .program_form_container_form {
   display: flex;
   flex-direction: column;
-  height: 1000px;
 }
 .program_form_container_form h5 {
   font-size: 14px;
@@ -186,120 +188,175 @@
   font-size: 18px;
   font-weight: bolder;
 }
-
+.program_data_container_socnav {
+  display: none;
+}
 @media (max-width: 860px) {
   .program_container {
     flex-direction: column;
+    align-items: center;
   }
   .program_data_container2 {
-    width: 90vw;
+    width: 100vw;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
   }
   .program_data_container_p {
     width: 90%;
+    margin: 0;
   }
   .program_data_container_p p {
     width: 100%;
+    line-height: 25px;
   }
   .program_data_container_card {
     margin-top: 2vh;
+    width: 95%;
   }
-
+  .program_data_container_Itinerary {
+    margin: 0 1vw 3vw;
+  }
+  .program_data_container_Itinerary_ul {
+    width: 94vw;
+    padding: 26px;
+  }
+  .program_data_container_Itinerary_li_LeftSide_text {
+    row-gap: 2vw;
+  }
 
   .accordion_navTitleli {
     padding-bottom: 3vw;
   }
+  .program_data_container_Itinerary_ul {
+    border-radius: 0.2cm;
+  }
   .program_form_container {
-    width: 90vw;
-
-    
+    border: 1px solid rgb(203, 208, 210);
+    width: 94%;
+    border-radius: 0.2cm;
+    padding: 35px 20px 20px;
   }
   .program_form_container h4 {
     font-size: 16px;
     margin-bottom: 3vw;
   }
   .program_form_container p {
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: 3vw;
   }
   .program_form_container button {
-    width: 80vw;
+    width: 90vw;
+    font-size: 14px;
+    margin-bottom: 2vw;
+    height: 52px;
+    gap: 2vw;
   }
+
   .program_form_container_form {
     height: 100%;
-
-
-  
   }
   .program_form_container_form h5 {
-    margin-bottom: 1vw;
+    margin: 10px 0 20px;
   }
   .program_form_container_form input {
-    margin: 1vw auto 2vw;
+    margin: 10px auto 25px;
   }
   .program_form_container_form button {
-
-    font-size: 18px;
+    font-size: 14px;
     font-weight: lighter;
   }
-  .program_form_container button {
-    gap: 2vw;
+  .accordion_navTitleli {
+    padding: 15px;
+  }
+  .program_data_container_socnav {
+    position: absolute;
+    display: block;
+    top: 50vh;
+    background-color: #fcfcfc;
+  }
+  .acBorder {
+    border: 3px solid #23a5b9;
+  }
+  .program_data_container_Itinerary_li_LeftSide {
+    padding: 2vw;
   }
 }
 @media (max-width: 450px) {
-  .program_container_hero_container_h2{
+  /* .program_container_hero_container_h2{
     font-size: 12px;
-  }
+  } */
   .program_data_container_p p {
-    font-size: 9px;
-  }
-  .program_data_container_Itinerary h3 {
     font-size: 14px;
+    padding: 20px 0;
   }
+  /* .program_data_container_Itinerary h3 {
+    font-size: 14px;
+  } */
   .accordion_navTitleli {
-    font-size: 12px;
+    /* font-size: 12px; */
     padding-bottom: 3vw;
   }
+
   .program_data_container_Itinerary_li span {
-    font-size: 6px;
-    font-weight: lighter;
+    /* font-size: 6px; */
+    /* font-weight: lighter; */
+    padding-top: 15px;
+  }
+  .program_data_container_Itinerary_li_LeftSide_icon {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 15px;
   }
   .program_data_container_Itinerary_li_LeftSide_text {
     padding-right: 3vw;
+   
   }
   .program_data_container_Itinerary_li_LeftSide_text h3 {
-    font-size: 9px;
+    /* font-size: 9px; */
+    padding: 15px 0 10px 40px;
   }
   .program_data_container_Itinerary_li_LeftSide_text p {
-    font-size: 7px;
+    /* font-size: 7px; */
+    /* width: 80%; */
+    line-height: 20px;
   }
   .Includes__h2 {
     padding: 2vw;
-    font-size: 10px;
+    /* font-size: 10px; */
   }
   .acLine {
     width: 1px;
   }
-  .acBorder {
-    height: 13px;
-    width: 13px;
+
+  .program_form_container {
+    padding: 0;
+    border: none;
+
+  }
+  .program_form_container span {margin: 20px ;}
+  .program_form_container_textSec p{ width: 90%; margin-bottom: 16px;}
+  .program_form_container_textSec{
+    padding: 26px 16px 16px;
+    border: 1px solid rgb(203, 208, 210);
+    border-radius: 0.3cm;
+    margin: 0 0 10px;
+    line-height: 25px;
+  }
+  .program_form_container_form  {
+    padding: 16px;
+    border: 1px solid rgb(203, 208, 210);
+    border-radius: 0.3cm;
+    margin: 10px 0 10px;
   }
 
-  .program_form_container_form h5 {
-    font-size: 10px;
-  }
-  .program_form_container_form label {
-    font-size: 9px;
-  }
-  .program_form_container_form input {
-    height: 25px;
-  }
-  .program_form_container_form button {
-
-    font-size: 9px;
+  .program_form_container button {
+    /* font-size: 9px; */
+    width: 94%;
     font-weight: lighter;
   }
-  .program_form_container button {
-    font-size: 12px;
 
-  }
 }
