@@ -1,11 +1,21 @@
+.dynamictextContainer {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  height: 50px;
+  @media (max-width: 860px) {
+    height: 30px;
+  }
+}
 .textContainer {
   display: inline-block;
   animation: show-from-right 1.5s linear;
   /* animation-direction: alternate; */
   /* position: absolute; */
   /* display: flex; */
-  height:30px;
-  color: #22A0B6;
+  font-size: 12px;
+  color: #22a0b6;
   @media (max-width: 860px) {
     animation: show-from-center 1.5s linear;
   }
