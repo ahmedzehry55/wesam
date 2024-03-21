@@ -4,13 +4,18 @@
   /* animation-direction: alternate; */
   /* position: absolute; */
   /* display: flex; */
+  height:30px;
+  color: #22A0B6;
+  @media (max-width: 860px) {
+    animation: show-from-center 1.5s linear;
+  }
 }
 .divpor {
   background: rgb(255, 30, 30);
   width: 5px;
   height: 50px;
   z-index: 100;
-  display: inline-block;
+  display: inline;
   /* animation: showright 1.5s linear infinite; */
 }
 @keyframes show-from-right {
@@ -30,16 +35,28 @@
     width: 0;
   }
 }
-
-@keyframes showright {
+@keyframes show-from-center {
   0% {
-  translate: 0px 0px ;
+    transform: scaleX(0);
   }
 
   50% {
-    translate: -9vw 0px ;
+    transform: scaleX(1);
   }
   100% {
-    translate: 0px 0px ;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes showright {
+  0% {
+    translate: 0px 0px;
+  }
+
+  50% {
+    translate: -9vw 0px;
+  }
+  100% {
+    translate: 0px 0px;
   }
 }

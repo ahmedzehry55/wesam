@@ -20,7 +20,7 @@ export default function DynamicText() {
   }, []);
 
   return (
-    <div style={{ display: "inline", position: "relative" , }}>
+    <div style={{ display: "inline", position: "relative" , height:"30px" , textAlign:"center"}}>
       {isVisible && (
         <h2 className={`${styles.textContainer} `}>
           {dynamicText[currentIndex]}{" "}

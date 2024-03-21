@@ -8,6 +8,15 @@
   justify-content: center;
   align-items: center;
 }
+.airlines_div1_span{
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  @media (max-width:860px) {
+    flex-direction: column;
+  }
+}
 
 .background-video {
   position: absolute;
