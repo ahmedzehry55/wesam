@@ -2,6 +2,14 @@ import Image from "next/image";
 import React from "react";
 import icon from "../../../public/icons/flytimer.svg";
 export default function Cta() {
+  const phoneNumber = "+966545003143";
+  const message = "Please help me?";
+
+  const handleWhatsAppClick = () => {
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    window.open(url);
+  };
   return (
     <div className="Cta_container section_margin">
       <div className="Cta_container_rightSide" >
@@ -16,7 +24,7 @@ export default function Cta() {
       </div>
       <div className="Cta_container_wesam_1">
         {" "}
-        <button className="Cta_container_button">اعرف المزيد</button>
+        <button className="Cta_container_button" onClick={handleWhatsAppClick}>اعرف المزيد</button>
       </div>
       </div>
       </div>

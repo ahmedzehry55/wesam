@@ -93,27 +93,29 @@
   }
     .Cta_container_wesam_1{
       width: auto;
-      height: 2vw;
+      height: 20px;
       padding: 0px;
     }
   .Cta_container_wesam_1 button {
     background: transparent;
+    height: 4vh;
     border: none;
     padding: 0px;
   }
 }
 @media (max-width: 450px) {
   .Cta_container {
-    height: 125px;
+    height: 110px;
   }
 
   .Cta_container_text_button{
-    height: 100%;
-    row-gap: 2vw;
+    /* height: 100%; */
+    row-gap: 0vw;
+    justify-content: flex-start;
   }
   .Cta_container_text {
-    height: 70%;
-    justify-content: space-around;
+    height: 100%;
+    justify-content: flex-start;
   }
   .Cta_container_text h2 {
     font-size: 12px;

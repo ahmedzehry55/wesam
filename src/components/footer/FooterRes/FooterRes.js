@@ -95,9 +95,9 @@ export default function FooterRes() {
         <Image src={pay3} alt="pay" width={25} height={25} />
         <Image src={pay4} alt="pay" width={25} height={25} />
       </div>
-      <section className={styless.sec} title=".slideTwo">
+      {/* <section className={styless.sec} title=".slideTwo">
       <Brightness/>
-      </section>
+      </section> */}
     </div>
   );
 }

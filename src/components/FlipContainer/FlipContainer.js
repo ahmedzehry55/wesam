@@ -5,9 +5,27 @@ import React, { useState } from "react";
 import styles from "./Flipcont.module.css";
 import FlipCard from "../flipCard/FlipCard";
 
-import { IoIosArrowRoundBack,IoIosArrowRoundForward  } from "react-icons/io";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import Image from "next/image";
 
 function FlipContainer() {
+  const [showSpan, setShowSpan] = useState(false);
+  const [showSpanleft, setShowSpanleft] = useState(false);
+
+  const handleMouseDown = () => {
+    setShowSpan(true);
+  };
+
+  const handleMouseUp = () => {
+    setShowSpan(false);
+  };
+  const handleMouseDownleft = () => {
+    setShowSpanleft(true);
+  };
+
+  const handleMouseUpleft = () => {
+    setShowSpanleft(false);
+  };
   const slideLeft = () => {
     let slider = document.getElementById("flip");
     slider.scrollLeft -= 360;
@@ -28,7 +46,10 @@ function FlipContainer() {
   return (
     <div className={styles.container}>
       <div className={styles.rightSide}>
-        <div style={{ alignSelf: "center" }} className={styles.rightSideLink}>
+        <div
+          style={{ alignSelf: "center", marginLeft: "30px" }}
+          className={styles.rightSideLink}
+        >
           <Link
             className={styles.rightSideLink}
             style={{
@@ -50,7 +71,9 @@ function FlipContainer() {
               onClick={() => handle(id, id)}
             >
               {activeIndex === id && <div className={styles.routesprov} />}
-              <h3>{titleLink}</h3>
+              <h3 style={{ color: `${activeIndex === id ? "#5197BD" : ""}` }}>
+                {titleLink}
+              </h3>
             </div>
           ))}
         </div>
@@ -60,15 +83,35 @@ function FlipContainer() {
             className={styles.slideRight}
             title="scroll right"
             onClick={slideRight}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
           >
-            <IoIosArrowRoundForward />
+            <Image
+              src="/icons/prev-arrow.svg"
+              alt="arrow-left"
+              width={60}
+              height={60}
+              priority={true}
+            />
+            <span style={{ opacity: `${showSpan ? "1" : "0"}` }} className={``}>
+              prev
+            </span>
           </button>
           <button
             className={styles.slideLeft}
             title="scroll left"
             onClick={slideLeft}
+            onMouseDown={handleMouseDownleft}
+            onMouseUp={handleMouseUpleft}
           >
-            <IoIosArrowRoundBack />
+            <Image
+              src="/icons/next-arrow.svg"
+              alt="arrow-right"
+              width={60}
+              height={60}
+              priority={true}
+            />
+            <span style={{ opacity: `${showSpanleft ? "1" : "0"}` }}>next</span>
           </button>
         </div>
       </div>
@@ -77,17 +120,17 @@ function FlipContainer() {
         <div className={styles.lsTitle}>
           <h2>اختر وجهتك الان</h2>
         </div>
-        <div 
-        className={styles.cardcont}
+        <div
+          className={styles.cardcont}
           style={{
             width: "100%",
             alignItems: "start",
             display: "grid",
             alignItems: "start",
-            overflowX:"scroll",
-            scrollBehavior:"smooth",
-            scrollbarWidth:"none",
-            transition:"all 3s ease"
+            overflowX: "scroll",
+            scrollBehavior: "smooth",
+            scrollbarWidth: "none",
+            transition: "all 3s ease",
           }}
           id="flip"
         >
@@ -98,7 +141,7 @@ function FlipContainer() {
                   <div className={`${styles.flipcont}`} id="flipcon">
                     {routs.map((item) => (
                       <div key={item.id}>
-                        <div  className={styles.flipCard}>
+                        <div className={styles.flipCard}>
                           <FlipCard compTitle={item.link} img={item.image} />
                         </div>
                       </div>
@@ -111,6 +154,42 @@ function FlipContainer() {
           ))}
         </div>
       </div>
+      <div className={`${styles.btns} ${styles.btnsres}`}>
+          <button
+            className={styles.slideRight}
+            title="scroll right"
+            onClick={slideRight}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+          >
+            <Image
+              src="/icons/prev-arrow.svg"
+              alt="arrow-left"
+              width={60}
+              height={60}
+              priority={true}
+            />
+            <span style={{ opacity: `${showSpan ? "1" : "0"}` }} className={``}>
+              prev
+            </span>
+          </button>
+          <button
+            className={styles.slideLeft}
+            title="scroll left"
+            onClick={slideLeft}
+            onMouseDown={handleMouseDownleft}
+            onMouseUp={handleMouseUpleft}
+          >
+            <Image
+              src="/icons/next-arrow.svg"
+              alt="arrow-right"
+              width={60}
+              height={60}
+              priority={true}
+            />
+            <span style={{ opacity: `${showSpanleft ? "1" : "0"}` }}>next</span>
+          </button>
+        </div>
     </div>
   );
 }

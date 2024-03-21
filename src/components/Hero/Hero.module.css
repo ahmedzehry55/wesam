@@ -5,6 +5,7 @@
   background-position: center;
   background-size: cover;
   margin-top:100px ;
+  position: relative;
   @media screen and (max-width: 860px) {
   display: none;
   }

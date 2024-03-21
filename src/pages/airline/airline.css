@@ -1,0 +1,210 @@
+.airlines_div1 {
+  margin-top: 113px;
+  width: 100vw !important;
+  height: 600px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.airlines_div1 h2 {
+  font-size: 40px;
+}
+.airlines_div1 span {
+  font-size: 36px;
+}
+.airlines_div1 button {
+  font-size: 20px;
+  color: #22a0b6;
+  border: solid #22a0b6;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 25px;
+}
+.airlines_div2 {
+  width: 100vw !important;
+  /* height: 560px; */
+  padding: 77px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f2f6fb;
+}
+.airlines_div2 h2 {
+  font-size: 26px;
+  margin-bottom: 7px;
+  width: 475px;
+  text-align: center;
+}
+.airlines_div2 span {
+  font-size: 15px;
+  margin-bottom: 50px;
+  width: 475px;
+  text-align: center;
+}
+.airlines_div2_mapcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1190px;
+}
+.airlines_div2_mapitem {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  width: 24vw;
+  background: white;
+  padding: 10px;
+}
+.airlines_div2_mapitem figure {
+  position: relative;
+  width: 50px;
+  height: 60px;
+}
+.airlines_div2_mapitem_div1 {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: white;
+  padding: 10px;
+}
+.airlines_div2_mapitem_div2 {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
+
+  background: white;
+  padding: 10px;
+}
+.airlines_div2_mapitem_div2_mapitem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  width: 100%;
+  height: 55px;
+}
+
+.airlines_div2_mapitem_div2_mapitem span {
+  font-size: 14px;
+  margin: 0;
+  width: 70px;
+}
+.flight_road {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px !important;
+  position: relative;
+  height: 18px;
+}
+
+.airlines_div3 {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.airlines_div3 h2 {
+  font-size: 26px;
+}
+.airlines_div3_mapcontainer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.airlines_div3_mapitem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  font-size: 18px;
+  width: 200px;
+  text-align: center;
+}
+.airlines_div3_mapitem figure {
+  position: relative;
+  width: 82px;
+  height: 82px;
+}
+
+@media (max-width: 860px) {
+  .airlines_div1 {
+    margin-top: 0;
+  }
+  .airlines_div2 {
+    background: #FCFCFC;
+  }
+  .airlines_div2_mapcontainer {
+    width: 94%;
+    gap: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .airlines_div2_mapitem {
+    width: 100%;
+    height: 60PX;
+    border: 1px solid rgb(228, 230, 249);
+  }
+  .airlines_div2_mapitem_div1 ,.airlines_div2_mapitem_div2{
+    height: 40PX;
+  }
+  .airlines_div2_mapitem figure {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .airlines_div3_mapcontainer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .airlines_div3_mapitem {
+    width: 44vw;
+  }
+}
+@media (max-width: 450px) {
+  .airlines_div1 h2  {
+    font-size: 30px;
+  }
+  .airlines_div1 span{
+    text-align: center;
+  }
+
+  .airlines_div2 h2 ,.airlines_div3 h2 {
+    width: 98%;
+    font-size: 16px;
+    text-align: center;
+  }
+  .airlines_div2 span {
+    font-size: 12px;
+    width: 98%;
+  }
+  .airlines_div3_mapitem span{
+    font-size: 12px;
+  }
+}

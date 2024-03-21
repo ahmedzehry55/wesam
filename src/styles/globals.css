@@ -5,13 +5,13 @@
 @import url(../components/resMenu/ResMenu.css);
 @import url(../components/Cta/Cta.css);
 @import url(../components/Carsoul/carousel.module.css);
-
 @import url(../components/pagesComponent/MainPagesComponent.css);
 @import url(../components/pagesComponent/socNavbar/SocNavBar.css);
 @import url(../pages/hotel/[place]/hotel.css);
 @import url(../pages/city-guides/cityGuid.css);
 @import url(../pages/about/AboutComponet/header/aboutHeader.css);
 @import url(../pages/about/about.css);
+@import url(../pages/airline/airline.css);
 @import url(../pages/tours/tour.css);
 @import url(../pages/tours/[place]/[data]/tourdata.css);
 @import url(../components/search/Search.css);
@@ -20,10 +20,14 @@
   --max-width: 1100px;
   --backgroundCheckbox: #3498db;
   --background: #fafafa;
-  --color-footer:linear-gradient(164deg, rgba(34,160,182,1) 0%, rgba(1,43,57,1) 98%);
-  --primary1: #023E8A;
+  --color-footer: linear-gradient(
+    164deg,
+    rgba(34, 160, 182, 1) 0%,
+    rgba(1, 43, 57, 1) 98%
+  );
+  --primary1: #023e8a;
   --primary2: #00b4d8;
-  --primary3: rgba(34,160,182,1);
+  --primary3: rgba(34, 160, 182, 1);
   --primary5: #9ca2a2;
   --primary4: #0d1b2a;
 }
@@ -63,16 +67,15 @@ a {
     row-gap: 3vw;
   }
 }
-.city_dot{
+.city_dot {
   width: 3px;
   height: 3px;
   background: white;
   border-radius: 50%;
 }
-.section_margin{
+.section_margin {
   margin-bottom: 2vw;
-  @media (max-width:860px)  {
+  @media (max-width: 860px) {
     margin-bottom: 5vw;
-  } 
+  }
 }
-
