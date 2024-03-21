@@ -63,8 +63,8 @@ export default function Airline() {
 
               {activeIndexes.includes(index) && (
                 <div className="airlines_div2_mapitem_div2">
-                  {item.flights.map((flight) => (
-                    <div className="airlines_div2_mapitem_div2_mapitem">
+                  {item.flights.map((flight,index) => (
+                    <div key={index} className="airlines_div2_mapitem_div2_mapitem">
                       <span>{flight.start}</span>
                       <div className="flight_road">
                        <Image fill src={rout_ar} alt="rout_ar"/>
