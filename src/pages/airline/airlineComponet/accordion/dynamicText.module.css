@@ -1,39 +1,45 @@
 .textContainer {
-    display: inline-block;
-    animation: show-from-right 3s linear;
-    animation-direction: alternate;
+  display: inline-block;
+  animation: show-from-right 1.5s linear;
+  /* animation-direction: alternate; */
+  /* position: absolute; */
+  /* display: flex; */
+}
+.divpor {
+  background: rgb(255, 30, 30);
+  width: 5px;
+  height: 50px;
+  z-index: 100;
+  display: inline-block;
+  /* animation: showright 1.5s linear infinite; */
+}
+@keyframes show-from-right {
+  0% {
+    right: 0px;
+    transform: scaleX(0);
+    width: 0;
   }
-  
- 
 
-  @keyframes show-from-right {
-    0% {
-      transform: scaleX(0);
-      width: 0px;
+  50% {
+    /* right: 0px; */
+    transform: scaleX(1);
+  }
+  100% {
+    right: 0px;
+    transform: scaleX(0);
+    width: 0;
+  }
+}
 
-      right :0
-    }
-   
-    50%{
-      transform: scaleX(1);
-      right: 100%;
-      width: auto
-    }
-    100% {
-     transform: scaleX(0);
-     right: 100%;
-     width: 0
-    }
+@keyframes showright {
+  0% {
+  translate: 0px 0px ;
   }
-  
-  @keyframes hide-to-right {
-    0% {
-      transform: scaleX(1);
-      transform-origin: 0 0;
-    }
-    100% {
-      transform: scaleX(0);
-      transform-origin: 100% 0;
-    }
+
+  50% {
+    translate: -9vw 0px ;
   }
-  
+  100% {
+    translate: 0px 0px ;
+  }
+}

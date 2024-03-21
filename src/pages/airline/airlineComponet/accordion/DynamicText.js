@@ -1,6 +1,6 @@
-import { dynamicText } from '@/constants/constants'
-import React, { useState, useEffect } from 'react';
-import styles from './dynamicText.module.css';
+import { dynamicText } from "@/constants/constants";
+import React, { useState, useEffect } from "react";
+import styles from "./dynamicText.module.css";
 
 export default function DynamicText() {
   const dynamicText = ["الرحلات", "الخطوط", "المقاعد", "الاسعار"];
@@ -14,16 +14,19 @@ export default function DynamicText() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % dynamicText.length);
         setIsVisible(true);
       }, 500);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div style={{ display: "inline"}}>
+    <div style={{ display: "inline", position: "relative" , }}>
       {isVisible && (
-        <h2 className={`${styles.textContainer} `}>{dynamicText[currentIndex]}</h2>
+        <h2 className={`${styles.textContainer} `}>
+          {dynamicText[currentIndex]}{" "}
+        </h2>
       )}
+      {/* <div className={styles.divpor} /> */}
     </div>
   );
 }
