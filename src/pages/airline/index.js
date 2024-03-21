@@ -45,7 +45,7 @@ export default function Airline() {
         <div className="airlines_div2_mapcontainer">
           {airlines.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               onClick={() => handleClick(index)}
               className="airlines_div2_mapitem"
             >
