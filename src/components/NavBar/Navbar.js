@@ -71,7 +71,7 @@ export default function Navbar() {
               color: "black",
               border: "2 solid BLACK",
             }}
-            href="/"
+            href="/more"
           >
             <div className='navbar_icon' style={{ paddinBottom: "0.6vw" }}>
               <Image
