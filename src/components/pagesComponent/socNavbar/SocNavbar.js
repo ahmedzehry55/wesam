@@ -25,7 +25,7 @@ export default function SocNavbar({arrName, fontsize ,scrollactve ,scrolvh}) {
           ${item.scrollactve ? 'activeSocpackage' : ''}
           `}  key={item.id}>
             <Link href={item.ref}>
-              {item.name}
+              <h2>{item.name}</h2>
             </Link>
           </li>
         ))}

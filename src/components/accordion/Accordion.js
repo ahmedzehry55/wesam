@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const Accordion = ({ arrayName, navId }) => {
-  var dayss = arrayName[0].nav[navId].days;
+  var dayss = arrayName.cites[navId].days;
   const [activeIndexes, setActiveIndexes] = useState(
     dayss.map((_, index) => index) // Set the initial active indexes to an array containing all indices
   );

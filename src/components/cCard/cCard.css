@@ -1,5 +1,6 @@
 .cCardDis {
   display: none;
+  padding-right: 8px;
 }
 @media screen and (max-width: 860px) {
   .cCardDis {

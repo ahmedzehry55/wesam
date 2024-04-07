@@ -9,23 +9,7 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Image from "next/image";
 
 function FlipContainer() {
-  const [showSpan, setShowSpan] = useState(false);
-  const [showSpanleft, setShowSpanleft] = useState(false);
 
-  const handleMouseDown = () => {
-    setShowSpan(true);
-  };
-
-  const handleMouseUp = () => {
-    setShowSpan(false);
-  };
-  const handleMouseDownleft = () => {
-    setShowSpanleft(true);
-  };
-
-  const handleMouseUpleft = () => {
-    setShowSpanleft(false);
-  };
   const slideLeft = () => {
     let slider = document.getElementById("flip");
     slider.scrollLeft -= 360;
@@ -83,8 +67,7 @@ function FlipContainer() {
             className={styles.slideRight}
             title="scroll right"
             onClick={slideRight}
-            onMouseDown={handleMouseDown}
-            onMouseUp={handleMouseUp}
+    
           >
             <Image
               src="/icons/prev-arrow.svg"
@@ -93,16 +76,12 @@ function FlipContainer() {
               height={60}
               priority={true}
             />
-            <span style={{ opacity: `${showSpan ? "1" : "0"}` }} className={``}>
-              prev
-            </span>
+            <span className={styles.prevputton}>Prev</span>
           </button>
           <button
             className={styles.slideLeft}
             title="scroll left"
             onClick={slideLeft}
-            onMouseDown={handleMouseDownleft}
-            onMouseUp={handleMouseUpleft}
           >
             <Image
               src="/icons/next-arrow.svg"
@@ -111,7 +90,7 @@ function FlipContainer() {
               height={60}
               priority={true}
             />
-            <span style={{ opacity: `${showSpanleft ? "1" : "0"}` }}>next</span>
+            <span className={styles.nextputton}>Next</span>
           </button>
         </div>
       </div>
@@ -154,42 +133,7 @@ function FlipContainer() {
           ))}
         </div>
       </div>
-      <div className={`${styles.btns} ${styles.btnsres}`}>
-          <button
-            className={styles.slideRight}
-            title="scroll right"
-            onClick={slideRight}
-            onMouseDown={handleMouseDown}
-            onMouseUp={handleMouseUp}
-          >
-            <Image
-              src="/icons/prev-arrow.svg"
-              alt="arrow-left"
-              width={60}
-              height={60}
-              priority={true}
-            />
-            <span style={{ opacity: `${showSpan ? "1" : "0"}` }} className={``}>
-              prev
-            </span>
-          </button>
-          <button
-            className={styles.slideLeft}
-            title="scroll left"
-            onClick={slideLeft}
-            onMouseDown={handleMouseDownleft}
-            onMouseUp={handleMouseUpleft}
-          >
-            <Image
-              src="/icons/next-arrow.svg"
-              alt="arrow-right"
-              width={60}
-              height={60}
-              priority={true}
-            />
-            <span style={{ opacity: `${showSpanleft ? "1" : "0"}` }}>next</span>
-          </button>
-        </div>
+
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.bn55{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 44px;
+    background-color: #003143;
+    border: none;
+    border-top: 1px solid ;
+    color: white;
+    text-align: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5px;
+    overflow: hidden;
+    padding:8px 15px ;
+}
+.bn55span{
+    text-align: center;
+    font-size: 14px;
+
+}

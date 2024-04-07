@@ -8,9 +8,19 @@ import { LuSettings2 } from "react-icons/lu";
 import { useRouter } from "next/router";
 import Carsoul from "@/components/Carsoul/Carsoul";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const navarray = tourList;
 const SinglePage = ({ object }) => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:4000/api/tours/660a4c27749ebc54b3d73842`)
+      .then((res) => res.json())
+      .then((data) => {
+        
+        setData(data.data.toursData);
+      });
+  }, []);
   const router = useRouter();
   const currentPath = router.asPath;
   const goBack = () => {
@@ -53,7 +63,7 @@ const SinglePage = ({ object }) => {
       </div>
       {/* end header */}
       <ul className="tourid_container_card_container">
-        {tourdata.map((item) => (
+        {data.map((item) => (
           <li className="tourid_container_card_container_li">
             <Link href={`/${currentPath}/${item.id}`}> 
               <div className="tourid_container_card_container_corsul">

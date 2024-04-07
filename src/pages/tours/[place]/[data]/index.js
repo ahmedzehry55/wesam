@@ -13,6 +13,16 @@ import Carsoul from "@/components/Carsoul/Carsoul";
 // import Map from "@/components/map/Map";
 
 const SinglePage = ({ object }) => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:4000/api/tours/660a4c27749ebc54b3d73842`)
+      .then((res) => res.json())
+      .then((data) => {
+        
+        setData(data.data.toursData[0].sigleTourData);
+      });
+  }, []);
+  console.log(data)
   const [scrolled, setScrolled] = useState(false);
   const [selectedCity, setSelectedCity] = useState("#packgedesc");
   const phoneNumber = "+966545003143";
@@ -59,7 +69,7 @@ const SinglePage = ({ object }) => {
   };
   return (
     <div className="tour_data_container">
-      {singletourdata.map((tour, index) => (
+      {data.map((tour, index) => (
         <div key={index}>
           <figure className="bgimg">
             <GoArrowRight

@@ -1,5 +1,6 @@
 @import url(../components/ACard/ACard.css);
 @import url(./more.css);
+@import url(../pages/offers/offers.css);
 @import url(../components/cCard/cCard.css);
 @import url(../components/BCard/BCard.css);
 @import url(../components/NavBar/Navbar.css);
@@ -17,6 +18,7 @@
 @import url(../pages/tours/[place]/[data]/tourdata.css);
 @import url(../components/search/Search.css);
 @import url(../pages/packages/worldpackages/[place]/[data]/program.css);
+@import url(../pages/packages/cruise/[data]/program.css);
 :root {
   --max-width: 1100px;
   --backgroundCheckbox: #3498db;
@@ -48,6 +50,7 @@ button {
   overflow-x: hidden;
   font-family: bukra;
   background: #fafafa;
+  scroll-behavior: smooth;
 }
 a {
   color: inherit;
@@ -79,4 +82,16 @@ a {
   @media (max-width: 860px) {
     margin-bottom: 5vw;
   }
+}
+
+.blackdiv{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background:   linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0));
+  opacity: .2;
+  z-index: 1;
+  border-radius: inherit;
+  bottom: 0px;
+  backface-visibility: none;
 }

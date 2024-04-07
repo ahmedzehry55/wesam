@@ -68,6 +68,7 @@
 .tour_list_container{
   background: white;
   z-index: 1;
+  width: 100%;
 }
 .tour_list_container h3 {
   width: 100%;

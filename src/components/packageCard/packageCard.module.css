@@ -24,7 +24,6 @@
   position: relative;
   overflow: hidden;
   min-width: 22.5%;
-
 }
 
 .rowItem:hover {
@@ -62,11 +61,11 @@
 .trending h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: .6rem !important;
+  margin-bottom: 0.6rem !important;
 }
 
 .rowContainer {
-  width:96%;
+  width: 96%;
   display: flex;
   gap: 2.2rem;
   overflow-x: scroll;
@@ -91,7 +90,7 @@
   justify-content: center;
   align-items: center;
   color: #373737;
-  background-color:white ;
+  background-color: white;
   padding: 1rem;
   font-size: 1.5rem;
   border: none;
@@ -99,21 +98,21 @@
   width: 3rem;
   cursor: pointer;
   transition: all 0.1s ease-in;
-  outline: 2px solid rgba(0, 0, 0, 0.105)
+  outline: 2px solid rgba(0, 0, 0, 0.105);
 }
-.slideLeft{
-  position:absolute;
+.slideLeft {
+  position: absolute;
   top: 53%;
   left: -2%;
   z-index: 1;
-  border-radius: .5cm;
+  border-radius: 0.5cm;
 }
 .slideRight {
   position: absolute;
   top: 53%;
   right: -2%;
   z-index: 1;
-  border-radius: .5cm;
+  border-radius: 0.5cm;
 }
 
 .btns {
@@ -148,8 +147,8 @@
   .rowItem {
     min-width: 44vw;
   }
-  .head{
-    margin-right:2vw;
+  .head {
+    margin-right: 2vw;
   }
 }
 

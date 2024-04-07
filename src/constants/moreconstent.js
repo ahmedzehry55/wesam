@@ -2,39 +2,29 @@ export const morepackeges = [
     {
         id:0,
         title:"باقات  باسعار",
-        ref:'packages/pricePackages',
+        ref:'packages/pricePakages'
+        ,
         img:"/icons/moreIcons/packgase1.svg"
     },
     {
         id:1,
         title:"باقات الرحلات البحرية",
-        ref:'packages/pricePackages',
+        ref:'packages/cruise',
         img:"/icons/moreIcons/packgase2.svg"
     },
     {
-        id:2,
+        id:3,
         title:"باقات",
-        ref:'packages/pricePackages',
+        ref:'packages',
         img:"/icons/moreIcons/packgase3.svg"
     },
     {
-        id:2,
+        id:4,
         title:"الباقات الرياضية",
         ref:'packages/pricePackages',
         img:"/icons/moreIcons/packgase4.svg"
     },
-    {
-        id:2,
-        title:"باقات الدورات التعليمية",
-        ref:'packages/pricePackages',
-        img:"/icons/moreIcons/packgase5.svg"
-    },
-    {
-        id:2,
-        title:"المخيمات الصيفية",
-        ref:'packages/pricePackages',
-        img:"/icons/moreIcons/packgase6.svg"
-    },
+
 ]
 export const moretransport = [
     {
@@ -55,12 +45,7 @@ export const moretransport = [
         ref:'packages/pricePackages',
         img:"/icons/moreIcons/transport3.svg"
     },
-    {
-        id:2,
-        title:"استئجار طائرة خاصة",
-        ref:'packages/pricePackages',
-        img:"/icons/moreIcons/transport4.svg"
-    },
+
 ]
 export const morelandmarks  = [
     {
@@ -98,36 +83,41 @@ export const moremeet  = [
         img:"/icons/moreIcons/meet2.svg"
     },
 ]
-export const moreservice = [
+export const mostcommon =[
     {
         id:0,
-        title:"تصريح جمركي لنقل سيارتك",
+        title:"خدمة تأجير السيارات",
         ref:'packages/pricePackages',
-        img:"/icons/moreIcons/more1.svg"
+        img:"/icons/moreIcons/transport1.svg"
     },
     {
         id:1,
-        title:"رخصة قيادة دولية",
+        title:"باقات",
         ref:'packages/pricePackages',
-        img:"/icons/moreIcons/more2.svg"
+        img:"/icons/moreIcons/packgase3.svg"
     },
     {
         id:2,
-        title:"خدمات الشحن",
+        title:"باقات الرحلات البحرية",
         ref:'packages/pricePackages',
-        img:"/icons/moreIcons/more3.svg"
+        img:"/icons/moreIcons/packgase2.svg"
     },
     {
-        id:2,
-        title:"باقات  باسعار",
+        id:3,
+        title:"أنشطة سياحية",
         ref:'packages/pricePackages',
-        img:"/icons/moreIcons/more4.svg"
+        img:"/icons/moreIcons/landmark1.svg"
     },
     {
-        id:2,
-        title:"خدمة الكونسيرج",
+        id:4,
+        title:"الباقات الرياضية",
         ref:'packages/pricePackages',
-        img:"/icons/moreIcons/more5.jpg"
+        img:"/icons/moreIcons/packgase4.svg"
     },
- 
+    {
+        id:5,
+        title:"المخيمات الصيفية",
+        ref:'packages/pricePackages',
+        img:"/icons/moreIcons/packgase6.svg"
+    },
 ]

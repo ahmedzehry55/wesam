@@ -4,11 +4,11 @@ import Hero from "@/pages/about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import { cityGuides, offers, worldHotel } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import flytimer from "../../../public/icons/planw.svg";
-import calendar from "../../../public/icons/best_time_visit_icon.svg";
-import user from "../../../public/icons/visa_requirement_icon.svg";
+import FlipCard from "./component/Fllipcard";
+import Link from "next/link";
+import { ButtonBread } from "@/components/pagesComponent/breadList/ButtonBread";
+import { ButtonBread2 } from "@/components/pagesComponent/breadList/ButtonBread2";
+
 const navarray = cityGuides[0].nav;
 const SinglePage = ({ object }) => {
   const breadcrumb1 = [
@@ -26,11 +26,16 @@ const SinglePage = ({ object }) => {
       <div className="program_container_hero_container">
         <Hero imag={object.image} />
         <div className="program_container_hero_container_h2">
-          <h2>{object.title}</h2>
+          <h2 style={{ margin: "16px" }}>{object.title}</h2>
           <span>{object.desc}</span>
         </div>
       </div>
       <div className="guide_container">
+        <div>
+          <Link href={`/city-guides`}>
+            <ButtonBread2 title="دليلنا السياحي " />
+          </Link>
+        </div>
         <BreadcrumbList
           padT="0"
           breadcrumbsArrayname={breadcrumb1}
@@ -47,46 +52,8 @@ const SinglePage = ({ object }) => {
             زيارتك إلى دبي ستنقلك إلى مستوى آخر من متعة الترفيه!
           </p>
         </div>
-        <div className="guide_container_icons_div">
-          <div className="guide_container_itemdiv">
-            <figure>
-              <Image
-                sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                src={calendar}
-                fill
-                alt="img"
-              />
-            </figure>
-            <span>أفضل الأوقات للزيارة</span>
-          </div>
-          <div className="guide_container_itemdiv">
-            <figure>
-              <Image
-                sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                src={user}
-                fill
-                alt="img"
-              />
-            </figure>
-            <span>الوثائق المطلوبة للتأشيرة</span>
-          </div>
-          <div className="guide_container_itemdiv">
-            <figure>
-              <Image
-                sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                src={flytimer}
-                fill
-                alt="img"
-              />
-            </figure>
-            <span>مدة الرحلة</span>
-          </div>
+        <div>
+          <FlipCard arrayName={object.flipgiude} />
         </div>
         <BCard
           arryName={worldHotel}

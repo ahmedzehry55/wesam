@@ -13,6 +13,7 @@
   column-gap: 10px;
   justify-content: center;
   align-items: center;
+  width: 100%;
   @media (max-width:860px) {
     flex-direction: column;
   }
@@ -180,7 +181,13 @@
     height: 60PX;
     border: 1px solid rgb(228, 230, 249);
   }
-  .airlines_div2_mapitem_div1 ,.airlines_div2_mapitem_div2{
+  .airlines_div2_mapitem_div2{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    z-index: 14;
+  }
+  .airlines_div2_mapitem_div1 {
     height: 40PX;
   }
   .airlines_div2_mapitem figure {

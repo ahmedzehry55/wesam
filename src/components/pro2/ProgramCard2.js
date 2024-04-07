@@ -64,7 +64,7 @@ export default function ProgramCard2({ i, ArrayName, page_title, cardRef }) {
                     <div className={styles.newPrograms__heading}>
                       <Link href=" ">
                         <h3 className={styles.newPrograms__card__title}>
-                          {item.title}
+                          {item.name ? item.name : item.title}
                         </h3>
                       </Link>
                     </div>

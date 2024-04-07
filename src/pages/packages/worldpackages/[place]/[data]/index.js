@@ -3,14 +3,25 @@ import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList"
 import { datasoc, programs, socnavData } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
 import { Includes, City } from "@/constants/countryConstants";
-import PackageCard from "@/components/packageCard/packageCard";
+import PackageCard, { PopUpImage } from "@/components/packageCard/packageCard";
 import { FaWhatsapp } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Accordion from "@/components/accordion/Accordion";
-import ButtonBread from "@/components/pagesComponent/breadList/ButtonBread";
+import { ButtonBread } from "@/components/pagesComponent/breadList/ButtonBread";
 import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
+import Link from "next/link";
+import ImageModal from "@/components/Imagepop/ImgPop";
+import PopupGfg from "@/components/Imagepop/ImgPop";
 
 const SinglePage = ({ object }) => {
+
+
+
+  const programIds = programs.map((program) => ({
+    id: program.id,
+    data: program.place_id,
+  }));
+
   const breadcrumb1 = [
     {
       breadcrumbs: [
@@ -18,32 +29,37 @@ const SinglePage = ({ object }) => {
         { label: "البرامج السياحية", path: "/packages" },
         { label: "باقات دولية", path: "/packages/worldpackages" },
         {
-          label: `المانيا`,
-          path: `/packages/worldpackages/1`,
+          label: `${object.country}`,
+          path: `/packages/worldpackages/${object.country}`,
         },
         {
-          label: `بوكيت عرض لشخصين`,
-          path: `/packages/worldpackages/1/1`,
+          label: `${object.name}`,
+          path: `/packages/worldpackages/${object.country}/${object.name}`,
         },
       ],
     },
   ];
-  const city = City[0].nav;
+  const city = object.cites;
   const [selectedCity, setSelectedCity] = useState(city[0].name);
   return (
     <Layout menuDis="none" bgcolor="#fafafa" btnTitlea="العودة للباقات">
-      
       <div className="program_container_hero_container  ">
-        <Hero imag={City[0].image} />
-        <h2 className="program_container_hero_container_h2">{City[0].title}</h2>
+        <Hero imag={object.image} />
+        <h2 className="program_container_hero_container_h2">{object.name}</h2>
       </div>
       <div className="program_data_container_socnav section_margin">
-          <SocNavbar arrName={datasoc} fontsize='10px' scrolvh={65}/>
-          </div>
+        <SocNavbar arrName={datasoc} scrolvh={65} />
+      </div>
       <div className="program_container section_margin">
         <div className="program_data_container">
-          <ButtonBread title="العودة الى البرامج"/>
-          
+          <div>
+            {programIds.map((program) => (
+              <Link href={`/packages/worldpackages/${program.data}`}>
+                <ButtonBread title="العودة الى البرامج" />
+              </Link>
+            ))}
+          </div>
+
           <BreadcrumbList
             breadcrumbsArrayname={breadcrumb1}
             btnTitle="العودة"
@@ -52,20 +68,23 @@ const SinglePage = ({ object }) => {
           />
           <div className="program_data_container2">
             <div className="program_data_container_p">
-              <p>{City[0].para}</p>
+              <p>{object.para}</p>
             </div>
             <div className="program_data_container_card" id="dataCard">
               <PackageCard
                 compTitle=" وجهات يمكنك زيارتها"
-                arryName={City}
+                arryName={object.cites}
                 sliderName="germenCity"
-                widthCard="41vw"
+                widthCard="22.1vw"
                 hCard="250px"
+              
               />
             </div>
-
+          
             <div className="program_data_container_Itinerary">
-              <h3 style={{ padding: "3vw 0 5vw" }} id="roadmap">خط سير الرحلة </h3>
+              <h3 style={{ padding: "3vw 0 5vw" }} id="roadmap">
+                خط سير الرحلة{" "}
+              </h3>
               <ul className="accordion_navTitle" id="acrd">
                 {city.map((nav) => (
                   <div
@@ -79,9 +98,9 @@ const SinglePage = ({ object }) => {
                   </div>
                 ))}
               </ul>
-              <div className="program_data_container_Itinerary_container" >
+              <div className="program_data_container_Itinerary_container">
                 {selectedCity &&
-                  city.map((nav) => (
+                  city.map((nav, index) => (
                     <div
                       key={nav.id}
                       id={nav.name}
@@ -89,9 +108,14 @@ const SinglePage = ({ object }) => {
                         selectedCity === nav.name ? "activecityul" : ""
                       }`}
                     >
-                      <Accordion arrayName={City} navId={nav.id} />
-                      <div style={{padding:"5vw 0"}}>
-                        <h2 style={{padding:"0vw 0 5vw"}} className="Includes__h2 ">الباقه تشمل :</h2>
+                      <Accordion arrayName={object} navId={index} />
+                      <div style={{ padding: "5vw 0" }}>
+                        <h2
+                          style={{ padding: "0vw 0 5vw" }}
+                          className="Includes__h2 "
+                        >
+                          الباقه تشمل :
+                        </h2>
                         <Accordion arrayName={Includes} navId={0} />
                       </div>
                     </div>
@@ -115,7 +139,6 @@ const SinglePage = ({ object }) => {
               </div>{" "}
               تواصل معنا عن طريق الوتساب
             </button>
-            
           </div>
           <span>او</span>
           <form className="program_form_container_form">
@@ -149,20 +172,28 @@ const SinglePage = ({ object }) => {
 };
 
 export async function getStaticPaths() {
-  const programIds = programs.map((program) => ({
-    id: program.id,
-    data: program.place_id,
+  const data = await fetch("http://localhost:4000/api/aprogrammes")
+  .then((res) => res.json())
+  .then((data) => data.data);
+
+  const programIds = data.map((program) => ({
+    id: program.name,
+    data: program.country,
   }));
   const paths = programIds.map((program) => ({
-    params: { place: program.data.toString(), data: program.id.toString() },
+    params: { place: program.data, data: program.id },
   }));
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const program = programs.find(
-    (program) => program.id.toString() === params.place
+  const data = await fetch("http://localhost:4000/api/aprogrammes")
+  .then((res) => res.json())
+  .then((data) => data.data);
+
+  const program = data.find(
+    (program) => program.name === params.data
   );
   const object = { ...program };
 

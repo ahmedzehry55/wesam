@@ -1,5 +1,5 @@
 import { Layout } from "@/layout/Layout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cruisePrograms, socnav1 } from "@/constants/constants";
 import Pagescomponent from "@/components/pagesComponent/Main";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
@@ -15,6 +15,15 @@ const breadcrumb1 = [
   },
 ];
 function Hotel() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/api/Cruiseprogrammes")
+      .then((res) => res.json())
+      .then((data) => {
+        
+        setData(data.data);
+      });
+  }, []);
   return (
     <Layout menuDis='none'>
       <BreadcrumbList
@@ -27,7 +36,7 @@ function Hotel() {
       <Pagescomponent
         cardText="start"
         textAlignProp="center"
-        arryName={cruisePrograms}
+        arryName={data}
         cardWidth="23vw"
         catdHeight='250px'
         // phonewidth="48vw"

@@ -22,7 +22,10 @@ export default function FlipCard({ compTitle, img }) {
               alt="wesam elnagah logo"
               style={{ margin: "30px" }}
             />
-            <h3 style={{ margin: "0 50px 50px 0 ", color: "white" }}>
+
+            <h3
+              style={{ margin: "0 50px 50px 0 ", color: "white", zIndex: "2" }}
+            >
               {compTitle}
             </h3>
           </div>

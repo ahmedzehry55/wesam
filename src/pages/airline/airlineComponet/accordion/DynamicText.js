@@ -1,4 +1,3 @@
-import { dynamicText } from "@/constants/constants";
 import React, { useState, useEffect } from "react";
 import styles from "./dynamicText.module.css";
 
@@ -14,19 +13,19 @@ export default function DynamicText() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % dynamicText.length);
         setIsVisible(true);
       }, 500);
-    }, 2000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className={`${styles.dynamictextContainer}`}  style={{  position: "relative" ,  textAlign:"center"}}>
+    <div className={`${styles.dynamictextContainer} `} style={{ position: "relative",  }}>
       {isVisible && (
-        <h2 className={`${styles.textContainer} `}>
-          {dynamicText[currentIndex]}{" "}
+        <h2 className={`${styles.textContainer} ${styles.h2}`}>
+          {dynamicText[currentIndex]}
         </h2>
       )}
-      {/* <div className={styles.divpor} /> */}
     </div>
   );
 }
+

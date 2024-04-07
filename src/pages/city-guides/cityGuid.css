@@ -1,5 +1,6 @@
 .guide_container {
-  width: 100%;
+  /* width: 100%; */
+  width: 1200px;
   display: flex;
   flex-direction: column;
   padding-bottom: 3vw;
@@ -9,6 +10,8 @@
   position: relative;
   width: 100%;
   color: white;
+}
+.program_container_hero_container_h2 {
 }
 .guide_hero_container h2 {
   position: absolute;
@@ -36,21 +39,53 @@
 .guide_container_icons_div {
   display: flex;
   column-gap: 1.5vw;
-  padding: 5vw;
+  margin-bottom: 16px ;
+ 
+  /* padding: 5vw; */
 }
 .guide_container_itemdiv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 3vw;
-  width: 23%;
-  height: 34.3vh;
-  border: 1px solid rgba(0, 0, 0, 0.079);
+  row-gap: 1vw;
+  width: 280px;
+  height: 220px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+  border: 1px solid rgba(151, 161, 166, 0.3);
   border-radius: 0.2cm;
   color: var(--primary3);
-  cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.guide_container_itemdiv.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
 .guide_container_itemdiv figure {
   position: relative;
   width: 22%;
@@ -78,6 +113,9 @@
   font-weight: bolder;
 }
 @media (max-width: 860px) {
+  .guide_container{
+    width: 100%;
+  }
   .guide_hero_container {
     display: none;
   }
@@ -88,11 +126,11 @@
     overflow-x: scroll;
     scrollbar-width: none;
     column-gap: 3vw;
-    padding-right: 3vw;
+    padding: 0 3vw;
   }
   .guide_container_itemdiv {
-    min-width: 45vw;
-    height: 45vw;
+    min-width: 42vw;
+    height: 220px;
     overflow-x: scroll;
   }
   .guide_container_itemdiv figure {
@@ -108,13 +146,13 @@
     font-size: 9px;
   }
   .guide_container_itemdiv {
-    min-width: 85vw;
-    height: 90vw;
+    min-width: 94%;
+    height: 220px;
   }
   .guide_container_icons_div {
     overflow-x: scroll;
     scrollbar-width: none;
-    column-gap: 10vw;
+    column-gap: 5vw;
     padding-right: 6vw;
   }
   .guide_container_itemdiv figure {

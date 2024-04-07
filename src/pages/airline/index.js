@@ -37,7 +37,6 @@ export default function Airline() {
         <div className="airlines_div1_span">
           <span style={{ zIndex: "1" }}  >لا تشيل هم تذكرتك بنحصلك أفضل </span>{"  "}
           <DynamicText />
-          
         </div>
         <button style={{ zIndex: "1" }} onClick={handleWhatsAppClick}>
           احجز تذكرتك الان

@@ -1,0 +1,102 @@
+.offer_container {
+  margin-top: 170px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.offers_list_container_ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 16px;
+  margin-top: 16px;
+ 
+}
+.offers_list_container_card {
+  flex-basis: 32%;
+  background: white;
+
+  border-radius: 12px;
+  border: 1px solid rgb(216, 220, 222);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 12px;
+  row-gap: 16px;
+  color: #3a3a3a;
+}
+.offers_list_container_card_img{
+    position: relative;
+    width: 100%;
+    height: 25vh;
+}
+.offers_list_container_card_text_container{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+}
+.offers_list_container_card_type_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 8px;
+}
+.offers_list_container_card_type_span {
+    font-size: 12px;
+    font-weight: 600;
+    top: 0px;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    color: rgb(12, 154, 176);
+    text-align: center;
+    background: rgb(233, 246, 248);
+}
+.offers_list_container_card_title {
+    font-size: 14px;
+    width: 85%;
+    color: black;
+    height: 50px;
+    overflow: hidden;
+}
+.offers_list_container_card_desc {
+    height: 50px;
+    overflow: hidden;    
+}
+.offers_list_container_card_code {
+}
+.offers_list_container_card_code_span {
+}
+.offers_list_container_card_buttondiv {
+    width: 100%;
+    text-align: left;
+}
+.offers_list_container_card_button {
+    color: rgb(2, 100, 122);
+    font-weight: 600;
+    border: none;
+}
+.offers_list_container_card_button:hover {
+    text-decoration: underline;
+}
+@media (max-width: 860px) {
+.offer_container {
+    margin-top: 65px;
+}
+    .offers_list_container_ul{
+        justify-content: center;
+      
+    }
+
+    .offers_list_container_card {
+        flex-basis:98% ;
+        row-gap: 24px;
+    }
+
+}

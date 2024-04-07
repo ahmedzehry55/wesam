@@ -95,9 +95,9 @@ const SinglePage = ({ object }) => {
 };
 
 export async function getStaticPaths() {
-  const countryIds = hotels.map((country) => country.id);
+  const countryIds = hotels.map((country) => country.id.toString());
   const paths = countryIds.map((id) => ({
-    params: { place: id.toString() },
+    params: { place: id },
   }));
 
   return { paths, fallback: false };
@@ -105,7 +105,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const country = hotels.find(
-    (country) => country.id === parseInt(params.place)
+    (country) => country.id.toString() === parseInt(params.place)
   );
   const object = { ...country };
 

@@ -16,11 +16,15 @@
   column-gap: 1px;
   border-bottom: 1px solid rgba(224, 224, 224);
   font-weight: bold;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 .SocNavbar_li {
   padding: 0 1vw 1vw;
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
+  scroll-behavior: smooth;
+  font-weight: bolder;
 }
 
 .activeSoc {
@@ -28,7 +32,7 @@
   border-bottom: 2px solid rgb(2, 100, 122);
   font-weight: bolder;
 }
-.SocNavbarcontainer_button{
+.SocNavbarcontainer_button {
   display: none;
 }
 
@@ -42,9 +46,9 @@
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px;
   }
-.SocNavbarcontainer_button{
-  display: block;
-}
+  .SocNavbarcontainer_button {
+    display: block;
+  }
 
   .scrolled {
     position: fixed;
@@ -57,15 +61,14 @@
     border: none;
     margin: 0px;
     margin-bottom: 2vw;
-  justify-content: space-around;
-
+    justify-content: space-around;
   }
   .SocNavbar_li {
     padding: 10px 5vw;
     color: rgb(2, 100, 122);
-    font-weight: lighter;
     flex-basis: 31vw;
     min-width: 120px;
+    font-size: 8px;
   }
   .activeSoc {
     background: #e2ecee;
@@ -83,38 +86,22 @@
   }
 }
 @media (max-width: 450px) {
-  /* .soc_860 {
-    width: 84vw;
-    
-  }*/
   .SocNavbar_ul {
-    border: none;
-    margin: 0px;
-    margin-bottom: 2vw;
     column-gap: 1vw;
-    padding:0 2vw;
+    padding: 0 2vw;
   }
-  .SocNavbar_li {
-    padding: 10px 5vw;
-    color: rgb(2, 100, 122);
-    font-weight: lighter;
-    flex-basis: 31vw;
-    min-width: 120px;
-  }
+
   .SocNavbar_li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
-  
+
     height: 34px;
-    font-size: 10px;
-    color: rgb(2, 100, 122);
-    font-weight: lighter;
+
   }
   .activeSocpackage {
-    
     padding: 0;
   }
 }

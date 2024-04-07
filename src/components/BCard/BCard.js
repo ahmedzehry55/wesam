@@ -31,7 +31,7 @@ export default function BCard({
           <h2>{compTitle}</h2>
           <span>{compspan}</span>
         </div>
-        <Link href={`/${titleBtnsLink}`}>{titleBtnsheader}</Link>
+        <Link href={`/${titleBtnsLink}`} style={{alignSelf:"flex-end"}}>{titleBtnsheader}</Link>
       </div>
 
       <div className="btns">
@@ -64,7 +64,8 @@ export default function BCard({
               // alt={item.title}
               style={{ borderRadius: ".2cm " }}
             />
-            <div className="B_itemDescription">
+            <div className="blackdiv"/>
+            <div  style={{zIndex:"2"}} className="B_itemDescription">
               <div className="descText" >
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>

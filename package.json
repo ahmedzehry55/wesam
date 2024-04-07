@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
     "export": "next export",
@@ -16,8 +16,7 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.0.1",
-    "react-id-swiper": "^4.0.0"
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "^8",

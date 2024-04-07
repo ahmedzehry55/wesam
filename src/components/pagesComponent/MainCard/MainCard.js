@@ -33,7 +33,7 @@ export default function MainCard({
   }, []);
   const router = useRouter();
   const currentPath = router.asPath;
-  const myArray = arryName[0].nav;
+  const myArray = arryName;
   const [badge, setBadge] = useState(false);
   return (
     <>
@@ -42,7 +42,7 @@ export default function MainCard({
           <div className={styles.rowContainer}>
             {myArray.map((nav) => (
               <Link
-                href={`/${currentPath}/${nav.id}`}
+                href={`/${currentPath}/${nav.pathname ? nav.pathname : nav.name}`}
                 key={nav.id}
                 className={styles.rowItem}
                 style={{
@@ -60,18 +60,20 @@ export default function MainCard({
                   (max-width: 1200px) 50vw,
                   33vw"
                   src={nav.image}
-                  alt={nav.title}
+                  alt={nav.name}
                   style={{ objectFit: "cover", borderRadius: ".2cm " }}
                 />
                 <div  className={styles.badgediv} >
                   {nav.badge ? <p className={styles.badge}>{nav.badge}</p> : null}
                   {nav.bestSeller ? <p className={styles.badge}>{nav.bestSeller}</p> : null}
                 </div>
-
+                <div className="blackdiv"/>
+           
                 <section
                   className={styles.link}
-                  style={{ alignItems: `${itemText}` }}
+                  style={{ alignItems: `${itemText}`, zIndex:"2" }}
                 >
+
                   <section
                     className={styles.itemDescription}
                     style={{ justifyContent: `${textflex}` }}
@@ -84,7 +86,7 @@ export default function MainCard({
                         rowGap: ".5vw",
                       }}
                     >
-                      <h3>{nav.title}</h3>
+                      <h3>{nav.name}</h3>
                       <div className={styles.arraydesc_div}>
                         {nav.desc.length > 0 ? (
                           nav.desc.map((city, index) => (

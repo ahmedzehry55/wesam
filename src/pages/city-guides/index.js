@@ -1,18 +1,28 @@
 import { Layout } from "@/layout/Layout";
 import React from "react";
 import Pagescomponent from "@/components/pagesComponent/Main";
-import { cityGuides, } from "@/constants/constants";
+import { cityGuides } from "@/constants/constants";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
+import Link from "next/link";
+import { ButtonBread2 } from "@/components/pagesComponent/breadList/ButtonBread2";
 function CityGuides() {
   return (
-    <Layout menuDis='none'>
+    <Layout menuDis="none">
+      <div style={{display:"block" , width:"100%" ,position:"relative"}}>
+        <Link href={`/`}>
+          <ButtonBread2 title="الصفحة الرئيسية" />
+        </Link>
+      </div>
       <BreadcrumbList breadcrumbsArrayname={cityGuides} />
-      <Pagescomponent
+      
+    <div style={{width:"100%" , marginTop:"44px"}}>
+    <Pagescomponent
         arryName={cityGuides}
-        currntpath='city-guides'
+        currntpath="city-guides"
         title="دليلك السياحي"
         span="اكتشف معنا أروع وجهات السفر"
       />
+    </div>
     </Layout>
   );
 }

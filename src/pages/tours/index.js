@@ -1,7 +1,7 @@
 import { Layout } from "@/layout/Layout";
 import React, { useEffect, useState } from "react";
 
-import { tourList, tourNav } from "@/constants/constants";
+import {  tourNav } from "@/constants/constants";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import Hero from "../about/AboutComponet/Hero";
 import Image from "next/image";
@@ -18,6 +18,15 @@ const breadcrumb1 = [
   },
 ];
 function Tours() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/api/tours")
+      .then((res) => res.json())
+      .then((data) => {
+        
+        setData(data.data);
+      });
+  }, []);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +42,7 @@ function Tours() {
   }, [1]);
   return (
     <Layout menuDis="none" headerPos="fixed">
-      <div style={{background:"white"}}>
+      <div style={{background:"white" ,width:"100%"}}>
         <div className={`tour_hero ${scrolled ? "tour_hero_scrolled" : ""}`}>
           <Hero imag={hero} />
           <input
@@ -50,7 +59,7 @@ function Tours() {
       /> */}
 
         <div
-          style={{ background: "white", zIndex: "777777" , position:"relative"}}
+          style={{ background: "white", zIndex: "777777" , position:"relative" }}
           className={`${scrolled ? "tour_ul_list_scrolled" : ""}`}
         >
           <ul className="tour_nav_ul">
@@ -68,7 +77,7 @@ function Tours() {
           <div className="tour_list_container">
             <h3>اكتشف افضل الوجهات </h3>
             <ul className="tour_list_ul">
-              {tourList.map((nav) => (
+              {data.map((nav) => (
                 <li key={nav.id}>
                   <Link
                     href={`/tours/${nav.id}`}
@@ -78,7 +87,7 @@ function Tours() {
                       <Image
                         style={{ borderRadius: ".2cm" }}
                         fill
-                        src={nav.img}
+                        src={nav.image}
                         alt={nav.title}
                       />
                     </figure>
