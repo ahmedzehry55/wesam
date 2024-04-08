@@ -6,9 +6,7 @@ import { cityGuides, offers, worldHotel } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
 import FlipCard from "./component/Fllipcard";
 import Link from "next/link";
-import { ButtonBread } from "@/components/pagesComponent/breadList/ButtonBread";
 import { ButtonBread2 } from "@/components/pagesComponent/breadList/ButtonBread2";
-
 const navarray = cityGuides[0].nav;
 const SinglePage = ({ object }) => {
   const breadcrumb1 = [

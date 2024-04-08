@@ -1,4 +1,3 @@
-import Navbar from "@/components/NavBar/Navbar";
 import {
   morelandmarks,
   moremeet,
@@ -74,7 +73,6 @@ export default function More() {
           />
           <MoreComponent arryname={morevisa} title="خدمات التأشيرات" />
           <MoreComponent arryname={moremeet} title="خدمة الاستقبال والترحيب" />
-        
         </div>
       </div>
     </Layout>

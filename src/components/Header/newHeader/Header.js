@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
 import Image from "next/image";
-import { navMenu, navbar } from "@/constants/constants";
+import { navMenu } from "@/constants/constants";
 import logo from "../../../../public/images/logo.svg";
 import blacklogo from "../../../../public/images/blackLogo.svg";
 import { useEffect, useState } from "react";

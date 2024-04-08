@@ -1,22 +1,17 @@
 import Hero from "../../../../about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import { datasoc, programs, socnavData } from "@/constants/constants";
+import { datasoc, programs } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
-import { Includes, City } from "@/constants/countryConstants";
-import PackageCard, { PopUpImage } from "@/components/packageCard/packageCard";
+import { Includes } from "@/constants/countryConstants";
+import PackageCard from "@/components/packageCard/packageCard";
 import { FaWhatsapp } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Accordion from "@/components/accordion/Accordion";
 import { ButtonBread } from "@/components/pagesComponent/breadList/ButtonBread";
 import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
 import Link from "next/link";
-import ImageModal from "@/components/Imagepop/ImgPop";
-import PopupGfg from "@/components/Imagepop/ImgPop";
 
 const SinglePage = ({ object }) => {
-
-
-
   const programIds = programs.map((program) => ({
     id: program.id,
     data: program.place_id,
@@ -77,10 +72,9 @@ const SinglePage = ({ object }) => {
                 sliderName="germenCity"
                 widthCard="22.1vw"
                 hCard="250px"
-              
               />
             </div>
-          
+
             <div className="program_data_container_Itinerary">
               <h3 style={{ padding: "3vw 0 5vw" }} id="roadmap">
                 خط سير الرحلة{" "}
@@ -173,8 +167,8 @@ const SinglePage = ({ object }) => {
 
 export async function getStaticPaths() {
   const data = await fetch("http://localhost:4000/api/aprogrammes")
-  .then((res) => res.json())
-  .then((data) => data.data);
+    .then((res) => res.json())
+    .then((data) => data.data);
 
   const programIds = data.map((program) => ({
     id: program.name,
@@ -189,12 +183,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const data = await fetch("http://localhost:4000/api/aprogrammes")
-  .then((res) => res.json())
-  .then((data) => data.data);
+    .then((res) => res.json())
+    .then((data) => data.data);
 
-  const program = data.find(
-    (program) => program.name === params.data
-  );
+  const program = data.find((program) => program.name === params.data);
   const object = { ...program };
 
   return { props: { object } };

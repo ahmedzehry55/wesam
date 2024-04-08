@@ -1,5 +1,5 @@
-import { programs, singletourdata } from "@/constants/constants";
-import Image from "next/image";
+import { singletourdata } from "@/constants/constants";
+
 import { MdBolt } from "react-icons/md";
 import { FaCheck } from "react-icons/fa6";
 import { MdCancelPresentation } from "react-icons/md";
@@ -18,11 +18,10 @@ const SinglePage = ({ object }) => {
     fetch(`http://localhost:4000/api/tours/660a4c27749ebc54b3d73842`)
       .then((res) => res.json())
       .then((data) => {
-        
         setData(data.data.toursData[0].sigleTourData);
       });
   }, []);
-  console.log(data)
+  console.log(data);
   const [scrolled, setScrolled] = useState(false);
   const [selectedCity, setSelectedCity] = useState("#packgedesc");
   const phoneNumber = "+966545003143";
@@ -83,7 +82,7 @@ const SinglePage = ({ object }) => {
               }}
             />
             {/* <Image fill alt={tour.tourTitle} src={tour.bgImg} /> */}
-            <Carsoul images={tour.img} dotbottm='5vw' />
+            <Carsoul images={tour.img} dotbottm="5vw" />
             <IoShareOutline
               style={{
                 color: "white",
@@ -113,40 +112,39 @@ const SinglePage = ({ object }) => {
             </span>
           </div>
           <div className="tour_data_bottom_div">
-          <div className="tour_data_bottom_div_uperr">
-            <h2 className="tour_data_bottom_div_h2">{tour.tourTitle}</h2>
-            <p className="tour_data_bottom_div_p">
-              {" "}
-              <span className="tour_data_bottom_div_p_span">
-                <MdBolt style={{ color: "orange", fontSize: "24px" }} />{" "}
-              </span>{" "}
-              حجز فوري{" "}
-            </p>
-            <div style={{ height: "145px" }}>{/* <Map/> */}</div>
-            <span className="tour_data_bottom_div_span">{tour.loc}</span>
-            <div className="tour_data_bottom_div_overview_div">
-              <h3>لمحة عامة </h3>
-              <p>{tour.overview}</p>
+            <div className="tour_data_bottom_div_uperr">
+              <h2 className="tour_data_bottom_div_h2">{tour.tourTitle}</h2>
+              <p className="tour_data_bottom_div_p">
+                {" "}
+                <span className="tour_data_bottom_div_p_span">
+                  <MdBolt style={{ color: "orange", fontSize: "24px" }} />{" "}
+                </span>{" "}
+                حجز فوري{" "}
+              </p>
+              <div style={{ height: "145px" }}>{/* <Map/> */}</div>
+              <span className="tour_data_bottom_div_span">{tour.loc}</span>
+              <div className="tour_data_bottom_div_overview_div">
+                <h3>لمحة عامة </h3>
+                <p>{tour.overview}</p>
+              </div>
+              <div className="tour_data_bottom_div_advantage_div">
+                <h3>المميزات</h3>
+                <ul className="tour_data_bottom_div_advantage_div_ul">
+                  {tour.advantage.map((adv) => (
+                    <li className="tour_data_bottom_div_advantage_div_ul_li">
+                      <span>
+                        <FaCheck
+                          style={{ fontSize: "18px", fontWeight: "lighter" }}
+                          color="#000000DE"
+                        />
+                      </span>
+                      <p>{adv}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="tour_data_bottom_div_advantage_div">
-              <h3>المميزات</h3>
-              <ul className="tour_data_bottom_div_advantage_div_ul">
-                {tour.advantage.map((adv) => (
-                  <li className="tour_data_bottom_div_advantage_div_ul_li">
-                    <span>
-                      <FaCheck
-                        style={{ fontSize: "18px", fontWeight: "lighter" }}
-                        color="#000000DE"
-                      />
-                    </span>
-                    <p>{adv}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-          </div>
-          <div className="tour_data_bottom_div_tour_packages">
+            <div className="tour_data_bottom_div_tour_packages">
               <h3>الباقات المتاحة</h3>
               {tour.tourPackages.map((item) => (
                 <div className="tour_data_bottom_div_tour_packages_li">
@@ -218,48 +216,60 @@ const SinglePage = ({ object }) => {
                         كيفية الاستخدام
                       </li>
                     </ul>
-                    {selectedCity && item.packgeDescSec.map((obj) => (
-                      <div className={`tour_data_bottom_div_tour_packages_li_detilesdiv_detcontainer ${
-                        selectedCity === "#packgedesc" ? "aciveArea" : ""}`}>
-                        <h3>{obj.header}</h3>
-                        {obj.text.map((textobj) => (
-                          <div className="tour_data_bottom_div_tour_packages_li_featuresdiv_li">
-                            <span>
-                              <FaCheck style={{ fontSize: "18px" }} />
-                            </span>
-                            <span>{textobj}</span>
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                    {selectedCity && item.packageused.map((obj) => (
-                      <div className={`tour_data_bottom_div_tour_packages_li_detilesdiv_detcontainer ${
-                        selectedCity === '#packgedused' ? "aciveArea" : ""}`} >
-                        <h3>{obj.header}</h3>
-                        {obj.text.map((textobj) => (
-                          <div className="tour_data_bottom_div_tour_packages_li_featuresdiv_li">
-                            <span>
-                              <FaCheck style={{ fontSize: "18px" }} />
-                            </span>
-                            <span>{textobj}</span>
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                    {selectedCity && item.packagereq.map((obj) => (
-                      <div className={`tour_data_bottom_div_tour_packages_li_detilesdiv_detcontainer ${
-                        selectedCity === "#packgereq" ? "aciveArea" : ""}`}>
-                        <h3>{obj.header}</h3>
-                        {obj.text.map((textobj) => (
-                          <div className="tour_data_bottom_div_tour_packages_li_featuresdiv_li">
-                            <span>
-                              <FaCheck style={{ fontSize: "18px" }} />
-                            </span>
-                            <span>{textobj}</span>
-                          </div>
-                        ))}
-                      </div>
-                    ))}
+                    {selectedCity &&
+                      item.packgeDescSec.map((obj) => (
+                        <div
+                          className={`tour_data_bottom_div_tour_packages_li_detilesdiv_detcontainer ${
+                            selectedCity === "#packgedesc" ? "aciveArea" : ""
+                          }`}
+                        >
+                          <h3>{obj.header}</h3>
+                          {obj.text.map((textobj) => (
+                            <div className="tour_data_bottom_div_tour_packages_li_featuresdiv_li">
+                              <span>
+                                <FaCheck style={{ fontSize: "18px" }} />
+                              </span>
+                              <span>{textobj}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    {selectedCity &&
+                      item.packageused.map((obj) => (
+                        <div
+                          className={`tour_data_bottom_div_tour_packages_li_detilesdiv_detcontainer ${
+                            selectedCity === "#packgedused" ? "aciveArea" : ""
+                          }`}
+                        >
+                          <h3>{obj.header}</h3>
+                          {obj.text.map((textobj) => (
+                            <div className="tour_data_bottom_div_tour_packages_li_featuresdiv_li">
+                              <span>
+                                <FaCheck style={{ fontSize: "18px" }} />
+                              </span>
+                              <span>{textobj}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    {selectedCity &&
+                      item.packagereq.map((obj) => (
+                        <div
+                          className={`tour_data_bottom_div_tour_packages_li_detilesdiv_detcontainer ${
+                            selectedCity === "#packgereq" ? "aciveArea" : ""
+                          }`}
+                        >
+                          <h3>{obj.header}</h3>
+                          {obj.text.map((textobj) => (
+                            <div className="tour_data_bottom_div_tour_packages_li_featuresdiv_li">
+                              <span>
+                                <FaCheck style={{ fontSize: "18px" }} />
+                              </span>
+                              <span>{textobj}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
                   </div>
                 </div>
               ))}
@@ -277,8 +287,12 @@ const SinglePage = ({ object }) => {
                 {"(شاملا ضريبة القيمة المضافة )"}{" "}
               </p>
             </div>
-            <button onClick={handleWhatsAppClick}
-            className="tour_data_footer_button">احجز الان</button>
+            <button
+              onClick={handleWhatsAppClick}
+              className="tour_data_footer_button"
+            >
+              احجز الان
+            </button>
           </div>
         </div>
       ))}

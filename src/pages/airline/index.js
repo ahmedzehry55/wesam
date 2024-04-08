@@ -2,10 +2,8 @@ import { airlines, bookingadv } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
 import Image from "next/image";
 import React, { useState } from "react";
-import styles from "./airlineComponet/accordion/dynamicText.module.css";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import rout_ar from "../../../public/icons/rout_ar.png";
-import vid from "../../../public/vid.mp4";
 import DynamicText from "./airlineComponet/accordion/DynamicText";
 export default function Airline() {
   const phoneNumber = "+966545003143";

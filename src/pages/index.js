@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Layout } from "@/layout/Layout";
 import Navbar from "@/components/NavBar/Navbar";
 import ACard from "@/components/ACard/ACard";
-import { cityGuides, offers, offersarray, programs, tourList, worldHotel } from "@/constants/constants";
+import { cityGuides, offersarray, programs, tourList, worldHotel } from "@/constants/constants";
 import BCard from "@/components/BCard/BCard";
 import FlipContainer from "@/components/FlipContainer/FlipContainer";
 import ProgramCard2 from "@/components/pro2/ProgramCard2";

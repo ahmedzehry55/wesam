@@ -1,14 +1,8 @@
 import { Layout } from "@/layout/Layout";
 import React, { useEffect, useState } from "react";
-
-import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import Hero from "../about/AboutComponet/Hero";
 import Image from "next/image";
 import Link from "next/link";
-import hero from "../../../public/images/tourHero.jpg";
-import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
 import { useRouter } from "next/router";
-
 const breadcrumb1 = [
   {
     breadcrumbs: [
@@ -24,11 +18,10 @@ function Offers() {
     fetch("http://localhost:4000/api/offers")
       .then((res) => res.json())
       .then((data) => {
-        
         setData(data.data);
       });
   }, []);
-  var filteredPackages = data
+  var filteredPackages = data;
   const [packages, setPackages] = useState(filteredPackages);
   const [selectedType, setSelectedType] = useState("جميع العروض");
   const router = useRouter();
@@ -67,12 +60,14 @@ function Offers() {
     if (selectedType == "جميع العروض") {
       setPackages(data);
     } else {
-      const filteredPackages = data.filter((packagena) => packagena.type.includes(selectedType));
+      const filteredPackages = data.filter((packagena) =>
+        packagena.type.includes(selectedType)
+      );
       setPackages(filteredPackages);
     }
     setSelectedType(selectedType);
   };
-  
+
   const phoneNumber = "+966545003143";
   const message = "Please help me?";
 
@@ -147,7 +142,7 @@ function Offers() {
                     <span
                       key={index}
                       className="offers_list_container_card_type_span"
-                      style={{display:`${index==0 ? "none": ""}`}}
+                      style={{ display: `${index == 0 ? "none" : ""}` }}
                     >
                       {type}
                     </span>

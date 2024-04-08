@@ -2,23 +2,20 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ProgramCard2 from "@/components/pro2/ProgramCard2";
-import {ButtonBread} from "../breadList/ButtonBread";
-export default function SocNavbar2({ arrName ,country}) {
+import { ButtonBread } from "../breadList/ButtonBread";
+export default function SocNavbar2({ arrName, country }) {
   const [data, setData] = useState([]);
-
   const [scrolled, setScrolled] = useState(false);
   const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
   const [selectedType, setSelectedType] = useState("شهر العسل");
-  const packagesArray = data
-
-
+  const packagesArray = data;
   var filteredcountry = packagesArray.filter(
     (packagena) => packagena.country === country
   );
   var filteredPackages = filteredcountry.filter(
     (packagena) => packagena.type === "شهر العسل"
   );
-  console.log(filteredPackages)
+  console.log(filteredPackages);
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
@@ -30,16 +27,18 @@ export default function SocNavbar2({ arrName ,country}) {
         var filteredcountry = data.data.filter(
           (packagena) => packagena.country === country
         );
-        const filteredPackages = filteredcountry.filter((packagena) => packagena.type === "شهر العسل");
+        const filteredPackages = filteredcountry.filter(
+          (packagena) => packagena.type === "شهر العسل"
+        );
         setPackages(filteredPackages);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
-  
+
   console.log(filteredPackages);
   const router = useRouter();
   const getNavItems = () => {
@@ -63,8 +62,6 @@ export default function SocNavbar2({ arrName ,country}) {
     ];
     return items;
   };
- 
-
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 860px)");
@@ -109,7 +106,7 @@ export default function SocNavbar2({ arrName ,country}) {
     setPackages(filteredPackages);
     setSelectedType(selectedType);
   };
-  
+
   return (
     <div className={`SocNavbarcontainer `}>
       <div className={`soc_860 SocNavbar ${scrolled ? "scrolled" : ""} `}>

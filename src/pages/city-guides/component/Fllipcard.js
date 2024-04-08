@@ -1,8 +1,6 @@
-import { flipgiude } from "@/constants/constants";
 import Image from "next/image";
 import { useState } from "react";
-
-const FlipCard = ({arrayName}) => {
+const FlipCard = ({ arrayName }) => {
   const [flippedCards, setFlippedCards] = useState([]);
 
   const handleFlip = (index) => {
@@ -52,7 +50,14 @@ const FlipCard = ({arrayName}) => {
                   />
                 </figure>
                 <span>{item.title}</span>
-                <span style={{ color: "#333333", fontSize: "12px", width:"90%", textAlign:"center" }}>
+                <span
+                  style={{
+                    color: "#333333",
+                    fontSize: "12px",
+                    width: "90%",
+                    textAlign: "center",
+                  }}
+                >
                   {item.desc}
                 </span>
               </div>

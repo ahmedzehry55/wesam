@@ -1,4 +1,4 @@
-import { tourList, tourdata } from "@/constants/constants";
+import { tourList } from "@/constants/constants";
 import dot from "../../../../public/icons/dot.png";
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";

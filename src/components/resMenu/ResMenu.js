@@ -3,8 +3,7 @@ import { RiCloseLine } from "react-icons/ri";
 import { IoIosMenu } from "react-icons/io";
 import { navMenu } from "@/constants/constants";
 import Image from "next/image";
-import Link from "next/link";
-import { IoIosArrowBack } from "react-icons/io";
+import Link from "next/link"; 
 import { IoIosArrowForward } from "react-icons/io";
 import { useRouter } from "next/router";
 const HamburgerMenu = ({color}) => {

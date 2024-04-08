@@ -1,15 +1,14 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
-export default function SocNavbar({arrName, fontsize ,scrollactve ,scrolvh}) {
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+export default function SocNavbar({ arrName, fontsize, scrolvh }) {
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > scrolvh * window.innerHeight / 100;
+      const isScrolled = window.scrollY > (scrolvh * window.innerHeight) / 100;
       setScrolled(isScrolled);
     };
-    
 
     window.addEventListener("scroll", handleScroll);
 
@@ -19,19 +18,23 @@ export default function SocNavbar({arrName, fontsize ,scrollactve ,scrolvh}) {
   }, [1]);
   return (
     <div className={`SocNavbar ${scrolled ? "scrolled" : ""} section_margin`}>
-      <ul className='SocNavbar_ul'>
+      <ul className="SocNavbar_ul">
         {arrName.map((item) => (
-          <li  style={{fontSize:`${fontsize}`}}  className={`SocNavbar_li ${router.pathname === item.ref ? 'activeSoc' : ''}
-          ${item.scrollactve ? 'activeSocpackage' : ''}
-          `}  key={item.id}>
+          <li
+            style={{ fontSize: `${fontsize}` }}
+            className={`SocNavbar_li ${
+              router.pathname === item.ref ? "activeSoc" : ""
+            }
+          ${item.scrollactve ? "activeSocpackage" : ""}
+          `}
+            key={item.id}
+          >
             <Link href={item.ref}>
               <h2>{item.name}</h2>
             </Link>
           </li>
         ))}
       </ul>
-
-
     </div>
-  )
+  );
 }

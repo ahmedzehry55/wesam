@@ -1,10 +1,7 @@
 import React from "react";
 import styles from "./packageCard.module.css";
-import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Image from "next/image";
 import CustomPopup from "../Imagepop/Imgpopcontainer";
-
 export default function PackageCard({
   arryName,
   compTitle,

@@ -1,11 +1,9 @@
 import CCard from "../cCard/CCard";
-import { allRoutes, worldHotel } from "@/constants/constants";
+import { allRoutes} from "@/constants/constants";
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./Flipcont.module.css";
 import FlipCard from "../flipCard/FlipCard";
-
-import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Image from "next/image";
 
 function FlipContainer() {

@@ -1,6 +1,6 @@
 import { Layout } from "@/layout/Layout";
 import React, { useEffect, useState } from "react";
-import { countrys, socnav1, worldHotel } from "@/constants/constants";
+import {  socnav1 } from "@/constants/constants";
 import Pagescomponent from "@/components/pagesComponent/Main";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";

@@ -1,6 +1,6 @@
 import { Layout } from "@/layout/Layout";
 import React, { useEffect, useState } from "react";
-import { cruisePrograms, socnav1 } from "@/constants/constants";
+import { socnav1 } from "@/constants/constants";
 import Pagescomponent from "@/components/pagesComponent/Main";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
@@ -20,12 +20,11 @@ function Hotel() {
     fetch("http://localhost:4000/api/Cruiseprogrammes")
       .then((res) => res.json())
       .then((data) => {
-        
         setData(data.data);
       });
   }, []);
   return (
-    <Layout menuDis='none'>
+    <Layout menuDis="none">
       <BreadcrumbList
         breadcrumbsArrayname={breadcrumb1}
         btnTitle="العودة للباقات"
@@ -38,7 +37,7 @@ function Hotel() {
         textAlignProp="center"
         arryName={data}
         cardWidth="23vw"
-        catdHeight='250px'
+        catdHeight="250px"
         // phonewidth="48vw"
         currntpath="cruise"
         title="أفضل الرحلات البحرية "

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./resFooter.module.css";
-import styless from "../footercontainer.module.css";
 import pay1 from "../../../../public/images/pay1.png";
 import pay2 from "../../../../public/images/pay2.png";
 import pay3 from "../../../../public/images/pay3.png";
@@ -12,8 +11,6 @@ import { footer, footerlegal, footersocial } from "@/constants/constants";
 import logoicon from "../../../../public/images/iconlogo.png";
 import Image from "next/image";
 import style from "../footercontainer.module.css";
-
-import Brightness from "@/components/brightness/Brightness";
 const Footer = ({ arraName }) => (
   <div className={styles.resfooterlink}>
     {arraName.map(({ title, id, links }) => (

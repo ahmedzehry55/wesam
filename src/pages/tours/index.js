@@ -1,8 +1,6 @@
 import { Layout } from "@/layout/Layout";
 import React, { useEffect, useState } from "react";
-
 import {  tourNav } from "@/constants/constants";
-import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import Hero from "../about/AboutComponet/Hero";
 import Image from "next/image";
 import Link from "next/link";

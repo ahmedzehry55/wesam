@@ -3,8 +3,6 @@ import styles from "./flip.module.css";
 import Image from "next/image";
 import logoBlack from "../../../public/images/logoBlack1.png";
 import logoicon from "../../../public/images/iconlogo.png";
-import Link from "next/link";
-import { IoMdArrowRoundBack } from "react-icons/io";
 import Button from "../button/Button";
 export default function FlipCard({ compTitle, img }) {
   return (

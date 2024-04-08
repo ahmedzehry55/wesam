@@ -1,18 +1,11 @@
 import { useState } from "react";
 import { RiCloseLine } from "react-icons/ri";
-import { IoIosMenu } from "react-icons/io";
-import { navbar, tourNav } from "@/constants/constants";
-import Image from "next/image";
-import Link from "next/link";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-const Search = ({color}) => {
+import { tourNav } from "@/constants/constants";
+const Search = ({ color }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <>
       <div
@@ -27,22 +20,20 @@ const Search = ({color}) => {
           />
         ) : (
           <input
-          className="tour_heroSerch"
-          type="search"
-          placeholder={`ابحث عن الأنشطة داخل السعودية`}
-        />
+            className="tour_heroSerch"
+            type="search"
+            placeholder={`ابحث عن الأنشطة داخل السعودية`}
+          />
         )}
       </div>
 
       <nav id="smenu" className={isOpen ? "active" : ""}>
         <div style={{ position: "relative" }}>
-          <input type="search" placeholder="البحث"/>
+          <input type="search" placeholder="البحث" />
           <h3>الأنشطةالمقترحة</h3>
           <ul>
             {tourNav.map((item) => (
-              <li key={item.id}>
-                {item.title}
-              </li>
+              <li key={item.id}>{item.title}</li>
             ))}
           </ul>
         </div>

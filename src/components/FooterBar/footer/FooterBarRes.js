@@ -1,10 +1,8 @@
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
-
 import styles from "./FooterBarRes.module.css";
 import { footbar } from "@/constants/constants";
 import Link from "next/link";
-import Image from "next/image";
 export default function FooterBarRes() {
   return (
     <div className={styles.a}>

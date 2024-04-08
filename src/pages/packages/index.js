@@ -1,7 +1,6 @@
 import { Layout } from "@/layout/Layout";
 import React, { useEffect, useState } from "react";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import { packages } from "@/constants/constants";
 import Pagescomponent from "@/components/pagesComponent/Main";
 const breadcrumb1 = [
   {

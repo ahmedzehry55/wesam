@@ -11,8 +11,7 @@ function Pagescomponent({
   catdHeight,
   just,
   textflex,
-  phonewidth
-
+  phonewidth,
 }) {
   return (
     <div className="pagescomponent_container">

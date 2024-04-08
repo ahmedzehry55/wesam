@@ -1,21 +1,18 @@
 import Hero from "../../../about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
-import {  datasoc } from "@/constants/constants";
+import { datasoc } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
-import {
-  cruiseIncludes,
-  cruiseterms,
-} from "@/constants/countryConstants";
+import { cruiseIncludes, cruiseterms } from "@/constants/countryConstants";
 import PackageCard from "@/components/packageCard2/packageCard";
 import { FaWhatsapp } from "react-icons/fa6";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Accordion from "@/components/accordion2/Accordion";
 import { ButtonBread } from "@/components/pagesComponent/breadList/ButtonBread";
 import SocNavbar from "@/components/pagesComponent/socNavbar/SocNavbar";
 import Link from "next/link";
 
 const SinglePage = ({ object }) => {
- console.log(object)
+  console.log(object);
   const ref = useRef(null);
   const breadcrumb1 = [
     {
@@ -34,12 +31,10 @@ const SinglePage = ({ object }) => {
     <Layout menuDis="none" bgcolor="#fafafa" btnTitlea="العودة للباقات">
       <div className="program_container_hero_container  ">
         <Hero imag={object.image} />
-        <h2 className="program_container_hero_container_h2">
-          {object.name}
-        </h2>
+        <h2 className="program_container_hero_container_h2">{object.name}</h2>
       </div>
       <div className="program_data_container_socnav section_margin">
-        <SocNavbar arrName={datasoc}  scrolvh={65} />
+        <SocNavbar arrName={datasoc} scrolvh={65} />
       </div>
       <div className="program_container section_margin">
         <div className="program_data_container">
@@ -200,12 +195,11 @@ const SinglePage = ({ object }) => {
 
 export async function getStaticPaths() {
   const data = await fetch("http://localhost:4000/api/Cruiseprogrammes")
-  .then((res) => res.json())
-  .then((data) => data.data);
+    .then((res) => res.json())
+    .then((data) => data.data);
 
   const programIds = data.map((program) => ({
     id: program.name,
-    
   }));
   const paths = programIds.map((program) => ({
     params: { data: program.id },
@@ -216,12 +210,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const data = await fetch("http://localhost:4000/api/Cruiseprogrammes")
-  .then((res) => res.json())
-  .then((data) => data.data);
+    .then((res) => res.json())
+    .then((data) => data.data);
 
-  const program = data.find(
-    (program) => program.name === params.data
-  );
+  const program = data.find((program) => program.name === params.data);
   const object = { ...program };
 
   return { props: { object } };

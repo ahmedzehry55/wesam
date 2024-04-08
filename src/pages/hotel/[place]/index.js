@@ -51,7 +51,6 @@ const SinglePage = ({ object }) => {
                   className="hotel__image_next"
                   src={nav.image}
                   alt="img"
-                  
                 />
               </div>
 
@@ -80,7 +79,7 @@ const SinglePage = ({ object }) => {
                 </span>
                 <div className="hotel__text_button">
                   <Button
-                    title=" احجز الأن" 
+                    title=" احجز الأن"
                     itemId={currentPath}
                     onClick={handleWhatsAppClick}
                   />

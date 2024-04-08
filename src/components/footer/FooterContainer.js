@@ -5,7 +5,6 @@ import {
   footerhelp,
   footerlegal,
   footersocial,
-  ourloc,
 } from "@/constants/constants";
 import styles from "./footercontainer.module.css";
 import pay1 from "../../../public/images/pay1.png";

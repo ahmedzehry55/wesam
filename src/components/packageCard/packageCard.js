@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import styles from "./packageCard.module.css";
-import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Image from "next/image";
-import PopupGfg from "../Imagepop/ImgPop";
 import CustomPopup from "../Imagepop/Imgpopcontainer";
-
 export default function PackageCard({
   arryName,
   compTitle,
