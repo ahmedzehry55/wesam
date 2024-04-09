@@ -4,7 +4,7 @@ import Hero from "@/pages/about/AboutComponet/Hero";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import { cityGuides, offers, worldHotel } from "@/constants/constants";
 import { Layout } from "@/layout/Layout";
-import FlipCard from "./component/Fllipcard";
+
 import Link from "next/link";
 import { ButtonBread2 } from "@/components/pagesComponent/breadList/ButtonBread2";
 const navarray = cityGuides[0].nav;
@@ -51,7 +51,7 @@ const SinglePage = ({ object }) => {
           </p>
         </div>
         <div>
-          <FlipCard arrayName={object.flipgiude} />
+          {/* <FlipCard arrayName={object.flipgiude} /> */}
         </div>
         <BCard
           arryName={worldHotel}
