@@ -15,7 +15,7 @@ const SinglePage = ({ object }) => {
         { label: "الرئيسية", path: "/" },
         { label: "البرامج السياحية", path: "/packages" },
         { label: "دليلك السياحي", path: "/city-guides" },
-        { label: `${object.title}`, path: `/city-guides/${object.id}` },
+        { label: `${object.name}`, path: `/city-guides/${object.name}` },
       ],
     },
   ];
@@ -88,15 +88,19 @@ const SinglePage = ({ object }) => {
 };
 
 export async function getStaticPaths() {
-  const paths = navarray.map((object) => ({
-    params: { id: object.id.toString() },
+  const programIds = navarray.map((program) => ({
+    id: program.name,
+  }));
+  const paths = programIds.map((program) => ({
+    params: { id: program.id },
   }));
 
   return { paths, fallback: false };
 }
 
+
 export async function getStaticProps({ params }) {
-  const object = navarray.find((object) => object.id.toString() === params.id);
+  const object = navarray.find((object) => object.name === params.id);
 
   return { props: { object } };
 }

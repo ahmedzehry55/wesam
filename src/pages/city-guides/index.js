@@ -17,7 +17,7 @@ export default function CityGuides() {
       
     <div style={{width:"100%" , marginTop:"44px"}}>
     <Pagescomponent
-        arryName={cityGuides}
+        arryName={cityGuides[0].nav}
         currntpath="city-guides"
         title="دليلك السياحي"
         span="اكتشف معنا أروع وجهات السفر"
