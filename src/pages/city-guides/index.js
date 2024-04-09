@@ -5,7 +5,7 @@ import { cityGuides } from "@/constants/constants";
 import { BreadcrumbList } from "@/components/pagesComponent/breadList/BreadList";
 import Link from "next/link";
 import { ButtonBread2 } from "@/components/pagesComponent/breadList/ButtonBread2";
-function CityGuides() {
+export default function CityGuides() {
   return (
     <Layout menuDis="none">
       <div style={{display:"block" , width:"100%" ,position:"relative"}}>
@@ -26,5 +26,3 @@ function CityGuides() {
     </Layout>
   );
 }
-
-export default CityGuides;

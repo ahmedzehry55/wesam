@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-const FlipCard = ({ arrayName }) => {
+export default function FlipCard({ arrayName })  {
   const [flippedCards, setFlippedCards] = useState([]);
 
   const handleFlip = (index) => {
@@ -69,4 +69,4 @@ const FlipCard = ({ arrayName }) => {
   );
 };
 
-export default FlipCard;
+
