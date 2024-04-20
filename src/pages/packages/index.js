@@ -13,7 +13,7 @@ const breadcrumb1 = [
 function TravelPrograms() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://wesamelnagah:4000/api/maincategory")
+    fetch("http://localhost:4000/api/maincategory")
       .then((res) => res.json())
       .then((data) => {
         
