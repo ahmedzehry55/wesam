@@ -18,7 +18,7 @@ const breadcrumb1 = [
 function Tours() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/tours")
+    fetch("http://wesamelnagah.com:4000/api/tours")
       .then((res) => res.json())
       .then((data) => {
         

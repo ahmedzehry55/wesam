@@ -194,7 +194,7 @@ const SinglePage = ({ object }) => {
 };
 
 export async function getStaticPaths() {
-  const data = await fetch("http://localhost:4000/api/Cruiseprogrammes")
+  const data = await fetch("http://wesamelnagah.com:4000/api/Cruiseprogrammes")
     .then((res) => res.json())
     .then((data) => data.data);
 
@@ -209,7 +209,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await fetch("http://localhost:4000/api/Cruiseprogrammes")
+  const data = await fetch("http://wesamelnagah.com:4000/api/Cruiseprogrammes")
     .then((res) => res.json())
     .then((data) => data.data);
 

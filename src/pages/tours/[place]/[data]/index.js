@@ -15,7 +15,7 @@ import Carsoul from "@/components/Carsoul/Carsoul";
 const SinglePage = ({ object }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:4000/api/tours/660a4c27749ebc54b3d73842`)
+    fetch(`http://wesamelnagah.com:4000/api/tours/660a4c27749ebc54b3d73842`)
       .then((res) => res.json())
       .then((data) => {
         setData(data.data.toursData[0].sigleTourData);

@@ -18,7 +18,7 @@ function Hotel() {
   const [data, setData] = useState([]);
   const [metadata, setmetaData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/routespage")
+    fetch("http://wesamelnagah.com:4000/api/routespage")
       .then((res) => res.json())
       .then((data) => {
         
@@ -26,7 +26,7 @@ function Hotel() {
       });
   }, []);
   useEffect(() => {
-    fetch("http://localhost:4000/api/metapage")
+    fetch("http://wesamelnagah.com:4000/api/metapage")
       .then((res) => res.json())
       .then((metadata) => {
         const filteredData = metadata.data.filter((obj) => obj.pagetitle === "باقات دولية");

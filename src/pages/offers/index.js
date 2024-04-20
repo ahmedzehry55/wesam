@@ -15,7 +15,7 @@ const breadcrumb1 = [
 function Offers() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/offers")
+    fetch("http://wesamelnagah.com:4000/api/offers")
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);

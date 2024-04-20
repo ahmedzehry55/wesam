@@ -17,7 +17,7 @@ const breadcrumb1 = [
 function Hotel() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/Cruiseprogrammes")
+    fetch("http://wesamelnagah.com:4000/api/Cruiseprogrammes")
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);

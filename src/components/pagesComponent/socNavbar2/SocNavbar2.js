@@ -21,7 +21,7 @@ export default function SocNavbar2({ arrName, country }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/aprogrammes");
+        const response = await fetch("http://wesamelnagah.com:4000/api/aprogrammes");
         const data = await response.json();
         setData(data.data);
         var filteredcountry = data.data.filter(

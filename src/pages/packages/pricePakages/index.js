@@ -18,14 +18,14 @@ function Hotel() {
   const [data, setData] = useState([]);
   const [metadata, setmetaData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/priceprogrammes")
+    fetch("http://wesamelnagah.com:4000/api/priceprogrammes")
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);
       });
   }, []);
   useEffect(() => {
-    fetch("http://localhost:4000/api/metapage")
+    fetch("http://wesamelnagah.com:4000/api/metapage")
       .then((res) => res.json())
       .then((metadata) => {
         const filteredData = metadata.data.filter(

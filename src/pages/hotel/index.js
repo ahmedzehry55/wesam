@@ -15,7 +15,7 @@ function Hotel() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/hotels")
+    fetch("http://wesamelnagah.com:4000/api/hotels")
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);
